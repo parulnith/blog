@@ -5,20 +5,17 @@ description: Statistical tests and analysis can be confounded by a simple misund
 categories: [Statistics]
 title: The curious case of Simpson’s Paradox
 ---
-# The curious case of Simpson’s Paradox
 
-### Statistical tests and analysis can be confounded by a simple misunderstanding of the data
+![Photo by [Brendan Church](https://unsplash.com/@bdchu614?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com?utm_source=medium&utm_medium=referral)](https://cdn-images-1.medium.com/max/10032/0*6yc_IK25IZsQ_gt9
+> Statistics rarely offers a single “right”way of doing anything — [Charles Wheelan](https://en.wikipedia.org/wiki/Charles_Wheelan) in Naked Statistics
 
-![Photo by [Brendan Church](https://unsplash.com/@bdchu614?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com?utm_source=medium&utm_medium=referral)](https://cdn-images-1.medium.com/max/10032/0*6yc_IK25IZsQ_gt9)
-> # Statistics rarely offers a single “right”way of doing anything — [Charles Wheelan](https://en.wikipedia.org/wiki/Charles_Wheelan) in Naked Statistics
+In 1996, [Appleton, French, and Vanderpump](https://www.researchgate.net/publication/254331089_Ignoring_a_Covariate_An_Example_of_Simpson's_Paradox)* conducted an experiment to study the effect of smoking on a sample of people. The study was conducted over twenty years and included 1314 English women. Contrary to the common belief, this study showed that **Smokers tend to live longer than** non-smokers. Even though I am not an expert on the effects of smoking on human health, this finding is disturbing. The graph below shows that smokers had a mortality rate of 23%, while for non-smokers, it was around 31%.
 
-In 1996, [*Appleton, French, and Vanderpump](https://www.researchgate.net/publication/254331089_Ignoring_a_Covariate_An_Example_of_Simpson's_Paradox)* conducted an experiment to study the effect of smoking on a sample of people. The study was conducted over twenty years and included 1314 English women. Contrary to the common belief, this study showed that **Smokers tend to live longer than** non-smokers. Even though I am not an expert on the effects of smoking on human health, this finding is disturbing. The graph below shows that smokers had a mortality rate of 23%, while for non-smokers, it was around 31%.
-
-![The mortality rate of smokers vs. non-smokers | Image by Author](https://cdn-images-1.medium.com/max/2000/1*iDyNS-0t3aqoMWNOY5ySfQ.png)
+![Alt Text](https://cdn-images-1.medium.com/max/2000/1*iDyNS-0t3aqoMWNOY5ySfQ.png)
 
 Now, here’s where the things get interesting. On breaking the same data by age group, we get an entirely different picture. The results show that in most age groups, smokers have a high mortality rate compared to non-smokers.
 
-![Results of the study broken down by age group | Image by Author](https://cdn-images-1.medium.com/max/2000/1*a_7T9kLqig2uLxiikgnetw.png)
+![Alt Text](https://cdn-images-1.medium.com/max/2000/1*a_7T9kLqig2uLxiikgnetw.png)
 
 ### So why the confusion?🤔
 
@@ -39,7 +36,7 @@ In other words, the same data set can appear to show opposite trends depending o
 
 Lurking means to be present in a latent or barely discernible state, although still having an effect. In the same way, a lurking variable is a variable that isn’t included in the analysis but, if included, can considerably change the outcome of the analysis.
 
-The **age groups **are the lurking variable in the example discussed. When the data were grouped by age, we saw that the non-smokers were significantly older on average, and thus, more likely to die during the trial period, precisely because they were living longer in general.
+The **age groups** are the lurking variable in the example discussed. When the data were grouped by age, we saw that the non-smokers were significantly older on average, and thus, more likely to die during the trial period, precisely because they were living longer in general.
 
 ## Try it out for yourself. 💻
 
@@ -74,7 +71,7 @@ Let’s now visualize the relationship between the **culmen length of the pengui
 
 ![Culmen length vs. culmen depth of the penguins | Image by Author](https://cdn-images-1.medium.com/max/2000/1*pI8zh6NZE_JV262dcpv-iA.png)
 
-Here we see a negative association between culmen length and culmen depth for the data set. The results above demonstrate that the longer the culmen or the beak, the less dense it is. We have also calculated the correlation coefficient between the two columns to view the negative association using the [Pearson correlation coefficient](https://en.wikipedia.org/wiki/Pearson_correlation_coefficient#:~:text=In%20statistics%2C%20the%20Pearson%20correlation,between%20two%20sets%20of%20data.)(PCC), referred to as **Pearson’s *r. The PCC ***is a number between -1 and 1 and measures the linear correlation between two data sets. The Scipy library provides a method called pearsonr() for the same.
+Here we see a negative association between culmen length and culmen depth for the data set. The results above demonstrate that the longer the culmen or the beak, the less dense it is. We have also calculated the correlation coefficient between the two columns to view the negative association using the [Pearson correlation coefficient](https://en.wikipedia.org/wiki/Pearson_correlation_coefficient#:~:text=In%20statistics%2C%20the%20Pearson%20correlation,between%20two%20sets%20of%20data.)(PCC), referred to as Pearson’s r. The PCC ***is a number between -1 and 1 and measures the linear correlation between two data sets. The Scipy library provides a method called pearsonr() for the same.
 
 ### Drilling down at Species level
 
@@ -82,7 +79,7 @@ When you drill down further and group the data species-wise, the findings revers
 
     sns.lmplot(x **=** 'culmen_length_mm',y **=** 'culmen_depth_mm', data **=** df, hue **=** 'species')
 
-![Culmen length vs. culmen depth of the penguins grouped by species | Image by Author](https://cdn-images-1.medium.com/max/2000/1*7y1G5oTdu1Lc9tdaSNwCng.png)
+![Alt Text](https://cdn-images-1.medium.com/max/2000/1*7y1G5oTdu1Lc9tdaSNwCng.png)
 
 Voila! What we have is a classic example of Simpson’s effect. While the culmen's length and depth were negatively associated on a group level, the species level data exhibits an opposite association. Thus the type of **species** is a **lurking variable** here. We can also see the person's coefficient for each of the species using the code below:
 
