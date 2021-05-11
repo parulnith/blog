@@ -93,39 +93,25 @@ window.onload = wrap_img;
     </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <ul class="section-nav">
-<li class="toc-entry toc-h3"><a href="#so-why-the-confusion">So why the confusion?🤔</a></li>
-<li class="toc-entry toc-h2"><a href="#simpsons-paradox-things-arent-always-as-they-seem">Simpson’s Paradox: Things aren’t always as they seem</a></li>
-<li class="toc-entry toc-h2"><a href="#identifying-the-lurking-variable-">Identifying the Lurking variable 🔍</a></li>
-<li class="toc-entry toc-h2"><a href="#try-it-out-for-yourself-">Try it out for yourself. 💻</a>
-<ul>
-<li class="toc-entry toc-h3"><a href="#importing-the-necessary-libraries-and-the-dataset">Importing the necessary libraries and the dataset</a></li>
-<li class="toc-entry toc-h3"><a href="#drilling-down-at-species-level">Drilling down at Species level</a></li>
-</ul>
-</li>
-<li class="toc-entry toc-h2"><a href="#tools-to-discover-simpsons-effect-">Tools to discover Simpson’s effect 🛠</a></li>
-<li class="toc-entry toc-h2"><a href="#conclusion">Conclusion</a></li>
-</ul><blockquote>
+    <blockquote>
   <p>Statistics rarely offers a single “right”way of doing anything — <a href="https://en.wikipedia.org/wiki/Charles_Wheelan">Charles Wheelan</a> in Naked Statistics</p>
 </blockquote>
 
 <p>In 1996, <a href="https://www.researchgate.net/publication/254331089_Ignoring_a_Covariate_An_Example_of_Simpson's_Paradox">Appleton, French, and Vanderpump</a>* conducted an experiment to study the effect of smoking on a sample of people. The study was conducted over twenty years and included 1314 English women. Contrary to the common belief, this study showed that <strong>Smokers tend to live longer than</strong> non-smokers. Even though I am not an expert on the effects of smoking on human health, this finding is disturbing. The graph below shows that smokers had a mortality rate of 23%, while for non-smokers, it was around 31%.</p>
 
-<p><img src="https://cdn-images-1.medium.com/max/2000/1*iDyNS-0t3aqoMWNOY5ySfQ.png" alt="Alt Text"></p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*iDyNS-0t3aqoMWNOY5ySfQ.png" alt="Alt Text" /></p>
 
 <p>Now, here’s where the things get interesting. On breaking the same data by age group, we get an entirely different picture. The results show that in most age groups, smokers have a high mortality rate compared to non-smokers.</p>
 
-<p><img src="https://cdn-images-1.medium.com/max/2000/1*a_7T9kLqig2uLxiikgnetw.png" alt="Alt Text"></p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*a_7T9kLqig2uLxiikgnetw.png" alt="Alt Text" /></p>
 
-<h3 id="so-why-the-confusion">
-<a class="anchor" href="#so-why-the-confusion" aria-hidden="true"><span class="octicon octicon-link"></span></a>So why the confusion?🤔</h3>
+<h3 id="so-why-the-confusion">So why the confusion?🤔</h3>
 
 <p>Well, the phenomenon that we just saw above is a classic case of <strong>Simpson’s paradox</strong>, which from time to makes way into a lot of data-driven analysis. In this article, we’ll look a little deeper into it and understand how to avoid fallacies like these in our analysis.</p>
 
-<h2 id="simpsons-paradox-things-arent-always-as-they-seem">
-<a class="anchor" href="#simpsons-paradox-things-arent-always-as-they-seem" aria-hidden="true"><span class="octicon octicon-link"></span></a>Simpson’s Paradox: Things aren’t always as they seem</h2>
+<h2 id="simpsons-paradox-things-arent-always-as-they-seem">Simpson’s Paradox: Things aren’t always as they seem</h2>
 
-<p><img src="https://cdn-images-1.medium.com/max/3840/1*4VUfxWFvYDhgg7d80vnMuA.jpeg" alt="Image by [Carlos Ribeiro](https://pixabay.com/users/ctribeiro-680997/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1708964) from [Pixabay](https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1708964)"></p>
+<p><img src="https://cdn-images-1.medium.com/max/3840/1*4VUfxWFvYDhgg7d80vnMuA.jpeg" alt="Image by [Carlos Ribeiro](https://pixabay.com/users/ctribeiro-680997/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1708964) from [Pixabay](https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1708964)" /></p>
 
 <p>As per Wikipedia, <strong>Simpson’s paradox</strong> also called the <strong>Yule-Simpson effect</strong>, can be defined as follows:*</p>
 <blockquote>
@@ -134,32 +120,28 @@ window.onload = wrap_img;
 
 <p>In other words, the same data set can appear to show opposite trends depending on how it’s grouped. This is exactly what we saw in the smokers vs. non-smokers mortality rate example. When grouped age-wise, the data shows that non-smokers tend to live longer. But when we see an overall picture, smokers tend to live longer. So what is exactly happening here? Why are there different interpretations of the same data, and what is evading our eye in the first case? Well, The culprit, in this case, is called the <strong>Lurking variable —</strong> a conditional variable <em>**</em>that can affect our conclusions about the relationship between two variables — smoking and mortality in our case.</p>
 
-<h2 id="identifying-the-lurking-variable-">
-<a class="anchor" href="#identifying-the-lurking-variable-" aria-hidden="true"><span class="octicon octicon-link"></span></a>Identifying the Lurking variable 🔍</h2>
+<h2 id="identifying-the-lurking-variable-">Identifying the Lurking variable 🔍</h2>
 
-<p><img src="https://cdn-images-1.medium.com/max/2000/1*vkiDwWnsTb6BxaJU1XPFvg.png" alt="Image by [Peggy_Marco](https://pixabay.com/users/peggy_marco-1553824/) from [Pixabay](https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1708964)"></p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*vkiDwWnsTb6BxaJU1XPFvg.png" alt="Image by [Peggy_Marco](https://pixabay.com/users/peggy_marco-1553824/) from [Pixabay](https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1708964)" /></p>
 
 <p>Lurking means to be present in a latent or barely discernible state, although still having an effect. In the same way, a lurking variable is a variable that isn’t included in the analysis but, if included, can considerably change the outcome of the analysis.</p>
 
 <p>The <strong>age groups</strong> are the lurking variable in the example discussed. When the data were grouped by age, we saw that the non-smokers were significantly older on average, and thus, more likely to die during the trial period, precisely because they were living longer in general.</p>
 
-<h2 id="try-it-out-for-yourself-">
-<a class="anchor" href="#try-it-out-for-yourself-" aria-hidden="true"><span class="octicon octicon-link"></span></a>Try it out for yourself. 💻</h2>
+<h2 id="try-it-out-for-yourself-">Try it out for yourself. 💻</h2>
 
 <p>Here is another example where the effect of Simpson’s Paradox is easily visible. We all are aware of the <a href="https://allisonhorst.github.io/palmerpenguins/articles/intro.html"><strong>Palmer Penguins</strong></a>🐧 <a href="https://allisonhorst.github.io/palmerpenguins/articles/intro.html">dataset</a>** — the drop-in replacement for the famous iris dataset. The dataset consists of details about three species of penguins, including their culmen length and depth, their flipper length, body mass, and sex. The culmen is essentially the upper ridge of a penguin’s beak, while their wings are called flippers. The dataset is <a href="https://www.kaggle.com/parulpandey/palmer-archipelago-antarctica-penguin-data?select=penguins_size.csv">available for download</a> on Kaggle.</p>
 
 <table>
   <tbody>
     <tr>
-      <td>![<a href="https://www.freepik.com/vectors/nature">Nature vector created by brgfx — www.freepik.com</a>
-</td>
+      <td>![<a href="https://www.freepik.com/vectors/nature">Nature vector created by brgfx — www.freepik.com</a></td>
       <td>Attribution 1.0 Generic (<a href="https://creativecommons.org/licenses/by/1.0/">CC BY 1.0</a>)](https://cdn-images-1.medium.com/max/2000/1*gIOJSSoVH7i0GyOAtV0ZfA.jpeg)</td>
     </tr>
   </tbody>
 </table>
 
-<h3 id="importing-the-necessary-libraries-and-the-dataset">
-<a class="anchor" href="#importing-the-necessary-libraries-and-the-dataset" aria-hidden="true"><span class="octicon octicon-link"></span></a>Importing the necessary libraries and the dataset</h3>
+<h3 id="importing-the-necessary-libraries-and-the-dataset">Importing the necessary libraries and the dataset</h3>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import pandas as pd
 import seaborn as sns
@@ -175,7 +157,7 @@ df.head()')
 df.info()
 </code></pre></div></div>
 
-<p><img src="https://cdn-images-1.medium.com/max/2000/1*0Wg8r9copQYj5EWpG_gdnQ.png" alt=""></p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*0Wg8r9copQYj5EWpG_gdnQ.png" alt="" /></p>
 
 <p>There are few missing values in the dataset. Let’s get rid of those.</p>
 
@@ -195,34 +177,31 @@ df.info()
 
 <p>Here we see a negative association between culmen length and culmen depth for the data set. The results above demonstrate that the longer the culmen or the beak, the less dense it is. We have also calculated the correlation coefficient between the two columns to view the negative association using the <a href="https://en.wikipedia.org/wiki/Pearson_correlation_coefficient#:~:text=In%20statistics%2C%20the%20Pearson%20correlation,between%20two%20sets%20of%20data.">Pearson correlation coefficient</a>(PCC), referred to as Pearson’s r. The PCC *is a number between -1 and 1 and measures the linear correlation between two data sets. The Scipy library provides a method called pearsonr() for the same.</p>
 
-<h3 id="drilling-down-at-species-level">
-<a class="anchor" href="#drilling-down-at-species-level" aria-hidden="true"><span class="octicon octicon-link"></span></a>Drilling down at Species level</h3>
+<h3 id="drilling-down-at-species-level">Drilling down at Species level</h3>
 
 <p>When you drill down further and group the data species-wise, the findings reverse. The ‘hue’ parameter determines which column in the data frame should be used for color encoding.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sns.lmplot(x **=** 'culmen_length_mm',y **=** 'culmen_depth_mm', data **=** df, hue **=** 'species')
 </code></pre></div></div>
 
-<p><img src="https://cdn-images-1.medium.com/max/2000/1*7y1G5oTdu1Lc9tdaSNwCng.png" alt="Alt Text"></p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*7y1G5oTdu1Lc9tdaSNwCng.png" alt="Alt Text" /></p>
 
 <p>Voila! What we have is a classic example of Simpson’s effect. While the culmen’s length and depth were negatively associated on a group level, the species level data exhibits an opposite association. Thus the type of <strong>species</strong> is a <strong>lurking variable</strong> here. We can also see the person’s coefficient for each of the species using the code below:</p>
 
-<p><img src="https://cdn-images-1.medium.com/max/2000/1*EOm4SCGWijobj30NoQdZlQ.png" alt=""></p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*EOm4SCGWijobj30NoQdZlQ.png" alt="" /></p>
 
-<p><img src="https://cdn-images-1.medium.com/max/2000/1*5MiFXw4wem7giROBCQqeVA.png" alt=""></p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*5MiFXw4wem7giROBCQqeVA.png" alt="" /></p>
 
-<p><img src="https://cdn-images-1.medium.com/max/2000/1*bK7w4jPGD8o6JxV3qXR4qA.png" alt="Images by Author"></p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*bK7w4jPGD8o6JxV3qXR4qA.png" alt="Images by Author" /></p>
 <blockquote>
   <p><strong>Here is the <a href="https://nbviewer.jupyter.org/github/parulnith/Data-Science-Articles/tree/main/The%20curious%20case%20of%20Simpson%27s%20Paradox/">nbviewer link</a> to the notebook incase you want to follow along.</strong></p>
 </blockquote>
 
-<h2 id="tools-to-discover-simpsons-effect-">
-<a class="anchor" href="#tools-to-discover-simpsons-effect-" aria-hidden="true"><span class="octicon octicon-link"></span></a>Tools to discover Simpson’s effect 🛠</h2>
+<h2 id="tools-to-discover-simpsons-effect-">Tools to discover Simpson’s effect 🛠</h2>
 
 <p>Detecting Simpson’s effect in a dataset can be tricky and requires some careful observation and analysis. However, since this issue pops up from time to time in the statistical world, few tools have been created to help us deal with it. A paper titled “<a href="https://arxiv.org/abs/1805.03094">Using Simpson’s Paradox to Discover Interesting Patterns in Behavioral Data</a>.” was released in 2018, highlighting a data-driven discovery method that leverages Simpson’s paradox to uncover interesting patterns in behavioral data. *The method systematically disaggregates data to identify subgroups within a population whose behavior deviates significantly from the rest of the population. *It is a great read and also has the link to the code.</p>
 
-<h2 id="conclusion">
-<a class="anchor" href="#conclusion" aria-hidden="true"><span class="octicon octicon-link"></span></a>Conclusion</h2>
+<h2 id="conclusion">Conclusion</h2>
 
 <p>Data comes with a lot of power and can be easily manipulated to suit our needs and objectives. There are multiple ways of aggregating and grouping data. Depending upon how it is grouped, the data may offer confounding results. It is up to us to carefully assess all the details using the statistical tools and look for lurking variables that might affect our decisions and outcomes.</p>
 
