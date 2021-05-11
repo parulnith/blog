@@ -67,8 +67,6 @@ There are few missing values in the dataset. Let’s get rid of those.
 
 Let’s now visualize the relationship between the **culmen length of the penguins vs. their culmen depth**. We’ll use seaborn’s lmplot method (where “lm” stands for “linear model”)for the same.
 
- <iframe src="https://medium.com/media/19f19b21772c3b0209df29989efc8e17" frameborder=0></iframe>
-
 ![Culmen length vs. culmen depth of the penguins | Image by Author](https://cdn-images-1.medium.com/max/2000/1*pI8zh6NZE_JV262dcpv-iA.png)
 
 Here we see a negative association between culmen length and culmen depth for the data set. The results above demonstrate that the longer the culmen or the beak, the less dense it is. We have also calculated the correlation coefficient between the two columns to view the negative association using the [Pearson correlation coefficient](https://en.wikipedia.org/wiki/Pearson_correlation_coefficient#:~:text=In%20statistics%2C%20the%20Pearson%20correlation,between%20two%20sets%20of%20data.)(PCC), referred to as Pearson’s r. The PCC *is a number between -1 and 1 and measures the linear correlation between two data sets. The Scipy library provides a method called pearsonr() for the same.
@@ -83,7 +81,6 @@ When you drill down further and group the data species-wise, the findings revers
 
 Voila! What we have is a classic example of Simpson’s effect. While the culmen's length and depth were negatively associated on a group level, the species level data exhibits an opposite association. Thus the type of **species** is a **lurking variable** here. We can also see the person's coefficient for each of the species using the code below:
 
- <iframe src="https://medium.com/media/fd26c9c5b57e09d355a4a218ae5962ee" frameborder=0></iframe>
 
 ![](https://cdn-images-1.medium.com/max/2000/1*EOm4SCGWijobj30NoQdZlQ.png)
 
