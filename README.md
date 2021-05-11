@@ -6,7 +6,7 @@
 
 https://parulnith.github.io/blog/
 
-# My Blog
+# Parul Pandey's Blog
 
 
 _powered by [fastpages](https://github.com/fastai/fastpages)_
