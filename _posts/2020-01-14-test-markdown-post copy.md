@@ -1,9 +1,9 @@
 ---
-toc: true
+toc: false
 layout: post
 description: Statistical tests and analysis can be confounded by a simple misunderstanding of the data
 categories: [Statistics]
-title: The curious case of Simpson’s Paradox
+title: "The curious case of Simpson’s Paradox"
 ---
 
 
