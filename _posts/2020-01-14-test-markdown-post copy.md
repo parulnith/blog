@@ -6,7 +6,7 @@ categories: [Statistics]
 title: The curious case of Simpson’s Paradox
 ---
 
-![Photo by [Brendan Church](https://unsplash.com/@bdchu614?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com?utm_source=medium&utm_medium=referral)](https://cdn-images-1.medium.com/max/10032/0*6yc_IK25IZsQ_gt9
+
 > Statistics rarely offers a single “right”way of doing anything — [Charles Wheelan](https://en.wikipedia.org/wiki/Charles_Wheelan) in Naked Statistics
 
 In 1996, [Appleton, French, and Vanderpump](https://www.researchgate.net/publication/254331089_Ignoring_a_Covariate_An_Example_of_Simpson's_Paradox)* conducted an experiment to study the effect of smoking on a sample of people. The study was conducted over twenty years and included 1314 English women. Contrary to the common belief, this study showed that **Smokers tend to live longer than** non-smokers. Even though I am not an expert on the effects of smoking on human health, this finding is disturbing. The graph below shows that smokers had a mortality rate of 23%, while for non-smokers, it was around 31%.
