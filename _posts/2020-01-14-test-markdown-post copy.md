@@ -40,7 +40,7 @@ The **age groups** are the lurking variable in the example discussed. When the d
 
 ## Try it out for yourself. 💻
 
-Here is another example where the effect of Simpson’s Paradox is easily visible. We all are aware of the [**Palmer Penguins ](https://allisonhorst.github.io/palmerpenguins/articles/intro.html)🐧 [dataset](https://allisonhorst.github.io/palmerpenguins/articles/intro.html)** — the drop-in replacement for the famous iris dataset. The dataset consists of details about three species of penguins, including their culmen length and depth, their flipper length, body mass, and sex. The culmen is essentially the upper ridge of a penguin’s beak, while their wings are called flippers. The dataset is [available for download](https://www.kaggle.com/parulpandey/palmer-archipelago-antarctica-penguin-data?select=penguins_size.csv) on Kaggle.
+Here is another example where the effect of Simpson’s Paradox is easily visible. We all are aware of the [**Palmer Penguins**](https://allisonhorst.github.io/palmerpenguins/articles/intro.html)🐧 [dataset](https://allisonhorst.github.io/palmerpenguins/articles/intro.html)** — the drop-in replacement for the famous iris dataset. The dataset consists of details about three species of penguins, including their culmen length and depth, their flipper length, body mass, and sex. The culmen is essentially the upper ridge of a penguin’s beak, while their wings are called flippers. The dataset is [available for download](https://www.kaggle.com/parulpandey/palmer-archipelago-antarctica-penguin-data?select=penguins_size.csv) on Kaggle.
 
 ![[Nature vector created by brgfx — www.freepik.com](https://www.freepik.com/vectors/nature) | Attribution 1.0 Generic ([CC BY 1.0](https://creativecommons.org/licenses/by/1.0/))](https://cdn-images-1.medium.com/max/2000/1*gIOJSSoVH7i0GyOAtV0ZfA.jpeg)
 
@@ -71,7 +71,7 @@ Let’s now visualize the relationship between the **culmen length of the pengui
 
 ![Culmen length vs. culmen depth of the penguins | Image by Author](https://cdn-images-1.medium.com/max/2000/1*pI8zh6NZE_JV262dcpv-iA.png)
 
-Here we see a negative association between culmen length and culmen depth for the data set. The results above demonstrate that the longer the culmen or the beak, the less dense it is. We have also calculated the correlation coefficient between the two columns to view the negative association using the [Pearson correlation coefficient](https://en.wikipedia.org/wiki/Pearson_correlation_coefficient#:~:text=In%20statistics%2C%20the%20Pearson%20correlation,between%20two%20sets%20of%20data.)(PCC), referred to as Pearson’s r. The PCC ***is a number between -1 and 1 and measures the linear correlation between two data sets. The Scipy library provides a method called pearsonr() for the same.
+Here we see a negative association between culmen length and culmen depth for the data set. The results above demonstrate that the longer the culmen or the beak, the less dense it is. We have also calculated the correlation coefficient between the two columns to view the negative association using the [Pearson correlation coefficient](https://en.wikipedia.org/wiki/Pearson_correlation_coefficient#:~:text=In%20statistics%2C%20the%20Pearson%20correlation,between%20two%20sets%20of%20data.)(PCC), referred to as Pearson’s r. The PCC *is a number between -1 and 1 and measures the linear correlation between two data sets. The Scipy library provides a method called pearsonr() for the same.
 
 ### Drilling down at Species level
 
