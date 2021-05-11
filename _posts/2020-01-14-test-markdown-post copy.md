@@ -25,7 +25,7 @@ Well, the phenomenon that we just saw above is a classic case of **Simpson’s p
 
 ![Image by [Carlos Ribeiro](https://pixabay.com/users/ctribeiro-680997/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1708964) from [Pixabay](https://pixabay.com/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1708964)](https://cdn-images-1.medium.com/max/3840/1*4VUfxWFvYDhgg7d80vnMuA.jpeg)
 
-***As per Wikipedia, Simpson’s paradox, **also called the **Yule-Simpson effect**, can be defined as follows:*
+As per Wikipedia, **Simpson’s paradox** also called the **Yule-Simpson effect**, can be defined as follows:*
 >  [Simpson’s Paradox is a phenomenon in probability and statistics, in which a trend appears in several different groups of data but disappears or reverses when these groups are combined.](https://en.wikipedia.org/wiki/Simpson%27s_paradox)
 
 In other words, the same data set can appear to show opposite trends depending on how it’s grouped. This is exactly what we saw in the smokers vs. non-smokers mortality rate example. When grouped age-wise, the data shows that non-smokers tend to live longer. But when we see an overall picture, smokers tend to live longer. So what is exactly happening here? Why are there different interpretations of the same data, and what is evading our eye in the first case? Well, The culprit, in this case, is called the **Lurking variable —** a conditional variable ****that can affect our conclusions about the relationship between two variables — smoking and mortality in our case.
