@@ -122,7 +122,7 @@ window.onload = wrap_img;
 
 <h2 id="identifying-the-lurking-variable-">Identifying the Lurking variable 🔍</h2>
 
-<p><img src="https://cdn-images-1.medium.com/max/2000/1*vkiDwWnsTb6BxaJU1XPFvg.png" alt="Image by [Peggy_Marco](https://pixabay.com/users/peggy_marco-1553824/) from [Pixabay](https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1708964)" /></p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*vkiDwWnsTb6BxaJU1XPFvg.png" alt="Alt Text" /></p>
 
 <p>Lurking means to be present in a latent or barely discernible state, although still having an effect. In the same way, a lurking variable is a variable that isn’t included in the analysis but, if included, can considerably change the outcome of the analysis.</p>
 
@@ -132,14 +132,8 @@ window.onload = wrap_img;
 
 <p>Here is another example where the effect of Simpson’s Paradox is easily visible. We all are aware of the <a href="https://allisonhorst.github.io/palmerpenguins/articles/intro.html"><strong>Palmer Penguins</strong></a>🐧 <a href="https://allisonhorst.github.io/palmerpenguins/articles/intro.html">dataset</a>** — the drop-in replacement for the famous iris dataset. The dataset consists of details about three species of penguins, including their culmen length and depth, their flipper length, body mass, and sex. The culmen is essentially the upper ridge of a penguin’s beak, while their wings are called flippers. The dataset is <a href="https://www.kaggle.com/parulpandey/palmer-archipelago-antarctica-penguin-data?select=penguins_size.csv">available for download</a> on Kaggle.</p>
 
-<table>
-  <tbody>
-    <tr>
-      <td>![<a href="https://www.freepik.com/vectors/nature">Nature vector created by brgfx — www.freepik.com</a></td>
-      <td>Attribution 1.0 Generic (<a href="https://creativecommons.org/licenses/by/1.0/">CC BY 1.0</a>)](https://cdn-images-1.medium.com/max/2000/1*gIOJSSoVH7i0GyOAtV0ZfA.jpeg)</td>
-    </tr>
-  </tbody>
-</table>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*gIOJSSoVH7i0GyOAtV0ZfA.jpeg" alt="Alt Text" /> 
+Attribution 1.0 Generic ([CC BY 1.0]</p>
 
 <h3 id="importing-the-necessary-libraries-and-the-dataset">Importing the necessary libraries and the dataset</h3>
 
@@ -181,18 +175,18 @@ df.info()
 
 <p>When you drill down further and group the data species-wise, the findings reverse. The ‘hue’ parameter determines which column in the data frame should be used for color encoding.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sns.lmplot(x **=** 'culmen_length_mm',y **=** 'culmen_depth_mm', data **=** df, hue **=** 'species')
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sns.lmplot(x = 'culmen_length_mm',y = 'culmen_depth_mm', data = df, hue = 'species')
 </code></pre></div></div>
 
 <p><img src="https://cdn-images-1.medium.com/max/2000/1*7y1G5oTdu1Lc9tdaSNwCng.png" alt="Alt Text" /></p>
 
 <p>Voila! What we have is a classic example of Simpson’s effect. While the culmen’s length and depth were negatively associated on a group level, the species level data exhibits an opposite association. Thus the type of <strong>species</strong> is a <strong>lurking variable</strong> here. We can also see the person’s coefficient for each of the species using the code below:</p>
 
-<p><img src="https://cdn-images-1.medium.com/max/2000/1*EOm4SCGWijobj30NoQdZlQ.png" alt="" /></p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*EOm4SCGWijobj30NoQdZlQ.png" alt="Alt Text" /></p>
 
-<p><img src="https://cdn-images-1.medium.com/max/2000/1*5MiFXw4wem7giROBCQqeVA.png" alt="" /></p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*5MiFXw4wem7giROBCQqeVA.png" alt="Alt Text" /></p>
 
-<p><img src="https://cdn-images-1.medium.com/max/2000/1*bK7w4jPGD8o6JxV3qXR4qA.png" alt="Images by Author" /></p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*bK7w4jPGD8o6JxV3qXR4qA.png" alt="Alt Text" /></p>
 <blockquote>
   <p><strong>Here is the <a href="https://nbviewer.jupyter.org/github/parulnith/Data-Science-Articles/tree/main/The%20curious%20case%20of%20Simpson%27s%20Paradox/">nbviewer link</a> to the notebook incase you want to follow along.</strong></p>
 </blockquote>
