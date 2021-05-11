@@ -32,7 +32,7 @@ In other words, the same data set can appear to show opposite trends depending o
 
 ## Identifying the Lurking variable 🔍
 
-![Image by [Peggy_Marco](https://pixabay.com/users/peggy_marco-1553824/) from [Pixabay](https://pixabay.com/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1708964)](https://cdn-images-1.medium.com/max/2000/1*vkiDwWnsTb6BxaJU1XPFvg.png)
+![Alt Text](https://cdn-images-1.medium.com/max/2000/1*vkiDwWnsTb6BxaJU1XPFvg.png)
 
 Lurking means to be present in a latent or barely discernible state, although still having an effect. In the same way, a lurking variable is a variable that isn’t included in the analysis but, if included, can considerably change the outcome of the analysis.
 
@@ -42,7 +42,8 @@ The **age groups** are the lurking variable in the example discussed. When the d
 
 Here is another example where the effect of Simpson’s Paradox is easily visible. We all are aware of the [**Palmer Penguins**](https://allisonhorst.github.io/palmerpenguins/articles/intro.html)🐧 [dataset](https://allisonhorst.github.io/palmerpenguins/articles/intro.html)** — the drop-in replacement for the famous iris dataset. The dataset consists of details about three species of penguins, including their culmen length and depth, their flipper length, body mass, and sex. The culmen is essentially the upper ridge of a penguin’s beak, while their wings are called flippers. The dataset is [available for download](https://www.kaggle.com/parulpandey/palmer-archipelago-antarctica-penguin-data?select=penguins_size.csv) on Kaggle.
 
-![[Nature vector created by brgfx — www.freepik.com](https://www.freepik.com/vectors/nature) | Attribution 1.0 Generic ([CC BY 1.0](https://creativecommons.org/licenses/by/1.0/))](https://cdn-images-1.medium.com/max/2000/1*gIOJSSoVH7i0GyOAtV0ZfA.jpeg)
+![Alt Text](https://cdn-images-1.medium.com/max/2000/1*gIOJSSoVH7i0GyOAtV0ZfA.jpeg) 
+Attribution 1.0 Generic ([CC BY 1.0]
 
 ### Importing the necessary libraries and the dataset
 
@@ -75,18 +76,18 @@ Here we see a negative association between culmen length and culmen depth for th
 
 When you drill down further and group the data species-wise, the findings reverse. The ‘hue’ parameter determines which column in the data frame should be used for color encoding.
 
-    sns.lmplot(x **=** 'culmen_length_mm',y **=** 'culmen_depth_mm', data **=** df, hue **=** 'species')
+    sns.lmplot(x = 'culmen_length_mm',y = 'culmen_depth_mm', data = df, hue = 'species')
 
 ![Alt Text](https://cdn-images-1.medium.com/max/2000/1*7y1G5oTdu1Lc9tdaSNwCng.png)
 
 Voila! What we have is a classic example of Simpson’s effect. While the culmen's length and depth were negatively associated on a group level, the species level data exhibits an opposite association. Thus the type of **species** is a **lurking variable** here. We can also see the person's coefficient for each of the species using the code below:
 
 
-![](https://cdn-images-1.medium.com/max/2000/1*EOm4SCGWijobj30NoQdZlQ.png)
+![Alt Text](https://cdn-images-1.medium.com/max/2000/1*EOm4SCGWijobj30NoQdZlQ.png)
 
-![](https://cdn-images-1.medium.com/max/2000/1*5MiFXw4wem7giROBCQqeVA.png)
+![Alt Text](https://cdn-images-1.medium.com/max/2000/1*5MiFXw4wem7giROBCQqeVA.png)
 
-![Images by Author](https://cdn-images-1.medium.com/max/2000/1*bK7w4jPGD8o6JxV3qXR4qA.png)
+![Alt Text](https://cdn-images-1.medium.com/max/2000/1*bK7w4jPGD8o6JxV3qXR4qA.png)
 >  **Here is the [nbviewer link](https://nbviewer.jupyter.org/github/parulnith/Data-Science-Articles/tree/main/The%20curious%20case%20of%20Simpson%27s%20Paradox/) to the notebook incase you want to follow along.**
 
 ## Tools to discover Simpson’s effect 🛠
