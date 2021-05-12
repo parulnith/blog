@@ -5,6 +5,8 @@ description: Statistical tests and analysis can be confounded by a simple misund
 comments: true
 categories: [Statistics]
 show_tags: true
+image: images/2021-05-06-The curious case of Simpson’s Paradox/0.jpeg
+show_image: true
 title: "The curious case of Simpson’s Paradox"
 ---
 
@@ -108,3 +110,4 @@ Detecting Simpson’s effect in a dataset can be tricky and requires some carefu
 
 Data comes with a lot of power and can be easily manipulated to suit our needs and objectives. There are multiple ways of aggregating and grouping data. Depending upon how it is grouped, the data may offer confounding results. It is up to us to carefully assess all the details using the statistical tools and look for lurking variables that might affect our decisions and outcomes.
 
+{{ Cover Image: Photo by Brendan Church on Unsplash }}
