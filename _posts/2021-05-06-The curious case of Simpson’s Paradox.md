@@ -2,6 +2,7 @@
 toc: false
 layout: post
 description: Statistical tests and analysis can be confounded by a simple misunderstanding of the data
+comments: true
 categories: [Statistics]
 show_tags: true
 title: "The curious case of Simpson’s Paradox"
