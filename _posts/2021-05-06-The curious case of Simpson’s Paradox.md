@@ -36,6 +36,8 @@ As per Wikipedia, **Simpson’s paradox** also called the **Yule-Simpson effect*
 
 In other words, the same data set can appear to show opposite trends depending on how it’s grouped. This is exactly what we saw in the smokers vs. non-smokers mortality rate example. When grouped age-wise, the data shows that non-smokers tend to live longer. But when we see an overall picture, smokers tend to live longer. So what is exactly happening here? Why are there different interpretations of the same data, and what is evading our eye in the first case? Well, The culprit, in this case, is called the **Lurking variable —** a conditional variable ****that can affect our conclusions about the relationship between two variables — smoking and mortality in our case.
 
+---
+
 ## Identifying the Lurking variable 🔍
 
 ![Alt Text](https://cdn-images-1.medium.com/max/2000/1*vkiDwWnsTb6BxaJU1XPFvg.png)
@@ -43,6 +45,8 @@ In other words, the same data set can appear to show opposite trends depending o
 Lurking means to be present in a latent or barely discernible state, although still having an effect. In the same way, a lurking variable is a variable that isn’t included in the analysis but, if included, can considerably change the outcome of the analysis.
 
 The **age groups** are the lurking variable in the example discussed. When the data were grouped by age, we saw that the non-smokers were significantly older on average, and thus, more likely to die during the trial period, precisely because they were living longer in general.
+
+---
 
 ## Try it out for yourself. 💻
 
@@ -76,7 +80,7 @@ There are few missing values in the dataset. Let’s get rid of those.
 
 Let’s now visualize the relationship between the **culmen length of the penguins vs. their culmen depth**. We’ll use seaborn’s lmplot method (where “lm” stands for “linear model”)for the same.
 
-![Culmen length vs. culmen depth of the penguins | Image by Author](https://cdn-images-1.medium.com/max/2000/1*pI8zh6NZE_JV262dcpv-iA.png)
+![Alt Text](https://cdn-images-1.medium.com/max/2000/1*pI8zh6NZE_JV262dcpv-iA.png)
 
 Here we see a negative association between culmen length and culmen depth for the data set. The results above demonstrate that the longer the culmen or the beak, the less dense it is. We have also calculated the correlation coefficient between the two columns to view the negative association using the [Pearson correlation coefficient](https://en.wikipedia.org/wiki/Pearson_correlation_coefficient#:~:text=In%20statistics%2C%20the%20Pearson%20correlation,between%20two%20sets%20of%20data.)(PCC), referred to as **Pearson’s r**. The PCC is a number between -1 and 1 and measures the linear correlation between two data sets. The Scipy library provides a method called pearsonr() for the same.
 
@@ -110,4 +114,12 @@ Detecting Simpson’s effect in a dataset can be tricky and requires some carefu
 
 Data comes with a lot of power and can be easily manipulated to suit our needs and objectives. There are multiple ways of aggregating and grouping data. Depending upon how it is grouped, the data may offer confounding results. It is up to us to carefully assess all the details using the statistical tools and look for lurking variables that might affect our decisions and outcomes.
 
-{{ Cover Image: Photo by Brendan Church on Unsplash }}
+---
+
+#### References
+
+- This article was originally published [here](https://towardsdatascience.com/the-curious-case-of-simpsons-paradox-6f178548d7e8?sk=ef5825185b5781525f0de82c9b23bf70).
+
+- Cover Image 
+Photo by [Brendan Church](https://unsplash.com/@bdchu614?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com/?utm_source=medium&utm_medium=referral).
+
