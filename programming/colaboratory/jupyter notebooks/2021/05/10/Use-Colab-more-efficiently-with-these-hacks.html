@@ -197,11 +197,7 @@ window.onload = wrap_img;
 <p>If you are on a budget and have exhausted your GPU resources quota on Kaggle, this hack might come as a respite for you. It is possible to download any dataset seamlessly from Kaggle onto your Colab infrastructure. Here is what you need to do:</p>
 
 <ul>
-  <li>
-    <ol>
-      <li>Download your Kaggle API Token :</li>
-    </ol>
-  </li>
+  <li>Download your Kaggle API Token :</li>
 </ul>
 
 <p><img src="https://cdn-images-1.medium.com/max/2000/1*5YNIeB_jg24OlF-Z5i_AYA.jpeg" alt="Alt Text"></p>
@@ -211,20 +207,14 @@ window.onload = wrap_img;
 <p><img src="https://cdn-images-1.medium.com/max/2000/1*dJ0_4MDuwkOYHrU8I_UsfA.png" alt="Alt Text"></p>
 
 <ul>
-  <li>
-    <ol>
-      <li>Mount Drive in Colab Notebook</li>
-    </ol>
-  </li>
+  <li>Mount Drive in Colab Notebook</li>
 </ul>
 
 <p><img src="https://cdn-images-1.medium.com/max/2000/1*u6CT4f5OiI3HZreF0k1Tqg.png" alt="Alt Text"></p>
 
 <ul>
   <li>
-    <ol>
-      <li>Provide the config path to <code class="language-plaintext highlighter-rouge">kaggle.json</code> and change the current working directory</li>
-    </ol>
+    <p>Provide the config path to <code class="language-plaintext highlighter-rouge">kaggle.json</code> and change the current working directory</p>
 
     <p>import os
  os.environ[‘KAGGLE_CONFIG_DIR’] = “/content/drive/My Drive/Kaggle”</p>
@@ -232,9 +222,7 @@ window.onload = wrap_img;
     <p>%cd /content/drive/MyDrive/Kaggle</p>
   </li>
   <li>
-    <ol>
-      <li>Copy the API of the dataset to be downloaded.</li>
-    </ol>
+    <p>Copy the API of the dataset to be downloaded.</p>
   </li>
 </ul>
 
@@ -256,15 +244,13 @@ window.onload = wrap_img;
 
 <ul>
   <li>
-    <ol>
-      <li>
-        <p>Finally, run the following command to download the datasets:</p>
+    <p>Finally, run the following command to download the datasets:</p>
 
-        <p>!kaggle datasets download -d alexanderbader/forbes-billionaires-2021-30
-  #or 
- !kaggle competitions download -c ieee-fraud-detection</p>
-      </li>
-    </ol>
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>!kaggle datasets download -d alexanderbader/forbes-billionaires-2021-30
+ #or 
+!kaggle competitions download -c ieee-fraud-detection
+</code></pre></div>    </div>
   </li>
 </ul>
 
