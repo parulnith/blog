@@ -32,6 +32,8 @@ Do you end up creating multiple Colab notebooks with names like “untitled 1.ip
 
 ![Alt Text](https://cdn-images-1.medium.com/max/2000/1*zJ5kCgojJOUFAu3jqmYTHw.png)
 
+
+
 ---
 
 
@@ -55,9 +57,11 @@ Here is a demo of how the notification appears even if you navigate to another t
 
 ![Alt Text](https://cdn-images-1.medium.com/max/2000/1*sgv8GJBBPlsdnu92qCXUcA.gif)
 
+
 #### Additional Tip
 >  Do you want this same functionality in your Jupyter Notebooks as well ? Well, I have you covered. You can also enable notifications in your **Jupyter notebooks** for cell completion. For details you can read a blog that I wrote on the same topic - 
 [Enabling notifications in your Jupyter notebooks for cell completion](https://towardsdatascience.com/enabling-notifications-in-your-jupyter-notebooks-for-cell-completion-68d82b02bbc6)
+
 
 ---
 
@@ -72,13 +76,15 @@ This will list all the Colab notebooks in your Google Drive. Additionally, you c
 
 ![Alt Text](https://cdn-images-1.medium.com/max/2128/1*iYWZvJtGrWkQLdsA0Q27yg.png)
 
+
 ---
 
 ### 6. Kaggle Datasets into Google Colab 🏅
 
 If you are on a budget and have exhausted your GPU resources quota on Kaggle, this hack might come as a respite for you. It is possible to download any dataset seamlessly from Kaggle onto your Colab infrastructure. Here is what you need to do:
 
- * Download your Kaggle API Token :**
+ - 1. Download your Kaggle API Token :
+
 
 ![Alt Text](https://cdn-images-1.medium.com/max/2000/1*5YNIeB_jg24OlF-Z5i_AYA.jpeg)
 
@@ -86,18 +92,18 @@ On clicking the. ‘Create New API Token’ tab, a kaggle.json file will be gene
 
 ![Alt Text](https://cdn-images-1.medium.com/max/2000/1*dJ0_4MDuwkOYHrU8I_UsfA.png)
 
- * 2. Mount Drive in Colab Notebook
+ - 2. Mount Drive in Colab Notebook
 
 ![Alt Text](https://cdn-images-1.medium.com/max/2000/1*u6CT4f5OiI3HZreF0k1Tqg.png)
 
-* 3. Provide the config path to `kaggle.json` and change the current working directory
+ - 3. Provide the config path to `kaggle.json` and change the current working directory
 
     import os
     os.environ['KAGGLE_CONFIG_DIR'] = "/content/drive/My Drive/Kaggle"
     
     %cd /content/drive/MyDrive/Kaggle
 
- * 4. Copy the API of the dataset to be downloaded.
+ - 4. Copy the API of the dataset to be downloaded.
 
 For standard datasets, the API can be accessed as follows;
 
@@ -105,11 +111,15 @@ For standard datasets, the API can be accessed as follows;
 
 ###### [Forbes Billionaires 2021 dataset publically available on Kaggle](http://Forbes%20Billionaires%202021%203.0)
 
+
 For datasets linked to competitions, the API is present under the ‘Data’ tab:
 
 ![Alt Text](https://cdn-images-1.medium.com/max/2000/1*65JC4CA097tXAHMCuKr_Dg.png)
+
 ##### [IEEE-CIS Fraud Detection competition](http://IEEE-CIS%20Fraud%20Detection)
-* Finally, run the following command to download the datasets:
+
+
+- 5. Finally, run the following command to download the datasets:
 	 
 	  !kaggle datasets download -d alexanderbader/forbes-billionaires-2021-30
        #or 
