@@ -197,7 +197,11 @@ window.onload = wrap_img;
 <p>If you are on a budget and have exhausted your GPU resources quota on Kaggle, this hack might come as a respite for you. It is possible to download any dataset seamlessly from Kaggle onto your Colab infrastructure. Here is what you need to do:</p>
 
 <ul>
-  <li>Download your Kaggle API Token :**</li>
+  <li>
+    <ol>
+      <li>Download your Kaggle API Token :</li>
+    </ol>
+  </li>
 </ul>
 
 <p><img src="https://cdn-images-1.medium.com/max/2000/1*5YNIeB_jg24OlF-Z5i_AYA.jpeg" alt="Alt Text"></p>
@@ -223,7 +227,7 @@ window.onload = wrap_img;
     </ol>
 
     <p>import os
-  os.environ[‘KAGGLE_CONFIG_DIR’] = “/content/drive/My Drive/Kaggle”</p>
+ os.environ[‘KAGGLE_CONFIG_DIR’] = “/content/drive/My Drive/Kaggle”</p>
 
     <p>%cd /content/drive/MyDrive/Kaggle</p>
   </li>
@@ -245,18 +249,22 @@ window.onload = wrap_img;
 <p>For datasets linked to competitions, the API is present under the ‘Data’ tab:</p>
 
 <p><img src="https://cdn-images-1.medium.com/max/2000/1*65JC4CA097tXAHMCuKr_Dg.png" alt="Alt Text"></p>
+
 <h5 id="ieee-cis-fraud-detection-competition">
 <a class="anchor" href="#ieee-cis-fraud-detection-competition" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="http://IEEE-CIS%20Fraud%20Detection">IEEE-CIS Fraud Detection competition</a>
 </h5>
+
 <ul>
   <li>
-    <p>Finally, run the following command to download the datasets:</p>
+    <ol>
+      <li>
+        <p>Finally, run the following command to download the datasets:</p>
 
-    <div class="language-plaintext highlighter-rouge">
-<div class="highlight"><pre class="highlight"><code>!kaggle datasets download -d alexanderbader/forbes-billionaires-2021-30
- #or 
-!kaggle competitions download -c ieee-fraud-detection
-</code></pre></div>    </div>
+        <p>!kaggle datasets download -d alexanderbader/forbes-billionaires-2021-30
+  #or 
+ !kaggle competitions download -c ieee-fraud-detection</p>
+      </li>
+    </ol>
   </li>
 </ul>
 
