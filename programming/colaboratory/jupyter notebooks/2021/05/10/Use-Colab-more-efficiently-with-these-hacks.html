@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Use Colab more efficiently with these hacks | Breaking the Jargons</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Use Colab more efficiently with these hacks" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Making the most of Google Colab notebooks" />
+<meta property="og:description" content="Making the most of Google Colab notebooks" />
+<link rel="canonical" href="https://parulnith.github.io/blog/programming/colaboratory/jupyter%20notebooks/2021/05/10/Use-Colab-more-efficiently-with-these-hacks.html" />
+<meta property="og:url" content="https://parulnith.github.io/blog/programming/colaboratory/jupyter%20notebooks/2021/05/10/Use-Colab-more-efficiently-with-these-hacks.html" />
+<meta property="og:site_name" content="Breaking the Jargons" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-05-10T00:00:00-05:00" />
+<script type="application/ld+json">
+{"url":"https://parulnith.github.io/blog/programming/colaboratory/jupyter%20notebooks/2021/05/10/Use-Colab-more-efficiently-with-these-hacks.html","@type":"BlogPosting","headline":"Use Colab more efficiently with these hacks","dateModified":"2021-05-10T00:00:00-05:00","datePublished":"2021-05-10T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://parulnith.github.io/blog/programming/colaboratory/jupyter%20notebooks/2021/05/10/Use-Colab-more-efficiently-with-these-hacks.html"},"description":"Making the most of Google Colab notebooks","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://parulnith.github.io/blog/feed.xml" title="Breaking the Jargons" /><link rel="shortcut icon" type="image/x-icon" href="/blog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/blog/">Breaking the Jargons</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/blog/about/">About Me</a><a class="page-link" href="/blog/about/">About Me</a><a class="page-link" href="/blog/search/">Search</a><a class="page-link" href="/blog/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Use Colab more efficiently with these hacks</h1><p class="page-description">Making the most of Google Colab notebooks</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-05-10T00:00:00-05:00" itemprop="datePublished">
+        May 10, 2021
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      5 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/blog/categories/#Programming">Programming</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/blog/categories/#Colaboratory">Colaboratory</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/blog/categories/#Jupyter Notebooks">Jupyter Notebooks</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul class="section-nav">
+<li class="toc-entry toc-h3"><a href="#1-using-local-runtimes-">1. Using local runtimes 🖥</a></li>
+<li class="toc-entry toc-h3"><a href="#2-scratchpad-">2. Scratchpad 📃</a></li>
+<li class="toc-entry toc-h3"><a href="#3-open-github-jupyter-notebooks-directly-in-colab-">3. Open GitHub Jupyter Notebooks directly in Colab 📖</a></li>
+<li class="toc-entry toc-h3"><a href="#4-get-notified-of-completed-cell-executions-">4. Get Notified of completed cell executions 🔔</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#additional-tip">Additional Tip</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h3"><a href="#5-search-for-all-notebooks-in-drive-">5. Search for all notebooks in drive 🔍</a></li>
+<li class="toc-entry toc-h3"><a href="#6-kaggle-datasets-into-google-colab-">6. Kaggle Datasets into Google Colab 🏅</a>
+<ul>
+<li class="toc-entry toc-h6"><a href="#forbes-billionaires-2021-dataset-publically-available-on-kaggle">Forbes Billionaires 2021 dataset publically available on Kaggle</a></li>
+<li class="toc-entry toc-h5"><a href="#ieee-cis-fraud-detection-competition">IEEE-CIS Fraud Detection competition</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h3"><a href="#7-accessing-visual-studio-codevs-code-on-colab-">7. Accessing Visual Studio Code(VS Code) on Colab 💻</a></li>
+<li class="toc-entry toc-h3"><a href="#8-data-table-extension-">8. Data Table extension 🗄</a></li>
+<li class="toc-entry toc-h3"><a href="#9-comparing-notebooks-">9. Comparing Notebooks 👀</a></li>
+<li class="toc-entry toc-h3"><a href="#wrap-up">Wrap Up</a></li>
+</ul><p><a href="https://colab.research.google.com/notebooks/intro.ipynb">Colaboratory</a>, or “Colab” for short, are hosted Jupyter Notebooks by Google, They allow you to write and execute Python code via your browser. It is effortless to spin a Colab since it is directly integrated with your Google account. Colab provides free access to GPUs and TPUs, requires zero-configuration, and makes sharing of code seamless.</p>
+
+<p>Colab has an interesting history. It initially started as an internal tool for data analysis at Google. However, later it was launched publically, and since then, many people have been using this tool to accomplish their machine learning tasks. Many students and people who do not have a GPU rely on colab for the free resources to run their machine learning experiments.</p>
+
+<p>This article compiles some useful tips and hacks that I use to get my work done in Colab. I have tried to list most of the sources where I read them first. Hopefully, these tricks should help you to make the most of your Colab notebooks.</p>
+
+<h3 id="1-using-local-runtimes-">
+<a class="anchor" href="#1-using-local-runtimes-" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. Using local runtimes 🖥</h3>
+
+<p>Typically, Colab provides you with free GPU resources. However, If you have your own GPUs and still want to utilize the Colab UI, there is a way. You can use the Colab UI with a local runtime as follows:</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2358/1*6ji2cSekUduGs-pFUH4fFw.png" alt="Alt Text"></p>
+
+<p>This way, you can execute code on your local hardware and access your local file system without leaving the Colab notebook. The <a href="https://research.google.com/colaboratory/local-runtimes.html">official documentation</a> goes deeper into the way it works.</p>
+
+<hr>
+
+<h3 id="2-scratchpad-">
+<a class="anchor" href="#2-scratchpad-" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. Scratchpad 📃</h3>
+
+<p>Do you end up creating multiple Colab notebooks with names like “untitled 1.ipynb” and “untitled 2.ipynb” etc.? I guess most of us are sail in the same boat in this regard. If that’s the case, then the <a href="https://colab.research.google.com/notebooks/empty.ipynb">Cloud scratchpad notebook</a> might be for you. The Cloud scratchpad is a special notebook available at the URL — <a href="https://colab.research.google.com/notebooks/empty.ipynb">https://colab.research.google.com/notebooks/empty.ipynb</a> that is not automatically saved to your drive account. It is great for experimentation or nontrivial work and doesn’t take space in Google drive.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*zJ5kCgojJOUFAu3jqmYTHw.png" alt="Alt Text"></p>
+
+<hr>
+
+<h3 id="3-open-github-jupyter-notebooks-directly-in-colab-">
+<a class="anchor" href="#3-open-github-jupyter-notebooks-directly-in-colab-" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. Open GitHub Jupyter Notebooks directly in Colab 📖</h3>
+
+<p>Colab notebooks are designed in a way that they can easily integrate with GitHub. This means you can both load and save Colab notebooks to GitHub, directly. There is a handy way to do that, thanks to <a href="https://www.endtoend.ai/blog/githubtocolab/">Seungjae Ryan Lee</a>.</p>
+
+<p>When you’re on a notebook on GitHub which you want to open in Colab, replace github with githubtocolab in the URL, leaving everything else untouched. This opens the same notebook in Colab.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2412/1*wu-uPw3mSjZRqv815L333w.gif" alt="Alt Text"></p>
+
+<hr>
+
+<h3 id="4-get-notified-of-completed-cell-executions-">
+<a class="anchor" href="#4-get-notified-of-completed-cell-executions-" aria-hidden="true"><span class="octicon octicon-link"></span></a>4. Get Notified of completed cell executions 🔔</h3>
+
+<p>Colab can notify you of completed executions even if you switch to another tab, window, or application. You can enable it via Tools → Settings → Site → Show desktop notifications (and allow browser notifications once prompted) to check it out.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2076/1*i5apguaDKcITqss1h_ZA3g.jpeg" alt="Alt Text"></p>
+
+<p>Here is a demo of how the notification appears even if you navigate to another tab.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*sgv8GJBBPlsdnu92qCXUcA.gif" alt="Alt Text"></p>
+
+<h4 id="additional-tip">
+<a class="anchor" href="#additional-tip" aria-hidden="true"><span class="octicon octicon-link"></span></a>Additional Tip</h4>
+<blockquote>
+  <p>Do you want this same functionality in your Jupyter Notebooks as well ? Well, I have you covered. You can also enable notifications in your <strong>Jupyter notebooks</strong> for cell completion. For details you can read a blog that I wrote on the same topic - 
+<a href="https://towardsdatascience.com/enabling-notifications-in-your-jupyter-notebooks-for-cell-completion-68d82b02bbc6">Enabling notifications in your Jupyter notebooks for cell completion</a></p>
+</blockquote>
+
+<hr>
+
+<h3 id="5-search-for-all-notebooks-in-drive-">
+<a class="anchor" href="#5-search-for-all-notebooks-in-drive-" aria-hidden="true"><span class="octicon octicon-link"></span></a>5. Search for all notebooks in drive 🔍</h3>
+
+<p>Do you want to search for a specific Colab notebook in the drive? Navigate to the Drive search box and add :</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>application/vnd.google.colaboratory
+</code></pre></div></div>
+
+<p>This will list all the Colab notebooks in your Google Drive. Additionally, you can also specify the title and ownership of a specific notebook. For instance, if I want to search for a notebook created by me, having ‘Transfer’ in its title, I would mention the following:</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2128/1*iYWZvJtGrWkQLdsA0Q27yg.png" alt="Alt Text"></p>
+
+<hr>
+
+<h3 id="6-kaggle-datasets-into-google-colab-">
+<a class="anchor" href="#6-kaggle-datasets-into-google-colab-" aria-hidden="true"><span class="octicon octicon-link"></span></a>6. Kaggle Datasets into Google Colab 🏅</h3>
+
+<p>If you are on a budget and have exhausted your GPU resources quota on Kaggle, this hack might come as a respite for you. It is possible to download any dataset seamlessly from Kaggle onto your Colab infrastructure. Here is what you need to do:</p>
+
+<ul>
+  <li>Download your Kaggle API Token :**</li>
+</ul>
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*5YNIeB_jg24OlF-Z5i_AYA.jpeg" alt="Alt Text"></p>
+
+<p>On clicking the. ‘Create New API Token’ tab, a kaggle.json file will be generated that contains your API token. Create a folder named <strong>Kaggle</strong> in your Google Drive and store the kaggle.json file in it.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*dJ0_4MDuwkOYHrU8I_UsfA.png" alt="Alt Text"></p>
+
+<ul>
+  <li>
+    <ol>
+      <li>Mount Drive in Colab Notebook</li>
+    </ol>
+  </li>
+</ul>
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*u6CT4f5OiI3HZreF0k1Tqg.png" alt="Alt Text"></p>
+
+<ul>
+  <li>
+    <ol>
+      <li>Provide the config path to <code class="language-plaintext highlighter-rouge">kaggle.json</code> and change the current working directory</li>
+    </ol>
+
+    <p>import os
+  os.environ[‘KAGGLE_CONFIG_DIR’] = “/content/drive/My Drive/Kaggle”</p>
+
+    <p>%cd /content/drive/MyDrive/Kaggle</p>
+  </li>
+  <li>
+    <ol>
+      <li>Copy the API of the dataset to be downloaded.</li>
+    </ol>
+  </li>
+</ul>
+
+<p>For standard datasets, the API can be accessed as follows;</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*_glS_N-A59cjpQNgxeIP2g.png" alt="Alt Text"></p>
+
+<h6 id="forbes-billionaires-2021-dataset-publically-available-on-kaggle">
+<a class="anchor" href="#forbes-billionaires-2021-dataset-publically-available-on-kaggle" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="http://Forbes%20Billionaires%202021%203.0">Forbes Billionaires 2021 dataset publically available on Kaggle</a>
+</h6>
+
+<p>For datasets linked to competitions, the API is present under the ‘Data’ tab:</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*65JC4CA097tXAHMCuKr_Dg.png" alt="Alt Text"></p>
+<h5 id="ieee-cis-fraud-detection-competition">
+<a class="anchor" href="#ieee-cis-fraud-detection-competition" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="http://IEEE-CIS%20Fraud%20Detection">IEEE-CIS Fraud Detection competition</a>
+</h5>
+<ul>
+  <li>
+    <p>Finally, run the following command to download the datasets:</p>
+
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>!kaggle datasets download -d alexanderbader/forbes-billionaires-2021-30
+ #or 
+!kaggle competitions download -c ieee-fraud-detection
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p><img src="https://cdn-images-1.medium.com/max/2690/1*lSXlKNZJE_U8uEPnKO-UlQ.gif" alt="Alt Text"></p>
+
+<hr>
+
+<h3 id="7-accessing-visual-studio-codevs-code-on-colab-">
+<a class="anchor" href="#7-accessing-visual-studio-codevs-code-on-colab-" aria-hidden="true"><span class="octicon octicon-link"></span></a>7. Accessing Visual Studio Code(VS Code) on Colab 💻</h3>
+
+<p>Do you want to use Colab’s infrastructure without using notebooks? Then this tip might be for you. Thanks to the community’s efforts in creating a package called <a href="https://github.com/abhi1thakur/colabcode">ColabCode</a>. It is now possible to run VSCode in Colab. Technically it is accomplished via <a href="https://github.com/cdr/code-server">Code Server</a> — a <a href="https://code.visualstudio.com/">Visual Studio Code</a> instance running on a remote server accessible through any web browser. Detailed instructions for installing the package can be found here - https://github.com/abhi1thakur/colabcode.</p>
+
+<p>Here is a quick demo of the process.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2990/1*PKprKU7ZuluaFnHpecODrA.gif" alt="Alt Text"></p>
+
+<hr>
+
+<h3 id="8-data-table-extension-">
+<a class="anchor" href="#8-data-table-extension-" aria-hidden="true"><span class="octicon octicon-link"></span></a>8. Data Table extension 🗄</h3>
+
+<p>Colab includes an <a href="https://colab.research.google.com/notebooks/data_table.ipynb#scrollTo=JgBtx0xFFv_i">extension</a> that renders pandas’ dataframes into interactive displays that can be filtered, sorted, and explored dynamically. To enable Data table display for Pandas dataframes, type in the following in the notebook cell:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>%load_ext google.colab.data_table
+
+#To disable the display
+%unload_ext google.colab.data_table
+</code></pre></div></div>
+
+<p>Here is a quick demo of the same: <a href="https://colab.research.google.com/notebooks/data_table.ipyn">https://colab.research.google.com/notebooks/data_table.ipyn</a>b</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2756/1*uaxaUG6PCKpEUIfVoPhuPQ.gif" alt="Alt Text"></p>
+
+<hr>
+
+<h3 id="9-comparing-notebooks-">
+<a class="anchor" href="#9-comparing-notebooks-" aria-hidden="true"><span class="octicon octicon-link"></span></a>9. Comparing Notebooks 👀</h3>
+
+<p>Colab makes it easy to compare two notebooks. Use View &gt; Diff notebooks from the Colab menu or navigate to <a href="https://t.co/wu8ce4ngMl?amp=1">https://colab.research.google.com/diff</a> and paste the Colab URLs of the notebooks to be compared, in the input boxes at the top.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/3448/1*0iKtKyXMXMAfe5-4N5mebg.gif" alt="Alt Text"></p>
+
+<hr>
+
+<h3 id="wrap-up">
+<a class="anchor" href="#wrap-up" aria-hidden="true"><span class="octicon octicon-link"></span></a>Wrap Up</h3>
+
+<p>These were some of the Colab tricks that I have found very useful, especially when it comes to training machine learning models on GPUs. Even though Colab notebooks can only run for at most 12 hours, nevertheless, with the hacks shared above, you should be able to make the most out of your session.</p>
+
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="parulnith/blog"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/blog/programming/colaboratory/jupyter%20notebooks/2021/05/10/Use-Colab-more-efficiently-with-these-hacks.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/blog/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/blog/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/blog/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>Posts on Machine Learning &amp; Data Science</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/parulnith" title="parulnith"><svg class="svg-icon grey"><use xlink:href="/blog/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://www.linkedin.com/in/parulpandeyindia" title="parulpandeyindia"><svg class="svg-icon grey"><use xlink:href="/blog/assets/minima-social-icons.svg#linkedin"></use></svg></a></li><li><a rel="me" href="https://twitter.com/pandeyparul" title="pandeyparul"><svg class="svg-icon grey"><use xlink:href="/blog/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
