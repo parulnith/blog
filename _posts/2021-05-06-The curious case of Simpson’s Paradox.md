@@ -3,6 +3,7 @@ toc: false
 layout: post
 description: Statistical tests and analysis can be confounded by a simple misunderstanding of the data
 categories: [Statistics]
+show_tags: true
 title: "The curious case of Simpson’s Paradox"
 ---
 
@@ -20,6 +21,8 @@ Now, here’s where the things get interesting. On breaking the same data by age
 ### So why the confusion?🤔
 
 Well, the phenomenon that we just saw above is a classic case of **Simpson’s paradox**, which from time to makes way into a lot of data-driven analysis. In this article, we’ll look a little deeper into it and understand how to avoid fallacies like these in our analysis.
+
+---
 
 ## Simpson’s Paradox: Things aren’t always as they seem
 
@@ -40,10 +43,12 @@ The **age groups** are the lurking variable in the example discussed. When the d
 
 ## Try it out for yourself. 💻
 
-Here is another example where the effect of Simpson’s Paradox is easily visible. We all are aware of the [**Palmer Penguins**](https://allisonhorst.github.io/palmerpenguins/articles/intro.html)🐧 [dataset](https://allisonhorst.github.io/palmerpenguins/articles/intro.html)** — the drop-in replacement for the famous iris dataset. The dataset consists of details about three species of penguins, including their culmen length and depth, their flipper length, body mass, and sex. The culmen is essentially the upper ridge of a penguin’s beak, while their wings are called flippers. The dataset is [available for download](https://www.kaggle.com/parulpandey/palmer-archipelago-antarctica-penguin-data?select=penguins_size.csv) on Kaggle.
+Here is another example where the effect of Simpson’s Paradox is easily visible. We all are aware of the [**Palmer Penguins**](https://allisonhorst.github.io/palmerpenguins/articles/intro.html)🐧 [dataset](https://allisonhorst.github.io/palmerpenguins/articles/intro.html) — the drop-in replacement for the famous iris dataset. The dataset consists of details about three species of penguins, including their culmen length and depth, their flipper length, body mass, and sex. The culmen is essentially the upper ridge of a penguin’s beak, while their wings are called flippers. The dataset is [available for download](https://www.kaggle.com/parulpandey/palmer-archipelago-antarctica-penguin-data?select=penguins_size.csv) on Kaggle.
 
 ![Alt Text](https://cdn-images-1.medium.com/max/2000/1*gIOJSSoVH7i0GyOAtV0ZfA.jpeg) 
-Attribution 1.0 Generic ([CC BY 1.0]
+##### Attribution 1.0 Generic ([CC BY 1.0]
+
+----
 
 ### Importing the necessary libraries and the dataset
 
@@ -70,7 +75,7 @@ Let’s now visualize the relationship between the **culmen length of the pengui
 
 ![Culmen length vs. culmen depth of the penguins | Image by Author](https://cdn-images-1.medium.com/max/2000/1*pI8zh6NZE_JV262dcpv-iA.png)
 
-Here we see a negative association between culmen length and culmen depth for the data set. The results above demonstrate that the longer the culmen or the beak, the less dense it is. We have also calculated the correlation coefficient between the two columns to view the negative association using the [Pearson correlation coefficient](https://en.wikipedia.org/wiki/Pearson_correlation_coefficient#:~:text=In%20statistics%2C%20the%20Pearson%20correlation,between%20two%20sets%20of%20data.)(PCC), referred to as Pearson’s r. The PCC *is a number between -1 and 1 and measures the linear correlation between two data sets. The Scipy library provides a method called pearsonr() for the same.
+Here we see a negative association between culmen length and culmen depth for the data set. The results above demonstrate that the longer the culmen or the beak, the less dense it is. We have also calculated the correlation coefficient between the two columns to view the negative association using the [Pearson correlation coefficient](https://en.wikipedia.org/wiki/Pearson_correlation_coefficient#:~:text=In%20statistics%2C%20the%20Pearson%20correlation,between%20two%20sets%20of%20data.)(PCC), referred to as **Pearson’s r**. The PCC is a number between -1 and 1 and measures the linear correlation between two data sets. The Scipy library provides a method called pearsonr() for the same.
 
 ### Drilling down at Species level
 
@@ -90,9 +95,13 @@ Voila! What we have is a classic example of Simpson’s effect. While the culmen
 ![Alt Text](https://cdn-images-1.medium.com/max/2000/1*bK7w4jPGD8o6JxV3qXR4qA.png)
 >  **Here is the [nbviewer link](https://nbviewer.jupyter.org/github/parulnith/Data-Science-Articles/tree/main/The%20curious%20case%20of%20Simpson%27s%20Paradox/) to the notebook incase you want to follow along.**
 
+---
+
 ## Tools to discover Simpson’s effect 🛠
 
 Detecting Simpson’s effect in a dataset can be tricky and requires some careful observation and analysis. However, since this issue pops up from time to time in the statistical world, few tools have been created to help us deal with it. A paper titled “[Using Simpson’s Paradox to Discover Interesting Patterns in Behavioral Data](https://arxiv.org/abs/1805.03094).” was released in 2018, highlighting a data-driven discovery method that leverages Simpson’s paradox to uncover interesting patterns in behavioral data. *The method systematically disaggregates data to identify subgroups within a population whose behavior deviates significantly from the rest of the population. *It is a great read and also has the link to the code.
+
+---
 
 ## Conclusion
 
