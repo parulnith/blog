@@ -1,4 +1,4 @@
-﻿---
+---
 toc: true
 layout: post
 description: Making the most of Google Colab notebooks
