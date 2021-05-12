@@ -4,6 +4,7 @@ layout: post
 description: Making the most of Google Colab notebooks
 comments: true
 categories: [Programming, Colaboratory, Jupyter Notebooks]
+image: images/2021-05-10-Use Colab more efficiently with these hacks/0.png
 show_image: true
 show_tags: true
 title: "Use Colab more efficiently with these hacks"
