@@ -28,10 +28,10 @@
 
   
       ,"page1": {
-          "title": "About Me",
-          "content": "Hi! I’m Parul and I work at H2O.ai .",
-          "url": "https://parulnith.github.io/blog/about/",
-          "relUrl": "/about/",
+          "title": "Talks",
+          "content": "",
+          "url": "https://parulnith.github.io/blog/talks/",
+          "relUrl": "/talks/",
           "date": ""
       }
       
