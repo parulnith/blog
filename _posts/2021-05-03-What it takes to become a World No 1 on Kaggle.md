@@ -89,7 +89,7 @@ To achieve a world no 1 rank is no mean feat, and Guanshuo’s relentless attitu
 
 * [Meet Yauhen: The first and the only Kaggle Grandmaster from Belarus.](https://towardsdatascience.com/meet-yauhen-the-first-and-the-only-kaggle-grandmaster-from-belarus-ee6ae3c86c65)
 
-* [*udalai Rajkumar: How a passion for numbers turned this Mechanical Engineer into a Kaggle Grandmaster](https://towardsdatascience.com/how-a-passion-for-numbers-turned-this-mechanical-engineer-into-a-kaggle-grandmaster-8b1ae218afc)
+* [Sudalai Rajkumar: How a passion for numbers turned this Mechanical Engineer into a Kaggle Grandmaster](https://towardsdatascience.com/how-a-passion-for-numbers-turned-this-mechanical-engineer-into-a-kaggle-grandmaster-8b1ae218afc)
 
 * [Gabor Fodor: The inspiring journey of the ‘Beluga’ of Kaggle World 🐋](https://towardsdatascience.com/the-inspiring-journey-of-the-beluga-of-kaggle-world-5409e740a21b?sk=a500e2014feb175eae520931ff43b419)
 

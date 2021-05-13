@@ -117,7 +117,7 @@ Voila! What we have is a classic example of Simpson’s effect. While the culmen
 
 ## Tools to discover Simpson’s effect 🛠
 
-Detecting Simpson’s effect in a dataset can be tricky and requires some careful observation and analysis. However, since this issue pops up from time to time in the statistical world, few tools have been created to help us deal with it. A paper titled “[Using Simpson’s Paradox to Discover Interesting Patterns in Behavioral Data](https://arxiv.org/abs/1805.03094).” was released in 2018, highlighting a data-driven discovery method that leverages Simpson’s paradox to uncover interesting patterns in behavioral data. *The method systematically disaggregates data to identify subgroups within a population whose behavior deviates significantly from the rest of the population. *It is a great read and also has the link to the code.
+Detecting Simpson’s effect in a dataset can be tricky and requires some careful observation and analysis. However, since this issue pops up from time to time in the statistical world, few tools have been created to help us deal with it. A paper titled “[Using Simpson’s Paradox to Discover Interesting Patterns in Behavioral Data](https://arxiv.org/abs/1805.03094).” was released in 2018, highlighting a data-driven discovery method that leverages Simpson’s paradox to uncover interesting patterns in behavioral data. The method systematically disaggregates data to identify subgroups within a population whose behavior deviates significantly from the rest of the population. It is a great read and also has the link to the code.
 
 ---
 
