@@ -18,10 +18,10 @@ In this series of interviews, I present the stories of established Data Scientis
 
 In this article, I shall be sharing my interaction with Guanshuo Xu. He is a **Kaggle Competitions Grandmaster** and a **Data Scientist** at [H2O.ai](https://www.h2o.ai/). Guanshuo obtained his Ph.D. in Electrical & Electronics Engineering at the [New Jersey Institute of Technology](https://www.linkedin.com/school/njit/), focusing on machine learning-based image forensics and steganalysis.
 
-Guanshuo is a man of many accomplishments. His methods for real-world image tampering detection and localization won second place in the [First IEEE Image Forensics Challenge](http://www.grip.unina.it/images/wifs2013/Ranking_Phase1.pdf)**. His architectural design of deep neural networks outperformed traditional feature-based methods for the first time in image steganalysis. More recently, Guanshuo also achieved the world rank #1 in the competition’s tier on Kaggle with a win in the [Alaska2 Image Steganalysis](https://www.kaggle.com/c/alaska2-image-steganalysis) and [RSNA STR Pulmonary Embolism Detection competitions.](https://www.kaggle.com/c/rsna-str-pulmonary-embolism-detection)
+Guanshuo is a man of many accomplishments. His methods for real-world image tampering detection and localization won second place in the [First IEEE Image Forensics Challenge](http://www.grip.unina.it/images/wifs2013/Ranking_Phase1.pdf). His architectural design of deep neural networks outperformed traditional feature-based methods for the first time in image steganalysis. More recently, Guanshuo also achieved the world rank #1 in the competition’s tier on Kaggle with a win in the [Alaska2 Image Steganalysis](https://www.kaggle.com/c/alaska2-image-steganalysis) and [RSNA STR Pulmonary Embolism Detection competitions.](https://www.kaggle.com/c/rsna-str-pulmonary-embolism-detection)
 >  *Here is also a [link](https://www.youtube.com/watch?v=lkUhibNLMNk) to Guanshuo’s interview at **CTDS.show** where he discusses his achievements on Kaggle.*
 
-*In this interview, we shall know more about his academic background, passion for Kaggle, and his journey to the number one title. Here is an excerpt from my conversation with Gunashuo:*
+*In this interview, we shall know more about his academic background, passion for Kaggle, and his journey to the number one title. Here is an excerpt from my conversation with Guanshuo:*
 
 ---
 
@@ -35,7 +35,7 @@ Guanshuo is a man of many accomplishments. His methods for real-world image tamp
 **How did your tryst with Kaggle begin, and what kept you motivated throughout your grandmaster’s journey?**
 
 ![Alt text](https://cdn-images-1.medium.com/max/2000/1*ZYeY6_LI2lqvazbBbo0g2g.png)
-<sub>Gunahuo's Kaggle Profile</sub>
+<sub>[Guanshuo's Kaggle Profile](https://www.kaggle.com/wowfattie/competitions)</sub>
 
 
 *Guanshuo*: From the time I discovered kaggle, I have been addicted to it. Some of the motivating factors for continuous competing on Kaggle would be the combined satisfaction of winning competitions and prize money, learning new techniques, widening and deepening my understanding of machine learning, and building surprisingly effective models.
@@ -53,7 +53,7 @@ Guanshuo is a man of many accomplishments. His methods for real-world image tamp
 **How do you typically approach a Kaggle problem?**
 
 ![Alt Text](https://cdn-images-1.medium.com/max/2000/1*aVpsNQ44W5wtuObaoFdnoQ.png)
-<sub>A glimpse of Gunashuo's wins on Kaggle</sub>
+<sub>[A glimpse of Gunashuo's wins on Kaggle](https://www.kaggle.com/wowfattie/competitions)</sub>
 
 *Guanshuo*: My approach varies based on the type of problem and the goal of the competition. Nowadays, what I often do is spend days or even weeks on understanding the data and the problem and thinking of a solution which includes, for instance, guessing the distribution of the private test data, proper validation scheme, detailed modeling steps, etc. Once I have a decent picture of the overall approach, I start coding and modeling. This process helps me to gain more understanding and make corrections or adjustments, if necessary, to the overall approach.
 
