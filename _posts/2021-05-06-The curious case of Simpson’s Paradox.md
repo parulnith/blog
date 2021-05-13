@@ -10,6 +10,11 @@ show_image: true
 title: "The curious case of Simpson’s Paradox"
 ---
 
+*This article was originally published [here](https://towardsdatascience.com/the-curious-case-of-simpsons-paradox-6f178548d7e8?sk=ef5825185b5781525f0de82c9b23bf70)*
+
+
+![Alt Text](https://miro.medium.com/max/10032/0*6yc_IK25IZsQ_gt9)
+<sub>Photo by [Brendan Church](https://unsplash.com/@bdchu614?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com/?utm_source=medium&utm_medium=referral)</sub>
 
 > Statistics rarely offers a single “right”way of doing anything — [Charles Wheelan](https://en.wikipedia.org/wiki/Charles_Wheelan) in Naked Statistics
 
@@ -17,9 +22,12 @@ In 1996, [Appleton, French, and Vanderpump](https://www.researchgate.net/publica
 
 ![Alt Text](https://cdn-images-1.medium.com/max/2000/1*iDyNS-0t3aqoMWNOY5ySfQ.png)
 
+<sub>The mortality rate of smokers vs. non-smokers</sub>
+
 Now, here’s where the things get interesting. On breaking the same data by age group, we get an entirely different picture. The results show that in most age groups, smokers have a high mortality rate compared to non-smokers.
 
 ![Alt Text](https://cdn-images-1.medium.com/max/2000/1*a_7T9kLqig2uLxiikgnetw.png)
+<sub>Results of the study broken down by age group</sub>
 
 ### So why the confusion?🤔
 
@@ -29,7 +37,9 @@ Well, the phenomenon that we just saw above is a classic case of **Simpson’s p
 
 ## Simpson’s Paradox: Things aren’t always as they seem
 
-![Image by [Carlos Ribeiro](https://pixabay.com/users/ctribeiro-680997/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1708964) from [Pixabay](https://pixabay.com/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1708964)](https://cdn-images-1.medium.com/max/3840/1*4VUfxWFvYDhgg7d80vnMuA.jpeg)
+![Alt Text](https://cdn-images-1.medium.com/max/3840/1*4VUfxWFvYDhgg7d80vnMuA.jpeg)
+<sub>Image by [Carlos Ribeiro](https://pixabay.com/users/ctribeiro-680997/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1708964) from [Pixabay](https://pixabay.com/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1708964)</sub>
+
 
 As per Wikipedia, **Simpson’s paradox** also called the **Yule-Simpson effect**, can be defined as follows:*
 >  [Simpson’s Paradox is a phenomenon in probability and statistics, in which a trend appears in several different groups of data but disappears or reverses when these groups are combined.](https://en.wikipedia.org/wiki/Simpson%27s_paradox)
@@ -42,6 +52,7 @@ In other words, the same data set can appear to show opposite trends depending o
 
 ![Alt Text](https://cdn-images-1.medium.com/max/2000/1*vkiDwWnsTb6BxaJU1XPFvg.png)
 
+
 Lurking means to be present in a latent or barely discernible state, although still having an effect. In the same way, a lurking variable is a variable that isn’t included in the analysis but, if included, can considerably change the outcome of the analysis.
 
 The **age groups** are the lurking variable in the example discussed. When the data were grouped by age, we saw that the non-smokers were significantly older on average, and thus, more likely to die during the trial period, precisely because they were living longer in general.
@@ -53,7 +64,7 @@ The **age groups** are the lurking variable in the example discussed. When the d
 Here is another example where the effect of Simpson’s Paradox is easily visible. We all are aware of the [**Palmer Penguins**](https://allisonhorst.github.io/palmerpenguins/articles/intro.html)🐧 [dataset](https://allisonhorst.github.io/palmerpenguins/articles/intro.html) — the drop-in replacement for the famous iris dataset. The dataset consists of details about three species of penguins, including their culmen length and depth, their flipper length, body mass, and sex. The culmen is essentially the upper ridge of a penguin’s beak, while their wings are called flippers. The dataset is [available for download](https://www.kaggle.com/parulpandey/palmer-archipelago-antarctica-penguin-data?select=penguins_size.csv) on Kaggle.
 
 ![Alt Text](https://cdn-images-1.medium.com/max/2000/1*gIOJSSoVH7i0GyOAtV0ZfA.jpeg) 
-##### Attribution 1.0 Generic ([CC BY 1.0]
+<sub>[Nature vector created by brgfx — www.freepik.com](https://www.freepik.com/vectors/nature) | Attribution 1.0 Generic ([CC BY 1.0](https://creativecommons.org/licenses/by/1.0/))</sub>
 
 ----
 
@@ -114,12 +125,6 @@ Detecting Simpson’s effect in a dataset can be tricky and requires some carefu
 
 Data comes with a lot of power and can be easily manipulated to suit our needs and objectives. There are multiple ways of aggregating and grouping data. Depending upon how it is grouped, the data may offer confounding results. It is up to us to carefully assess all the details using the statistical tools and look for lurking variables that might affect our decisions and outcomes.
 
----
 
-#### References
 
-- This article was originally published [here](https://towardsdatascience.com/the-curious-case-of-simpsons-paradox-6f178548d7e8?sk=ef5825185b5781525f0de82c9b23bf70).
-
-- Cover Image 
-Photo by [Brendan Church](https://unsplash.com/@bdchu614?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com/?utm_source=medium&utm_medium=referral).
 
