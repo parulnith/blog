@@ -101,33 +101,26 @@ window.onload = wrap_img;
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul class="section-nav">
-<li class="toc-entry toc-h3"><a href="#1-using-local-runtimes-">1. Using local runtimes 🖥</a></li>
-<li class="toc-entry toc-h3"><a href="#2-scratchpad-">2. Scratchpad 📃</a></li>
-<li class="toc-entry toc-h3"><a href="#3-open-github-jupyter-notebooks-directly-in-colab-">3. Open GitHub Jupyter Notebooks directly in Colab 📖</a></li>
-<li class="toc-entry toc-h3"><a href="#4-get-notified-of-completed-cell-executions-">4. Get Notified of completed cell executions 🔔</a>
-<ul>
-<li class="toc-entry toc-h4"><a href="#additional-tip">Additional Tip</a></li>
-</ul>
-</li>
-<li class="toc-entry toc-h3"><a href="#5-search-for-all-notebooks-in-drive-">5. Search for all notebooks in drive 🔍</a></li>
-<li class="toc-entry toc-h3"><a href="#6-kaggle-datasets-into-google-colab-">6. Kaggle Datasets into Google Colab 🏅</a>
-<ul>
-<li class="toc-entry toc-h6"><a href="#forbes-billionaires-2021-dataset-publically-available-on-kaggle">Forbes Billionaires 2021 dataset publically available on Kaggle</a></li>
-<li class="toc-entry toc-h5"><a href="#ieee-cis-fraud-detection-competition">IEEE-CIS Fraud Detection competition</a></li>
-</ul>
-</li>
-<li class="toc-entry toc-h3"><a href="#7-accessing-visual-studio-codevs-code-on-colab-">7. Accessing Visual Studio Code(VS Code) on Colab 💻</a></li>
-<li class="toc-entry toc-h3"><a href="#8-data-table-extension-">8. Data Table extension 🗄</a></li>
-<li class="toc-entry toc-h3"><a href="#9-comparing-notebooks-">9. Comparing Notebooks 👀</a></li>
-<li class="toc-entry toc-h3"><a href="#wrap-up">Wrap Up</a></li>
-</ul><p><a href="https://colab.research.google.com/notebooks/intro.ipynb">Colaboratory</a>, or “Colab” for short, are hosted Jupyter Notebooks by Google, They allow you to write and execute Python code via your browser. It is effortless to spin a Colab since it is directly integrated with your Google account. Colab provides free access to GPUs and TPUs, requires zero-configuration, and makes sharing of code seamless.</p>
+<li class="toc-entry toc-h2"><a href="#1-using-local-runtimes-">1. Using local runtimes 🖥</a></li>
+<li class="toc-entry toc-h2"><a href="#2-scratchpad-">2. Scratchpad 📃</a></li>
+<li class="toc-entry toc-h2"><a href="#3-open-github-jupyter-notebooks-directly-in-colab-">3. Open GitHub Jupyter Notebooks directly in Colab 📖</a></li>
+<li class="toc-entry toc-h2"><a href="#4-get-notified-of-completed-cell-executions-">4. Get Notified of completed cell executions 🔔</a></li>
+<li class="toc-entry toc-h2"><a href="#5-search-for-all-notebooks-in-drive-">5. Search for all notebooks in drive 🔍</a></li>
+<li class="toc-entry toc-h2"><a href="#6-kaggle-datasets-into-google-colab-">6. Kaggle Datasets into Google Colab 🏅</a></li>
+<li class="toc-entry toc-h2"><a href="#7-accessing-visual-studio-codevs-code-on-colab-">7. Accessing Visual Studio Code(VS Code) on Colab 💻</a></li>
+<li class="toc-entry toc-h2"><a href="#8-data-table-extension-">8. Data Table extension 🗄</a></li>
+<li class="toc-entry toc-h2"><a href="#9-comparing-notebooks-">9. Comparing Notebooks 👀</a></li>
+<li class="toc-entry toc-h2"><a href="#wrap-up">Wrap Up</a></li>
+</ul><p><em>This article was originally published <a href="https://towardsdatascience.com/use-colab-more-efficiently-with-these-hacks-fc89ef1162d8?sk=e1a969fa2e30792b8d362af67dd14f0e">here</a>.</em></p>
+
+<p><a href="https://colab.research.google.com/notebooks/intro.ipynb">Colaboratory</a>, or “Colab” for short, are hosted Jupyter Notebooks by Google, They allow you to write and execute Python code via your browser. It is effortless to spin a Colab since it is directly integrated with your Google account. Colab provides free access to GPUs and TPUs, requires zero-configuration, and makes sharing of code seamless.</p>
 
 <p>Colab has an interesting history. It initially started as an internal tool for data analysis at Google. However, later it was launched publically, and since then, many people have been using this tool to accomplish their machine learning tasks. Many students and people who do not have a GPU rely on colab for the free resources to run their machine learning experiments.</p>
 
 <p>This article compiles some useful tips and hacks that I use to get my work done in Colab. I have tried to list most of the sources where I read them first. Hopefully, these tricks should help you to make the most of your Colab notebooks.</p>
 
-<h3 id="1-using-local-runtimes-">
-<a class="anchor" href="#1-using-local-runtimes-" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. Using local runtimes 🖥</h3>
+<h2 id="1-using-local-runtimes-">
+<a class="anchor" href="#1-using-local-runtimes-" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. Using local runtimes 🖥</h2>
 
 <p>Typically, Colab provides you with free GPU resources. However, If you have your own GPUs and still want to utilize the Colab UI, there is a way. You can use the Colab UI with a local runtime as follows:</p>
 
@@ -137,8 +130,8 @@ window.onload = wrap_img;
 
 <hr>
 
-<h3 id="2-scratchpad-">
-<a class="anchor" href="#2-scratchpad-" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. Scratchpad 📃</h3>
+<h2 id="2-scratchpad-">
+<a class="anchor" href="#2-scratchpad-" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. Scratchpad 📃</h2>
 
 <p>Do you end up creating multiple Colab notebooks with names like “untitled 1.ipynb” and “untitled 2.ipynb” etc.? I guess most of us are sail in the same boat in this regard. If that’s the case, then the <a href="https://colab.research.google.com/notebooks/empty.ipynb">Cloud scratchpad notebook</a> might be for you. The Cloud scratchpad is a special notebook available at the URL — <a href="https://colab.research.google.com/notebooks/empty.ipynb">https://colab.research.google.com/notebooks/empty.ipynb</a> that is not automatically saved to your drive account. It is great for experimentation or nontrivial work and doesn’t take space in Google drive.</p>
 
@@ -146,8 +139,8 @@ window.onload = wrap_img;
 
 <hr>
 
-<h3 id="3-open-github-jupyter-notebooks-directly-in-colab-">
-<a class="anchor" href="#3-open-github-jupyter-notebooks-directly-in-colab-" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. Open GitHub Jupyter Notebooks directly in Colab 📖</h3>
+<h2 id="3-open-github-jupyter-notebooks-directly-in-colab-">
+<a class="anchor" href="#3-open-github-jupyter-notebooks-directly-in-colab-" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. Open GitHub Jupyter Notebooks directly in Colab 📖</h2>
 
 <p>Colab notebooks are designed in a way that they can easily integrate with GitHub. This means you can both load and save Colab notebooks to GitHub, directly. There is a handy way to do that, thanks to <a href="https://www.endtoend.ai/blog/githubtocolab/">Seungjae Ryan Lee</a>.</p>
 
@@ -157,8 +150,8 @@ window.onload = wrap_img;
 
 <hr>
 
-<h3 id="4-get-notified-of-completed-cell-executions-">
-<a class="anchor" href="#4-get-notified-of-completed-cell-executions-" aria-hidden="true"><span class="octicon octicon-link"></span></a>4. Get Notified of completed cell executions 🔔</h3>
+<h2 id="4-get-notified-of-completed-cell-executions-">
+<a class="anchor" href="#4-get-notified-of-completed-cell-executions-" aria-hidden="true"><span class="octicon octicon-link"></span></a>4. Get Notified of completed cell executions 🔔</h2>
 
 <p>Colab can notify you of completed executions even if you switch to another tab, window, or application. You can enable it via Tools → Settings → Site → Show desktop notifications (and allow browser notifications once prompted) to check it out.</p>
 
@@ -168,17 +161,16 @@ window.onload = wrap_img;
 
 <p><img src="https://cdn-images-1.medium.com/max/2000/1*sgv8GJBBPlsdnu92qCXUcA.gif" alt="Alt Text"></p>
 
-<h4 id="additional-tip">
-<a class="anchor" href="#additional-tip" aria-hidden="true"><span class="octicon octicon-link"></span></a>Additional Tip</h4>
 <blockquote>
-  <p>Do you want this same functionality in your Jupyter Notebooks as well ? Well, I have you covered. You can also enable notifications in your <strong>Jupyter notebooks</strong> for cell completion. For details you can read a blog that I wrote on the same topic - 
+  <p>Additional Tip
+ Do you want this same functionality in your Jupyter Notebooks as well ? Well, I have you covered. You can also enable notifications in your <strong>Jupyter notebooks</strong> for cell completion. For details you can read a blog that I wrote on the same topic - 
 <a href="https://towardsdatascience.com/enabling-notifications-in-your-jupyter-notebooks-for-cell-completion-68d82b02bbc6">Enabling notifications in your Jupyter notebooks for cell completion</a></p>
 </blockquote>
 
 <hr>
 
-<h3 id="5-search-for-all-notebooks-in-drive-">
-<a class="anchor" href="#5-search-for-all-notebooks-in-drive-" aria-hidden="true"><span class="octicon octicon-link"></span></a>5. Search for all notebooks in drive 🔍</h3>
+<h2 id="5-search-for-all-notebooks-in-drive-">
+<a class="anchor" href="#5-search-for-all-notebooks-in-drive-" aria-hidden="true"><span class="octicon octicon-link"></span></a>5. Search for all notebooks in drive 🔍</h2>
 
 <p>Do you want to search for a specific Colab notebook in the drive? Navigate to the Drive search box and add :</p>
 
@@ -191,8 +183,8 @@ window.onload = wrap_img;
 
 <hr>
 
-<h3 id="6-kaggle-datasets-into-google-colab-">
-<a class="anchor" href="#6-kaggle-datasets-into-google-colab-" aria-hidden="true"><span class="octicon octicon-link"></span></a>6. Kaggle Datasets into Google Colab 🏅</h3>
+<h2 id="6-kaggle-datasets-into-google-colab-">
+<a class="anchor" href="#6-kaggle-datasets-into-google-colab-" aria-hidden="true"><span class="octicon octicon-link"></span></a>6. Kaggle Datasets into Google Colab 🏅</h2>
 
 <p>If you are on a budget and have exhausted your GPU resources quota on Kaggle, this hack might come as a respite for you. It is possible to download any dataset seamlessly from Kaggle onto your Colab infrastructure. Here is what you need to do:</p>
 
@@ -230,17 +222,13 @@ window.onload = wrap_img;
 
 <p><img src="https://cdn-images-1.medium.com/max/2000/1*_glS_N-A59cjpQNgxeIP2g.png" alt="Alt Text"></p>
 
-<h6 id="forbes-billionaires-2021-dataset-publically-available-on-kaggle">
-<a class="anchor" href="#forbes-billionaires-2021-dataset-publically-available-on-kaggle" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="http://Forbes%20Billionaires%202021%203.0">Forbes Billionaires 2021 dataset publically available on Kaggle</a>
-</h6>
+<p><sub><a href="http://Forbes%20Billionaires%202021%203.0">Forbes Billionaires 2021 dataset publically available on Kaggle</a></sub></p>
 
 <p>For datasets linked to competitions, the API is present under the ‘Data’ tab:</p>
 
 <p><img src="https://cdn-images-1.medium.com/max/2000/1*65JC4CA097tXAHMCuKr_Dg.png" alt="Alt Text"></p>
 
-<h5 id="ieee-cis-fraud-detection-competition">
-<a class="anchor" href="#ieee-cis-fraud-detection-competition" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="http://IEEE-CIS%20Fraud%20Detection">IEEE-CIS Fraud Detection competition</a>
-</h5>
+<p><sub><a href="http://IEEE-CIS%20Fraud%20Detection">IEEE-CIS Fraud Detection competition</a></sub></p>
 
 <ul>
   <li>
@@ -258,8 +246,8 @@ window.onload = wrap_img;
 
 <hr>
 
-<h3 id="7-accessing-visual-studio-codevs-code-on-colab-">
-<a class="anchor" href="#7-accessing-visual-studio-codevs-code-on-colab-" aria-hidden="true"><span class="octicon octicon-link"></span></a>7. Accessing Visual Studio Code(VS Code) on Colab 💻</h3>
+<h2 id="7-accessing-visual-studio-codevs-code-on-colab-">
+<a class="anchor" href="#7-accessing-visual-studio-codevs-code-on-colab-" aria-hidden="true"><span class="octicon octicon-link"></span></a>7. Accessing Visual Studio Code(VS Code) on Colab 💻</h2>
 
 <p>Do you want to use Colab’s infrastructure without using notebooks? Then this tip might be for you. Thanks to the community’s efforts in creating a package called <a href="https://github.com/abhi1thakur/colabcode">ColabCode</a>. It is now possible to run VSCode in Colab. Technically it is accomplished via <a href="https://github.com/cdr/code-server">Code Server</a> — a <a href="https://code.visualstudio.com/">Visual Studio Code</a> instance running on a remote server accessible through any web browser. Detailed instructions for installing the package can be found here - https://github.com/abhi1thakur/colabcode.</p>
 
@@ -269,8 +257,8 @@ window.onload = wrap_img;
 
 <hr>
 
-<h3 id="8-data-table-extension-">
-<a class="anchor" href="#8-data-table-extension-" aria-hidden="true"><span class="octicon octicon-link"></span></a>8. Data Table extension 🗄</h3>
+<h2 id="8-data-table-extension-">
+<a class="anchor" href="#8-data-table-extension-" aria-hidden="true"><span class="octicon octicon-link"></span></a>8. Data Table extension 🗄</h2>
 
 <p>Colab includes an <a href="https://colab.research.google.com/notebooks/data_table.ipynb#scrollTo=JgBtx0xFFv_i">extension</a> that renders pandas’ dataframes into interactive displays that can be filtered, sorted, and explored dynamically. To enable Data table display for Pandas dataframes, type in the following in the notebook cell:</p>
 
@@ -286,8 +274,8 @@ window.onload = wrap_img;
 
 <hr>
 
-<h3 id="9-comparing-notebooks-">
-<a class="anchor" href="#9-comparing-notebooks-" aria-hidden="true"><span class="octicon octicon-link"></span></a>9. Comparing Notebooks 👀</h3>
+<h2 id="9-comparing-notebooks-">
+<a class="anchor" href="#9-comparing-notebooks-" aria-hidden="true"><span class="octicon octicon-link"></span></a>9. Comparing Notebooks 👀</h2>
 
 <p>Colab makes it easy to compare two notebooks. Use View &gt; Diff notebooks from the Colab menu or navigate to <a href="https://t.co/wu8ce4ngMl?amp=1">https://colab.research.google.com/diff</a> and paste the Colab URLs of the notebooks to be compared, in the input boxes at the top.</p>
 
@@ -295,8 +283,8 @@ window.onload = wrap_img;
 
 <hr>
 
-<h3 id="wrap-up">
-<a class="anchor" href="#wrap-up" aria-hidden="true"><span class="octicon octicon-link"></span></a>Wrap Up</h3>
+<h2 id="wrap-up">
+<a class="anchor" href="#wrap-up" aria-hidden="true"><span class="octicon octicon-link"></span></a>Wrap Up</h2>
 
 <p>These were some of the Colab tricks that I have found very useful, especially when it comes to training machine learning models on GPUs. Even though Colab notebooks can only run for at most 12 hours, nevertheless, with the hacks shared above, you should be able to make the most out of your session.</p>
 
