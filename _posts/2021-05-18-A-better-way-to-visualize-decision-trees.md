@@ -49,7 +49,7 @@ The algorithm of the decision tree models works by repeatedly partitioning the d
 The above excerpt has been taken from an article I wrote on understanding decision trees. This article goes deeper into explaining how the algorithm typically makes a decision.
 
 >
->[Understanding Decision Trees-My notes on Decision Trees from the course — Analytics Edge](https://medium.com/analytics-vidhya/a-guide-to-machine-learning-in-r-for-beginners-decision-trees-c24dfd490abb)
+>[Understanding Decision Trees](https://medium.com/analytics-vidhya/a-guide-to-machine-learning-in-r-for-beginners-decision-trees-c24dfd490abb)
 
 
 
@@ -192,7 +192,7 @@ The output graph can be saved in an SVG format as follows:
 
 The dtreeviz library scores above others when it comes to plotting decision trees. The additional capability of making results interpretable is an excellent add-on; You can isolate a single data point and understand the prediction at a micro-level. This helps in better understanding a model’s predictions, and it also makes it easy to communicate the findings to others. What I have touched here is just the tip of the iceberg. The Github repository and the accompanying article by the author go into more detail, and I’ll highly recommend going through them. The links are in the reference section below.
 
-## References and further reading:
+## References and further reading
 
 -   [The official Github repository of dtreeviz.](https://github.com/parrt/dtreeviz/)
 -   [How to visualize decision trees](https://explained.ai/decision-tree-viz/index.html#sec:1.4)  — A great read on decision tree visualization by creators of dtreeviz.
