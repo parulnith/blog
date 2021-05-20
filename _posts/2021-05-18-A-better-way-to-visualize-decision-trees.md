@@ -4,7 +4,7 @@ layout: post
 description: An open-source package for decision tree visualization and model interpretation
 comments: true
 categories: [Machine Learning, Data Visualization]
-image: images/2021-05-18- better way to visualize Decision Trees with the dtreeviz library/0.png
+image: images/2021-05-18-A-better-way-to-visualize-decision-trees/0.png
 show_image: true
 show_tags: true
 title: "A better way to visualize Decision Trees with the dtreeviz library"
@@ -19,7 +19,7 @@ The  **dtreeviz**  is a python library for decision tree visualization and model
 
 Here is a visual comparison of the visualization generated from default scikit-learn and that from dtreeviz on the famous  [wine quality dataset](https://www.kaggle.com/uciml/red-wine-quality-cortez-et-al-2009). The dataset includes 178 instances and 13 numeric predictive attributes. Each data point can belong to one of the three classes named class_0, class_1, and class_2.
 
-![Alt Text](./images/2021-05-18-A better way to visualize Decision Trees with the dtreeviz library/comparison.png)
+![Alt Text](https://imgur.com/n5WtK4i.png)
 
 <sub>Visual comparison of the visualization generated from default scikit-learn(Left) and that from dtreeviz(Right) on the famous  [wine quality dataset](https://www.kaggle.com/uciml/red-wine-quality-cortez-et-al-2009)</sub>
 
@@ -48,11 +48,11 @@ The algorithm of the decision tree models works by repeatedly partitioning the d
 
 The above excerpt has been taken from an article I wrote on understanding decision trees. This article goes deeper into explaining how the algorithm typically makes a decision.
 
-![Alt text](https://medium.com/analytics-vidhya/a-guide-to-machine-learning-in-r-for-beginners-decision-trees-c24dfd490abb)
+>
+>[Understanding Decision Trees-My notes on Decision Trees from the course — Analytics Edge](https://medium.com/analytics-vidhya/a-guide-to-machine-learning-in-r-for-beginners-decision-trees-c24dfd490abb)
 
-### Understanding Decision Trees
 
-### My notes on Decision Trees from the course — Analytics Edge
+
 
 Now let’s get back to the dtreeviz library and plot a few of them using the wine data mentioned above.
 
@@ -66,7 +66,7 @@ Let’s look at the first few rows of the dataset:
 
 ![Alt text](https://miro.medium.com/max/1159/1*9_4BRH_RMVmkrYcTZHyh4A.png)
 
-A glance at the dataset | Image by Author
+<sub>A glance at the dataset</sub>
 
 The  `quality`  parameter refers to the wine quality and is a score between 0 and 10
 
