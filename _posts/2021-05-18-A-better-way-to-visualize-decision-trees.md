@@ -10,6 +10,7 @@ show_tags: true
 title: "A better way to visualize Decision Trees with the dtreeviz library"
 ---
 
+**Originally published [here](https://towardsdatascience.com/a-better-way-to-visualize-decision-trees-with-the-dtreeviz-library-758994cdf05e?sk=ad5fcdf665e07388a829bb5320be9a6f)**
 
 It is rightly said that a picture is worth a thousand words. This axiom is equally applicable for machine learning models. If one can visualize and interpret the result, it instills more confidence in the model's predictions. Visualizing how a machine learning model works also makes it possible to explain the results to people with less or no machine learning skills. Scikit-learn library inherently comes with the plotting capability for decision trees via the  [sklearn.tree.export_graphviz](http://scikit-learn.org/stable/modules/generated/sklearn.tree.export_graphviz.html) function. However, there are some inconsistencies with the default option. This article will look at an alternative called  [dtreeviz](https://github.com/parrt/dtreeviz)  that renders better looking and intuitive visualizations while offering greater interpretability options.
 
