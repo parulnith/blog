@@ -168,9 +168,13 @@ The score here refers to the logit since the problem is a classification one. Th
 **Local Explanations**
 
 Local Explanations help us understand the reasons behind individual predictions and why a particular prediction was made.
-
+```
+ebm_local = ebm.explain_local(X_test[:5], y_test[:5], name='EBM')
+show(ebm_local)
+```
+ 
 ![](https://cdn-images-1.medium.com/max/2000/1*giADRNtdAvltV_E_L59BWg.png)
-<sub>Viewing Local Explanations
+
          
 **Comparing the performance with other models**
 
@@ -184,7 +188,7 @@ If required, InterpretML can also train BlackBox models and provide explanations
 
 ![](https://cdn-images-1.medium.com/max/2000/1*jhruLFrrbUv020peVaLZHA.jpeg)
 
-<sub>Analyzing Blackbox models 
+
          
 ## Conclusion
 
