@@ -30,7 +30,7 @@ Machine Learning is a powerful tool and is being increasingly used in multi-face
 
 ![](https://cdn-images-1.medium.com/max/2000/1*0r29CPjHgDAVwyMki8LSzg.png)
 
-         <sub>Advantages of having Machine learning Interpretability in pipeline 
+         <sub>Advantages of having Machine learning Interpretability in pipeline</sub>
  
 Machine learning interpretability has a vital role to play in such situations. Interpretability gives you the ability not only to discover a model’s mispredictions but analyze and fix the underlying cause too. Interpretability can help you debug your model, detect overfitting and data leakage, and most importantly, inspire trust between models and humans by giving explanations.
 
@@ -45,7 +45,6 @@ Algorithms that are designed to be interpretable are called Glassbox models. The
 Blackbox explainers, on the contrary, are **model agnostic**. They can be applied to any model, and such are **post-hoc** in nature since they are applied after the model has been trained. Blackbox explainers work by treating the model as a BlackBox and assume that they only have access to the model's inputs and outputs. They are particularly useful for complex algorithms like boosted trees and deep neural nets. Blackbox explainers work by repeatedly perturbing the input and analyzing the resultant changes in the model output. The examples include [SHAP](https://arxiv.org/abs/1705.07874), [LIME](https://arxiv.org/abs/1602.04938v3), [Partial Dependence Plot](https://christophm.github.io/interpretable-ml-book/pdp.html)s, etc., to name a few.
 
 ![](https://cdn-images-1.medium.com/max/2000/1*8ov3dWV39WHkx8SG6pMXWA.png)
-
 <sub>Glassbox vs. Blackbox explainability approaches 
 
 ### 2. Local vs. Global explanations
@@ -79,8 +78,7 @@ The following talk from Richard Caruana, the creator of EBM, goes deeper into th
 The vital point to note here is that even after all these improvements, EBM still preserves the interpretability of a linear model but often matches the accuracy of powerful BlackBox models, as shown below:
 
 ![](https://cdn-images-1.medium.com/max/2118/1*-gnKXfPsi5FHYcPiaLK50Q.png)
-
- <sub>Classification performance for models across datasets (rows, columns)|Source : [InterpretML: A Unified Framework for Machine Learning Interpretability](https://arxiv.org/pdf/1909.09223.pdf)
+<sub>Classification performance for models across datasets (rows, columns)|Source : [InterpretML: A Unified Framework for Machine Learning Interpretability](https://arxiv.org/pdf/1909.09223.pdf)</sub>
 ---
  
  ## Case Study: Predicting Employee Attrition Using Machine Learning
