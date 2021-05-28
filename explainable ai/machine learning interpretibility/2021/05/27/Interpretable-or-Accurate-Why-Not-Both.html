@@ -234,9 +234,11 @@ ebm.fit(X_train, y_train)
 
 <p>Global Explanations help better understand the model’s overall behavior and the general model behavior across the population.</p>
 
-<p><img src="https://cdn-images-1.medium.com/max/2720/1*9MeZEKvWkmXYkFJ1my29TQ.png" alt="" /></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ebm_global = ebm.explain_global(name='EBM')
+show(ebm_global)
+</code></pre></div></div>
 
-<p>The first graph that we see is the Summary plot which states that the Overtime variable is the most critical feature in determining if someone will leave the company or not.</p>
+<p>The first graph that we see is the <strong>Summary plot</strong> which states that the Overtime variable is the most critical feature in determining if someone will leave the company or not.</p>
 
 <p><img src="https://cdn-images-1.medium.com/max/2346/1*j_mIItfKqWYn-wZtsccKOQ.gif" alt="" />
 <sub>Viewing Global Explanations</sub></p>
