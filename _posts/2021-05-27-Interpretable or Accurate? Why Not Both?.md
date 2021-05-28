@@ -112,12 +112,14 @@ We’ll use the publicly available [IBM HR Analytics Employee Attrition & Perfor
 Here’s a snapshot of the dataset features.
 
 ![](https://cdn-images-1.medium.com/max/2000/1*lVoiOjtNnnD8QgJBiEDCgQ.png)
+
 <sub>Features of the dataset 
 
 As stated above, InterpretML supports training interpretable models (**glass-box**), as well as explaining existing ML pipelines (**Blackbox **), and is supported across Windows, Mac, and Linux. Currently, the following algorithms are supported in the package:
 
 ![](https://cdn-images-1.medium.com/max/2000/1*n4r1n6T5p0f6c3AJUtWEEg.png)
- <sub>Algorithms are supported by InterpretML 
+ 
+<sub>Algorithms are supported by InterpretML 
 
 **Exploring the dataset**
 
