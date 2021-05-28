@@ -4,7 +4,7 @@ layout: post
 description: Building interpretable Boosting Models with IntepretML
 comments: true
 categories: [Explainable AI, Machine learning Interpretibility]
-image: images/2021-05-27-Interpretable-or-Accurate-Why-Not-Boths/0.png
+image: 2021-05-27-Interpretable or Accurate? Why Not Both/0.png
 show_image: true
 show_tags: true
 title: "Interpretable or Accurate? Why Not Both?"
@@ -30,7 +30,7 @@ Machine Learning is a powerful tool and is being increasingly used in multi-face
 
 ![](https://cdn-images-1.medium.com/max/2000/1*0r29CPjHgDAVwyMki8LSzg.png)
 
-         <sub>Advantages of having Machine learning Interpretability in pipeline</sub>
+<sub>Advantages of having Machine learning Interpretability in pipeline</sub>
  
 Machine learning interpretability has a vital role to play in such situations. Interpretability gives you the ability not only to discover a model’s mispredictions but analyze and fix the underlying cause too. Interpretability can help you debug your model, detect overfitting and data leakage, and most importantly, inspire trust between models and humans by giving explanations.
 
@@ -79,9 +79,10 @@ The vital point to note here is that even after all these improvements, EBM stil
 
 ![](https://cdn-images-1.medium.com/max/2118/1*-gnKXfPsi5FHYcPiaLK50Q.png)
 <sub>Classification performance for models across datasets (rows, columns)|Source : [InterpretML: A Unified Framework for Machine Learning Interpretability](https://arxiv.org/pdf/1909.09223.pdf)</sub>
+
 ---
  
- ## Case Study: Predicting Employee Attrition Using Machine Learning
+## Case Study: Predicting Employee Attrition Using Machine Learning
 >  Here is the [nbviewer link](https://nbviewer.jupyter.org/github/parulnith/Data-Science-Articles/blob/main/Interpretable%20or%20Accurate%3F%20Why%20not%C2%A0both/Interpretable%20or%20Accurate%3F%20Why%20not%C2%A0both.ipynb) to the code notebook in case you want to follow along.
 
 ![[](https://pixabay.com/photos/get-me-out-escape-danger-security-1605906/)](https://cdn-images-1.medium.com/max/3840/1*289fHah3E3BX9CkKrIJegw.jpeg)
@@ -89,7 +90,7 @@ The vital point to note here is that even after all these improvements, EBM stil
 
 It’s time to get our hands dirty. In this section, we’ll train an EBM model to predict employee attrition. We’ll also compare the performance of EBMs with other algorithms. Finally, we’ll try and explain the predictions that our model made with the help of a tool called InterpretML. What is interpretML? Let’s find out.
  
- ### IntepretML: A Unified Framework for Machine Learning Interpretability
+### IntepretML: A Unified Framework for Machine Learning Interpretability
 
 EBMs come packaged within a Machine Learning Interpretability toolkit called [InterpretML](http://Unified Framework for Machine Learning Interpretability). [I](https://github.com/interpretml/interpret)t is an open-source package for training interpretable models as well as explaining black-box systems. Within InterpretML, the explainability algorithms are organized into two major sections, i.e., **Glassbox models** and **Blackbox explanations**. This means that this tool can not only explain the decisions of inherently interpretable models but also provide possible reasoning for black-box models. The following code architecture from the [official paper](https://arxiv.org/pdf/1909.09223.pdf) sums it nicely.
 
@@ -122,7 +123,8 @@ The first task is always to explore the dataset and understand the distributions
 
 ![](https://cdn-images-1.medium.com/max/2720/1*N7-QigRky33FIP3BdsSe6g.png)
 
-![Histogram visualization | Image by Author](https://cdn-images-1.medium.com/max/2410/1*G67PKzjun3wszNTHnWQTHg.gif)
+![](https://cdn-images-1.medium.com/max/2410/1*G67PKzjun3wszNTHnWQTHg.gif)
+<sub>Histogram visualization 
 
 **Training the model**
 
@@ -140,32 +142,36 @@ Global Explanations help better understand the model’s overall behavior and th
 
 The first graph that we see is the Summary plot which states that the Overtime variable is the most critical feature in determining if someone will leave the company or not.
 
-![Viewing Global Explanations | Image by Author](https://cdn-images-1.medium.com/max/2346/1*j_mIItfKqWYn-wZtsccKOQ.gif)
-
+![](https://cdn-images-1.medium.com/max/2346/1*j_mIItfKqWYn-wZtsccKOQ.gif)
+<sub>Viewing Global Explanations 
+         
 We can also look deeper into each feature plot on drilling down.
 
-![Effect of age on attrition | Image by Author](https://cdn-images-1.medium.com/max/2356/1*-FhB-jPrPGb5Y4v31voP7w.png)
-
+![](https://cdn-images-1.medium.com/max/2356/1*-FhB-jPrPGb5Y4v31voP7w.png)
+<sub>Effect of age on attrition
+         
 The score here refers to the logit since the problem is a classification one. The higher you are on the y-axis, the higher your odds of leaving the company. However, after around 35 years of age, this behavior changes, and you have more chances of staying back.
 
 **Local Explanations**
 
 Local Explanations help us understand the reasons behind individual predictions and why a particular prediction was made.
 
-![Viewing Local Explanations | Image by Author](https://cdn-images-1.medium.com/max/2000/1*giADRNtdAvltV_E_L59BWg.png)
-
+![](https://cdn-images-1.medium.com/max/2000/1*giADRNtdAvltV_E_L59BWg.png)
+<sub>Viewing Local Explanations
+         
 **Comparing the performance with other models**
 
 It is also easy to compare the performance of different algorithms and display the results in a dashboard format.
 
-![Comparison Dashboard | Image by Author](https://cdn-images-1.medium.com/max/2920/1*rge1s00o89Id6o6J1pTntA.jpeg)
-
+![](https://cdn-images-1.medium.com/max/2920/1*rge1s00o89Id6o6J1pTntA.jpeg)
+<sub>Comparison Dashboard
 **Training BlackBox models**
 
 If required, InterpretML can also train BlackBox models and provide explanations for the predictions. Here is an example of a trained Random ForestClassifier model on the same dataset and the subsequent explanation provided by LIME.
 
-![Analyzing Blackbox models | Image by Author](https://cdn-images-1.medium.com/max/2000/1*jhruLFrrbUv020peVaLZHA.jpeg)
-
+![](https://cdn-images-1.medium.com/max/2000/1*jhruLFrrbUv020peVaLZHA.jpeg)
+<sub>Analyzing Blackbox models 
+         
 ## Conclusion
 
 This article showcased how EBMs emerge as an excellent choice for creating both interpretable and accurate models. Personally, when machine learning models are used in high-stakes decisions, interpretability should be given a higher preference over a loss of few points of accuracy. It is not only important to see if a model works, but we as machine learning practitioners should also care about how it works and whether it works without any intentional bias.
