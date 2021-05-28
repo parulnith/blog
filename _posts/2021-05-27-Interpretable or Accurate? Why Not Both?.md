@@ -174,6 +174,7 @@ It is also easy to compare the performance of different algorithms and display t
 If required, InterpretML can also train BlackBox models and provide explanations for the predictions. Here is an example of a trained Random ForestClassifier model on the same dataset and the subsequent explanation provided by LIME.
 
 ![](https://cdn-images-1.medium.com/max/2000/1*jhruLFrrbUv020peVaLZHA.jpeg)
+
 <sub>Analyzing Blackbox models 
          
 ## Conclusion
