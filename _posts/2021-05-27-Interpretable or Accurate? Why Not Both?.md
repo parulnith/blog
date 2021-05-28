@@ -13,7 +13,8 @@ title: "Interpretable or Accurate? Why Not Both?"
 *The article was originally published [here](https://towardsdatascience.com/a-better-way-to-visualize-decision-trees-with-the-dtreeviz-library-758994cdf05e?sk=ad5fcdf665e07388a829bb5320be9a6f)*
 
 
-![Image by [Kingrise](https://pixabay.com/users/kingrise-4297632/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=3183317) from [Pixabay](https://pixabay.com/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=3183317)](https://cdn-images-1.medium.com/max/2560/1*kWy3VIPUPhLGl4G2-ccTPw.png)
+![](https://cdn-images-1.medium.com/max/2560/1*kWy3VIPUPhLGl4G2-ccTPw.png)
+<sub>Image by [Kingrise](https://pixabay.com/users/kingrise-4297632/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=3183317) from [Pixabay](https://pixabay.com/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=3183317)
 
 As summed up by [Miller](https://arxiv.org/abs/1706.07269), interpretability refers to the degree to which a human can understand the cause of a decision. A common notion in the machine learning community is that a trade-off exists between accuracy and interpretability. This means that the learning methods that are more accurate offer less interpretability and vice versa. However, of late, there has been a lot of emphasis on creating inherently interpretable models and doing away from their black box counterparts. In fact, Cynthia Rudin argues that [explainable black boxes should be entirely avoided for high-stakes prediction applications](https://www.nature.com/articles/s42256-019-0048-x) that deeply impact human lives. So, the question is whether a model can have higher accuracy without compromising on the interpretability front?
 
@@ -28,7 +29,7 @@ This article will look at the idea behind EBMs and implement them for a Human Re
 Machine Learning is a powerful tool and is being increasingly used in multi-faceted ways across several industries. The AI models are increasingly used to make decisions that affect people’s lives. Therefore, it becomes imperative that the predictions are fair and not biased or discriminating.
 
 ![](https://cdn-images-1.medium.com/max/2000/1*0r29CPjHgDAVwyMki8LSzg.png)
-                              <sub>Advantages of having Machine learning Interpretability in pipeline 
+<sub>Advantages of having Machine learning Interpretability in pipeline 
  
 Machine learning interpretability has a vital role to play in such situations. Interpretability gives you the ability not only to discover a model’s mispredictions but analyze and fix the underlying cause too. Interpretability can help you debug your model, detect overfitting and data leakage, and most importantly, inspire trust between models and humans by giving explanations.
 
