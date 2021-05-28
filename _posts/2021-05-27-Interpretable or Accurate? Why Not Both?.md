@@ -45,6 +45,7 @@ Algorithms that are designed to be interpretable are called Glassbox models. The
 Blackbox explainers, on the contrary, are **model agnostic**. They can be applied to any model, and such are **post-hoc** in nature since they are applied after the model has been trained. Blackbox explainers work by treating the model as a BlackBox and assume that they only have access to the model's inputs and outputs. They are particularly useful for complex algorithms like boosted trees and deep neural nets. Blackbox explainers work by repeatedly perturbing the input and analyzing the resultant changes in the model output. The examples include [SHAP](https://arxiv.org/abs/1705.07874), [LIME](https://arxiv.org/abs/1602.04938v3), [Partial Dependence Plot](https://christophm.github.io/interpretable-ml-book/pdp.html)s, etc., to name a few.
 
 ![](https://cdn-images-1.medium.com/max/2000/1*8ov3dWV39WHkx8SG6pMXWA.png)
+
 <sub>Glassbox vs. Blackbox explainability approaches 
 
 ### 2. Local vs. Global explanations
@@ -78,6 +79,7 @@ The following talk from Richard Caruana, the creator of EBM, goes deeper into th
 The vital point to note here is that even after all these improvements, EBM still preserves the interpretability of a linear model but often matches the accuracy of powerful BlackBox models, as shown below:
 
 ![](https://cdn-images-1.medium.com/max/2118/1*-gnKXfPsi5FHYcPiaLK50Q.png)
+
 <sub>Classification performance for models across datasets (rows, columns)|Source : [InterpretML: A Unified Framework for Machine Learning Interpretability](https://arxiv.org/pdf/1909.09223.pdf)</sub>
 
 ---
@@ -110,7 +112,7 @@ We’ll use the publicly available [IBM HR Analytics Employee Attrition & Perfor
 Here’s a snapshot of the dataset features.
 
 ![](https://cdn-images-1.medium.com/max/2000/1*lVoiOjtNnnD8QgJBiEDCgQ.png)
- <sub>Features of the dataset 
+<sub>Features of the dataset 
 
 As stated above, InterpretML supports training interpretable models (**glass-box**), as well as explaining existing ML pipelines (**Blackbox **), and is supported across Windows, Mac, and Linux. Currently, the following algorithms are supported in the package:
 
