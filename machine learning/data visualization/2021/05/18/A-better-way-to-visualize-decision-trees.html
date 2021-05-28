@@ -97,41 +97,18 @@ window.onload = wrap_img;
     </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <ul class="section-nav">
-<li class="toc-entry toc-h2"><a href="#dtreeviz-library-for-visualizing-tree-based-models">dtreeviz library for visualizing tree-based models</a></li>
-<li class="toc-entry toc-h2"><a href="#superior-visualizations-by-dtreeviz">Superior visualizations by dtreeviz</a>
-<ul>
-<li class="toc-entry toc-h3"><a href="#dataset">Dataset</a></li>
-</ul>
-</li>
-<li class="toc-entry toc-h2"><a href="#visualizations">Visualizations</a>
-<ul>
-<li class="toc-entry toc-h3"><a href="#regression-decision-tree">Regression decision tree</a></li>
-<li class="toc-entry toc-h3"><a href="#classification-decision-tree">Classification decision tree</a></li>
-</ul>
-</li>
-<li class="toc-entry toc-h2"><a href="#customizations">Customizations</a>
-<ul>
-<li class="toc-entry toc-h3"><a href="#scaling-the-image">Scaling the image</a></li>
-<li class="toc-entry toc-h3"><a href="#trees-with-a-left-to-right-alignment">Trees with a left to right alignment</a></li>
-<li class="toc-entry toc-h3"><a href="#prediction-path-of-a-single-observation">Prediction path of a single observation</a></li>
-<li class="toc-entry toc-h3"><a href="#saving-the-image">Saving the image</a></li>
-</ul>
-</li>
-<li class="toc-entry toc-h2"><a href="#conclusion">Conclusion</a></li>
-<li class="toc-entry toc-h2"><a href="#references-and-further-reading">References and further reading</a></li>
-</ul><p><em>Originally published <a href="https://towardsdatascience.com/a-better-way-to-visualize-decision-trees-with-the-dtreeviz-library-758994cdf05e?sk=ad5fcdf665e07388a829bb5320be9a6f">here</a></em></p>
+    <p><em>The article was originally published <a href="https://towardsdatascience.com/a-better-way-to-visualize-decision-trees-with-the-dtreeviz-library-758994cdf05e?sk=ad5fcdf665e07388a829bb5320be9a6f">here</a></em>
+<img src="https://miro.medium.com/max/4480/1*U70J5X9e3PRbjYssNd5K7A.png" alt="" /></p>
 
 <p>It is rightly said that a picture is worth a thousand words. This axiom is equally applicable for machine learning models. If one can visualize and interpret the result, it instills more confidence in the model’s predictions. Visualizing how a machine learning model works also makes it possible to explain the results to people with less or no machine learning skills. Scikit-learn library inherently comes with the plotting capability for decision trees via the  <a href="http://scikit-learn.org/stable/modules/generated/sklearn.tree.export_graphviz.html">sklearn.tree.export_graphviz</a> function. However, there are some inconsistencies with the default option. This article will look at an alternative called  <a href="https://github.com/parrt/dtreeviz">dtreeviz</a>  that renders better looking and intuitive visualizations while offering greater interpretability options.</p>
 
-<h2 id="dtreeviz-library-for-visualizing-tree-based-models">
-<a class="anchor" href="#dtreeviz-library-for-visualizing-tree-based-models" aria-hidden="true"><span class="octicon octicon-link"></span></a>dtreeviz library for visualizing tree-based models</h2>
+<h2 id="dtreeviz-library-for-visualizing-tree-based-models">dtreeviz library for visualizing tree-based models</h2>
 
 <p>The  <strong>dtreeviz</strong>  is a python library for decision tree visualization and model interpretation. According to the information available on its  <a href="https://github.com/parrt/dtreeviz">Github repo</a>, the library currently supports  <a href="https://scikit-learn.org/stable">scikit-learn</a>,  <a href="https://xgboost.readthedocs.io/en/latest">XGBoost</a>,  <a href="https://spark.apache.org/mllib/">Spark MLlib</a>, and  <a href="https://lightgbm.readthedocs.io/en/latest/">LightGBM</a>  trees.</p>
 
 <p>Here is a visual comparison of the visualization generated from default scikit-learn and that from dtreeviz on the famous  <a href="https://www.kaggle.com/uciml/red-wine-quality-cortez-et-al-2009">wine quality dataset</a>. The dataset includes 178 instances and 13 numeric predictive attributes. Each data point can belong to one of the three classes named class_0, class_1, and class_2.</p>
 
-<p><img src="https://imgur.com/n5WtK4i.png" alt="Alt Text"></p>
+<p><img src="https://imgur.com/n5WtK4i.png" alt="Alt Text" /></p>
 
 <p><sub>Visual comparison of the visualization generated from default scikit-learn(Left) and that from dtreeviz(Right) on the famous  <a href="https://www.kaggle.com/uciml/red-wine-quality-cortez-et-al-2009">wine quality dataset</a></sub></p>
 
@@ -152,18 +129,14 @@ window.onload = wrap_img;
 
 <p>We’ll see how the dtreeviz scores over the other visualization libraries through some common examples in the following sections. For the  <strong>installation instructions,</strong>  please refer to the official <a href="https://github.com/parrt/dtreeviz#install">Github page</a>. It can be installed with  <code class="language-plaintext highlighter-rouge">pip install dtreeviz but</code>requires  <code class="language-plaintext highlighter-rouge">graphviz</code>  to be pre-installed.</p>
 
-<h2 id="superior-visualizations-by-dtreeviz">
-<a class="anchor" href="#superior-visualizations-by-dtreeviz" aria-hidden="true"><span class="octicon octicon-link"></span></a>Superior visualizations by dtreeviz</h2>
+<h2 id="superior-visualizations-by-dtreeviz">Superior visualizations by dtreeviz</h2>
 
 <p>Before visualizing a decision tree, it is also essential to understand how it works. A Decision Tree is a supervised learning predictive model that uses a set of binary rules to calculate a target value. It can be used both for regression as well as classification tasks. Decision trees have three main parts:</p>
 
 <ul>
-  <li>
-<strong>Root Node:</strong> The node that performs the first split.</li>
-  <li>
-<strong>Terminal Nodes/Leaf node:</strong> Nodes that predict the outcome.</li>
-  <li>
-<strong>Branches:</strong> arrows connecting nodes, showing the flow from question to answer.</li>
+  <li><strong>Root Node:</strong> The node that performs the first split.</li>
+  <li><strong>Terminal Nodes/Leaf node:</strong> Nodes that predict the outcome.</li>
+  <li><strong>Branches:</strong> arrows connecting nodes, showing the flow from question to answer.</li>
 </ul>
 
 <p>The algorithm of the decision tree models works by repeatedly partitioning the data into multiple sub-spaces so that the outcomes in each final sub-space are as homogeneous as possible. This approach is technically called  <em>recursive partitioning</em>. The algorithm tries to split the data into subsets so that each subgroup is as pure or  <strong>homogeneous</strong>  as possible.</p>
@@ -177,8 +150,7 @@ window.onload = wrap_img;
 
 <p>Now let’s get back to the dtreeviz library and plot a few of them using the wine data mentioned above.</p>
 
-<h3 id="dataset">
-<a class="anchor" href="#dataset" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dataset</h3>
+<h3 id="dataset">Dataset</h3>
 
 <p>We’ll be using the famous red wine dataset from the  <a href="https://archive.ics.uci.edu/ml/datasets/wine+quality"><strong>Wine Quality Data Set</strong></a><strong>.</strong> The dataset consists of few physicochemical tests related to the red variant of the Portuguese “Vinho Verde” wine. The goal is to model wine quality based on these tests. Since this dataset can be viewed both as a classification and regression task, it is apt for our use case. We will not have to use separate datasets for demonstrating the classification and regression examples.</p>
 
@@ -188,24 +160,22 @@ window.onload = wrap_img;
 
 <p>Let’s look at the first few rows of the dataset:</p>
 
-<p><img src="https://miro.medium.com/max/1159/1*9_4BRH_RMVmkrYcTZHyh4A.png" alt="Alt text"></p>
+<p><img src="https://miro.medium.com/max/1159/1*9_4BRH_RMVmkrYcTZHyh4A.png" alt="Alt text" /></p>
 
 <p><sub>A glance at the dataset</sub></p>
 
 <p>The  <code class="language-plaintext highlighter-rouge">quality</code>  parameter refers to the wine quality and is a score between 0 and 10</p>
 
-<p><img src="https://miro.medium.com/max/989/1*7lVBiek6NE6DopRxJ8Z9Ow.png" alt="Alt text"></p>
+<p><img src="https://miro.medium.com/max/989/1*7lVBiek6NE6DopRxJ8Z9Ow.png" alt="Alt text" /></p>
 
-<h2 id="visualizations">
-<a class="anchor" href="#visualizations" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visualizations</h2>
+<h2 id="visualizations">Visualizations</h2>
 
 <p>Creating the features and target variables for ease.</p>
 
-<p>features = wine.drop(‘quality’,axis=1)<br>
+<p>features = wine.drop(‘quality’,axis=1)<br />
 target = wine[‘quality’]</p>
 
-<h3 id="regression-decision-tree">
-<a class="anchor" href="#regression-decision-tree" aria-hidden="true"><span class="octicon octicon-link"></span></a>Regression decision tree</h3>
+<h3 id="regression-decision-tree">Regression decision tree</h3>
 
 <p>For the regression example, we’ll be predicting the  <code class="language-plaintext highlighter-rouge">quality</code>  of the wine.</p>
 
@@ -223,7 +193,7 @@ regr= tree.DecisionTreeRegressor(max_depth=3) regr.fit(features, target)viz = dt
 viz
 </code></pre></div></div>
 
-<p><img src="https://miro.medium.com/max/710/1*qzLs2IBAYSEJwycZ0rc7mg.png" alt="Alt text"></p>
+<p><img src="https://miro.medium.com/max/710/1*qzLs2IBAYSEJwycZ0rc7mg.png" alt="Alt text" /></p>
 
 <p><sub>Regression decision tree </sub></p>
 
@@ -234,8 +204,7 @@ viz
   <li>Leaf nodes indicate the target prediction (mean) with a dashed line.</li>
 </ul>
 
-<h3 id="classification-decision-tree">
-<a class="anchor" href="#classification-decision-tree" aria-hidden="true"><span class="octicon octicon-link"></span></a>Classification decision tree</h3>
+<h3 id="classification-decision-tree">Classification decision tree</h3>
 
 <p>For the classification example, we’ll predict the  <code class="language-plaintext highlighter-rouge">class</code>  of wine from the given six classes. Again the target here is the quality variable.</p>
 
@@ -253,24 +222,21 @@ clf = tree.DecisionTreeClassifier(max_depth=3)clf.fit(features, target)# pick ra
 viz
 </code></pre></div></div>
 
-<p><img src="https://miro.medium.com/max/783/1*uTuE2EtGgpG2VFMQZNKzkw.png" alt="Alt text"></p>
+<p><img src="https://miro.medium.com/max/783/1*uTuE2EtGgpG2VFMQZNKzkw.png" alt="Alt text" /></p>
 
 <p><sub>Classification tree on Wine data</sub></p>
 
 <p>Unlike regressors, the target is a category for the classifiers. Therefore histograms are used to illustrate feature-target space. The stacked histograms might be challenging to read when the number of classes increases. In such cases, the  <code class="language-plaintext highlighter-rouge">histogram type</code>  parameter can be changed to  <code class="language-plaintext highlighter-rouge">bar</code>from  <code class="language-plaintext highlighter-rouge">barstacked,</code>  which is the default.</p>
 
-<h2 id="customizations">
-<a class="anchor" href="#customizations" aria-hidden="true"><span class="octicon octicon-link"></span></a>Customizations</h2>
+<h2 id="customizations">Customizations</h2>
 
 <p>The dtreeviz library also offers a bunch of customizations. I’ll showcase a few of them here:</p>
 
-<h3 id="scaling-the-image">
-<a class="anchor" href="#scaling-the-image" aria-hidden="true"><span class="octicon octicon-link"></span></a>Scaling the image</h3>
+<h3 id="scaling-the-image">Scaling the image</h3>
 
 <p>The scale parameter can be used to scale the overall image.</p>
 
-<h3 id="trees-with-a-left-to-right-alignment">
-<a class="anchor" href="#trees-with-a-left-to-right-alignment" aria-hidden="true"><span class="octicon octicon-link"></span></a>Trees with a left to right alignment</h3>
+<h3 id="trees-with-a-left-to-right-alignment">Trees with a left to right alignment</h3>
 
 <p>The  <code class="language-plaintext highlighter-rouge">orientation</code>  parameter can be set to  <code class="language-plaintext highlighter-rouge">LR</code>  to display the trees from left to right rather than top-down</p>
 
@@ -288,12 +254,11 @@ clf = tree.DecisionTreeClassifier(max_depth=2)clf.fit(features, target)# pick ra
 viz
 </code></pre></div></div>
 
-<p><img src="https://miro.medium.com/max/1294/1*NRK-fvUXv0C-F_ZJMqyGUw.png" alt="Alt text"></p>
+<p><img src="https://miro.medium.com/max/1294/1*NRK-fvUXv0C-F_ZJMqyGUw.png" alt="Alt text" /></p>
 
 <p><sub>Trees with left to right alignment </sub></p>
 
-<h3 id="prediction-path-of-a-single-observation">
-<a class="anchor" href="#prediction-path-of-a-single-observation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prediction path of a single observation</h3>
+<h3 id="prediction-path-of-a-single-observation">Prediction path of a single observation</h3>
 
 <p>The library also helps to isolate and understand which decision path is followed by a specific test observation. This is very useful in explaining the prediction or the results to others. For instance, let’s pick out a random sample from the dataset and traverse its decision path.</p>
 
@@ -311,30 +276,26 @@ X = features.iloc[np.random.randint(0, len(features)),:].values**viz = dtreeviz(
 viz
 </code></pre></div></div>
 
-<p><img src="https://miro.medium.com/max/1323/1*6opIcPQ1sQOUFClZ6C_FzQ.png" alt="Alt text"></p>
+<p><img src="https://miro.medium.com/max/1323/1*6opIcPQ1sQOUFClZ6C_FzQ.png" alt="Alt text" /></p>
 
 <p><sub>Prediction path of a single observation </sub></p>
 
-<h3 id="saving-the-image">
-<a class="anchor" href="#saving-the-image" aria-hidden="true"><span class="octicon octicon-link"></span></a>Saving the image</h3>
+<h3 id="saving-the-image">Saving the image</h3>
 
 <p>The output graph can be saved in an SVG format as follows:</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>viz.save_svg()
 </code></pre></div></div>
 
-<h2 id="conclusion">
-<a class="anchor" href="#conclusion" aria-hidden="true"><span class="octicon octicon-link"></span></a>Conclusion</h2>
+<h2 id="conclusion">Conclusion</h2>
 
 <p>The dtreeviz library scores above others when it comes to plotting decision trees. The additional capability of making results interpretable is an excellent add-on; You can isolate a single data point and understand the prediction at a micro-level. This helps in better understanding a model’s predictions, and it also makes it easy to communicate the findings to others. What I have touched here is just the tip of the iceberg. The Github repository and the accompanying article by the author go into more detail, and I’ll highly recommend going through them. The links are in the reference section below.</p>
 
-<h2 id="references-and-further-reading">
-<a class="anchor" href="#references-and-further-reading" aria-hidden="true"><span class="octicon octicon-link"></span></a>References and further reading</h2>
+<h2 id="references-and-further-reading">References and further reading</h2>
 
 <ul>
   <li><a href="https://github.com/parrt/dtreeviz/">The official Github repository of dtreeviz.</a></li>
-  <li>
-<a href="https://explained.ai/decision-tree-viz/index.html#sec:1.4">How to visualize decision trees</a>  — A great read on decision tree visualization by creators of dtreeviz.</li>
+  <li><a href="https://explained.ai/decision-tree-viz/index.html#sec:1.4">How to visualize decision trees</a>  — A great read on decision tree visualization by creators of dtreeviz.</li>
   <li><a href="https://medium.com/analytics-vidhya/a-guide-to-machine-learning-in-r-for-beginners-decision-trees-c24dfd490abb">Understanding Decision Trees</a></li>
 </ul>
 
