@@ -78,7 +78,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      9 min read
+      8 min read
     
 </span></p>
 
@@ -111,14 +111,8 @@ window.onload = wrap_img;
 
 <p>Machine Learning is a powerful tool and is being increasingly used in multi-faceted ways across several industries. The AI models are increasingly used to make decisions that affect people’s lives. Therefore, it becomes imperative that the predictions are fair and not biased or discriminating.</p>
 
-<table>
-  <tbody>
-    <tr>
-      <td>![Advantages of having Machine learning Interpretability in pipeline</td>
-      <td>Image by Author](https://cdn-images-1.medium.com/max/2000/1*0r29CPjHgDAVwyMki8LSzg.png)</td>
-    </tr>
-  </tbody>
-</table>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*0r29CPjHgDAVwyMki8LSzg.png" alt="" />
+<sub>Advantages of having Machine learning Interpretability in pipeline</sub></p>
 
 <p>Machine learning interpretability has a vital role to play in such situations. Interpretability gives you the ability not only to discover a model’s mispredictions but analyze and fix the underlying cause too. Interpretability can help you debug your model, detect overfitting and data leakage, and most importantly, inspire trust between models and humans by giving explanations.</p>
 
@@ -132,8 +126,9 @@ window.onload = wrap_img;
 
 <p>Blackbox explainers, on the contrary, are <strong>model agnostic</strong>. They can be applied to any model, and such are <strong>post-hoc</strong> in nature since they are applied after the model has been trained. Blackbox explainers work by treating the model as a BlackBox and assume that they only have access to the model’s inputs and outputs. They are particularly useful for complex algorithms like boosted trees and deep neural nets. Blackbox explainers work by repeatedly perturbing the input and analyzing the resultant changes in the model output. The examples include <a href="https://arxiv.org/abs/1705.07874">SHAP</a>, <a href="https://arxiv.org/abs/1602.04938v3">LIME</a>, <a href="https://christophm.github.io/interpretable-ml-book/pdp.html">Partial Dependence Plot</a>s, etc., to name a few.</p>
 
-<p><img src="https://cdn-images-1.medium.com/max/2000/1*8ov3dWV39WHkx8SG6pMXWA.png" alt="" />
-<sub>Glassbox vs. Blackbox explainability approaches | Image by Author</sub></p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*8ov3dWV39WHkx8SG6pMXWA.png" alt="" /></p>
+
+<p><sub>Glassbox vs. Blackbox explainability approaches</sub></p>
 
 <h3 id="2-local-vs-global-explanations">2. Local vs. Global explanations</h3>
 
@@ -153,7 +148,7 @@ window.onload = wrap_img;
 
 <p>To overcome this shortcoming, in the late 80’s statisticians <a href="https://projecteuclid.org/journals/statistical-science/volume-1/issue-3/Generalized-Additive-Models/10.1214/ss/1177013604.full">Hastie &amp; Tibshirani developed generalized additive models</a>(GAMs), which keep the additive structure, and therefore the interpretability of the linear models. Thus, the linear relationship between the response and predictor variable gets <a href="https://datascienceplus.com/generalized-additive-models/">replaced by several non-linear smooth functions</a>(f1, f2, etc.) to model and capture the non-linearities in the data. GAMs are more accurate than simple linear models, and since they do not contain any interactions between features, users can also easily interpret them.</p>
 
-<p><code class="language-plaintext highlighter-rouge">Additive Model: y = **f1**(x1) + **f2**(x2) + … + **fn** (xn)</code></p>
+<p><code class="language-plaintext highlighter-rouge">Additive Model: y = f1(x1) + f2(x2) + … + fn(xn)</code></p>
 
 <p>EBMs are an improvement on the GAMs utilizing techniques like gradient boosting and bagging. EBMs include pairwise interaction terms, which increases their accuracy even further.</p>
 
@@ -165,16 +160,9 @@ window.onload = wrap_img;
 
 <p>The vital point to note here is that even after all these improvements, EBM still preserves the interpretability of a linear model but often matches the accuracy of powerful BlackBox models, as shown below:</p>
 
-<table>
-  <tbody>
-    <tr>
-      <td>![Classification performance for models across datasets (rows, columns)</td>
-      <td>The official paper: <a href="https://arxiv.org/pdf/1909.09223.pdf">InterpretML: A Unified Framework for Machine Learning Interpretability</a>](https://cdn-images-1.medium.com/max/2118/1*-gnKXfPsi5FHYcPiaLK50Q.png)</td>
-    </tr>
-  </tbody>
-</table>
-
-<hr />
+<p><img src="https://cdn-images-1.medium.com/max/2118/1*-gnKXfPsi5FHYcPiaLK50Q.png" alt="" />
+<sub>Classification performance for models across datasets (rows, columns)|Source : <a href="https://arxiv.org/pdf/1909.09223.pdf">InterpretML: A Unified Framework for Machine Learning Interpretability</a>
+—</sub></p>
 
 <p>## Case Study: Predicting Employee Attrition Using Machine Learning</p>
 <blockquote>
@@ -190,14 +178,8 @@ window.onload = wrap_img;
 
 <p>EBMs come packaged within a Machine Learning Interpretability toolkit called <a href="http://Unified Framework for Machine Learning Interpretability">InterpretML</a>. <a href="https://github.com/interpretml/interpret">I</a>t is an open-source package for training interpretable models as well as explaining black-box systems. Within InterpretML, the explainability algorithms are organized into two major sections, i.e., <strong>Glassbox models</strong> and <strong>Blackbox explanations</strong>. This means that this tool can not only explain the decisions of inherently interpretable models but also provide possible reasoning for black-box models. The following code architecture from the <a href="https://arxiv.org/pdf/1909.09223.pdf">official paper</a> sums it nicely.</p>
 
-<table>
-  <tbody>
-    <tr>
-      <td>![code architecture from the official paper</td>
-      <td>Source: <a href="https://arxiv.org/pdf/1909.09223.pdf">InterpretML: A Unified Framework for Machine Learning Interpretability</a>](https://cdn-images-1.medium.com/max/2030/1*MxM1QHK31w16F9U0d5t7CQ.png)</td>
-    </tr>
-  </tbody>
-</table>
+<p><img src="https://cdn-images-1.medium.com/max/2030/1*MxM1QHK31w16F9U0d5t7CQ.png" alt="" />
+<sub>code architecture from the official paper | Source: <a href="https://arxiv.org/pdf/1909.09223.pdf">InterpretML: A Unified Framework for Machine Learning Interpretability</a></sub></p>
 
 <p>As per the authors, InterpretML follows four fundamental design principles:</p>
 
@@ -211,25 +193,13 @@ window.onload = wrap_img;
 
 <p>Here’s a snapshot of the dataset features.</p>
 
-<table>
-  <tbody>
-    <tr>
-      <td>![Features of the dataset</td>
-      <td>Image by Author](https://cdn-images-1.medium.com/max/2000/1*lVoiOjtNnnD8QgJBiEDCgQ.png)</td>
-    </tr>
-  </tbody>
-</table>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*lVoiOjtNnnD8QgJBiEDCgQ.png" alt="" />
+ <sub>Features of the dataset</sub></p>
 
 <p>As stated above, InterpretML supports training interpretable models (<strong>glass-box</strong>), as well as explaining existing ML pipelines (**Blackbox **), and is supported across Windows, Mac, and Linux. Currently, the following algorithms are supported in the package:</p>
 
-<table>
-  <tbody>
-    <tr>
-      <td>![Algorithms are supported by InterpretML</td>
-      <td>Image by Author](https://cdn-images-1.medium.com/max/2000/1*n4r1n6T5p0f6c3AJUtWEEg.png)</td>
-    </tr>
-  </tbody>
-</table>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*n4r1n6T5p0f6c3AJUtWEEg.png" alt="" />
+ <sub>Algorithms are supported by InterpretML</sub></p>
 
 <p><strong>Exploring the dataset</strong></p>
 
