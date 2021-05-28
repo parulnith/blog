@@ -149,15 +149,15 @@ window.onload = wrap_img;
 
 <p>EBM is a type of <a href="https://projecteuclid.org/journals/statistical-science/volume-1/issue-3/Generalized-Additive-Models/10.1214/ss/1177013604.full">generalized additive mode</a>l or GAM for short. Linear models assume a linear relationship between the response and predictors. Thus, they are unable to capture the non-linearities in the data.</p>
 
-<p>Linear Model: y = β0 + β1x1 + β2x2 + … + βn xn</p>
+<p><code class="language-plaintext highlighter-rouge">Linear Model: y = β0 + β1x1 + β2x2 + … + βn xn</code></p>
 
 <p>To overcome this shortcoming, in the late 80’s statisticians <a href="https://projecteuclid.org/journals/statistical-science/volume-1/issue-3/Generalized-Additive-Models/10.1214/ss/1177013604.full">Hastie &amp; Tibshirani developed generalized additive models</a>(GAMs), which keep the additive structure, and therefore the interpretability of the linear models. Thus, the linear relationship between the response and predictor variable gets <a href="https://datascienceplus.com/generalized-additive-models/">replaced by several non-linear smooth functions</a>(f1, f2, etc.) to model and capture the non-linearities in the data. GAMs are more accurate than simple linear models, and since they do not contain any interactions between features, users can also easily interpret them.</p>
 
-<p>Additive Model: y = <strong>f1</strong>(x1) + <strong>f2</strong>(x2) + … + <strong>fn</strong> (xn)</p>
+<p><code class="language-plaintext highlighter-rouge">Additive Model: y = **f1**(x1) + **f2**(x2) + … + **fn** (xn)</code></p>
 
 <p>EBMs are an improvement on the GAMs utilizing techniques like gradient boosting and bagging. EBMs include pairwise interaction terms, which increases their accuracy even further.</p>
 
-<p>EBMs: y = Ʃi <strong>fi</strong> (xi) + Ʃij <strong>fij(xi , xj) **+ Ʃijk **fijk (xi , xj , xk )</strong></p>
+<p><code class="language-plaintext highlighter-rouge">EBMs: y = Ʃifi (xi) + Ʃijfij(xi , xj) + Ʃijk fijk (xi , xj , xk )</code></p>
 
 <p>The following talk from Richard Caruana, the creator of EBM, goes deeper into the intuition behind the algorithm.</p>
 
@@ -174,7 +174,9 @@ window.onload = wrap_img;
   </tbody>
 </table>
 
-<h2 id="case-study-predicting-employee-attrition-using-machine-learning">Case Study: Predicting Employee Attrition Using Machine Learning</h2>
+<hr />
+
+<p>## Case Study: Predicting Employee Attrition Using Machine Learning</p>
 <blockquote>
   <p>Here is the <a href="https://nbviewer.jupyter.org/github/parulnith/Data-Science-Articles/blob/main/Interpretable%20or%20Accurate%3F%20Why%20not%C2%A0both/Interpretable%20or%20Accurate%3F%20Why%20not%C2%A0both.ipynb">nbviewer link</a> to the code notebook in case you want to follow along.</p>
 </blockquote>
@@ -184,7 +186,7 @@ window.onload = wrap_img;
 
 <p>It’s time to get our hands dirty. In this section, we’ll train an EBM model to predict employee attrition. We’ll also compare the performance of EBMs with other algorithms. Finally, we’ll try and explain the predictions that our model made with the help of a tool called InterpretML. What is interpretML? Let’s find out.</p>
 
-<h3 id="intepretml-a-unified-framework-for-machine-learning-interpretability">IntepretML: A Unified Framework for Machine Learning Interpretability</h3>
+<p>### IntepretML: A Unified Framework for Machine Learning Interpretability</p>
 
 <p>EBMs come packaged within a Machine Learning Interpretability toolkit called <a href="http://Unified Framework for Machine Learning Interpretability">InterpretML</a>. <a href="https://github.com/interpretml/interpret">I</a>t is an open-source package for training interpretable models as well as explaining black-box systems. Within InterpretML, the explainability algorithms are organized into two major sections, i.e., <strong>Glassbox models</strong> and <strong>Blackbox explanations</strong>. This means that this tool can not only explain the decisions of inherently interpretable models but also provide possible reasoning for black-box models. The following code architecture from the <a href="https://arxiv.org/pdf/1909.09223.pdf">official paper</a> sums it nicely.</p>
 
