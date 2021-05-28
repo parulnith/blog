@@ -148,9 +148,12 @@ Once the model is trained, we can visualize and understand the model’s behavio
 
 Global Explanations help better understand the model’s overall behavior and the general model behavior across the population.
 
-![](https://cdn-images-1.medium.com/max/2720/1*9MeZEKvWkmXYkFJ1my29TQ.png)
+```
+ebm_global = ebm.explain_global(name='EBM')
+show(ebm_global)
+ ```
 
-The first graph that we see is the Summary plot which states that the Overtime variable is the most critical feature in determining if someone will leave the company or not.
+The first graph that we see is the **Summary plot** which states that the Overtime variable is the most critical feature in determining if someone will leave the company or not.
 
 ![](https://cdn-images-1.medium.com/max/2346/1*j_mIItfKqWYn-wZtsccKOQ.gif)
 <sub>Viewing Global Explanations 
