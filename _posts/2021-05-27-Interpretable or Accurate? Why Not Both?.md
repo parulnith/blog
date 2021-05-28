@@ -56,15 +56,15 @@ Now that we have sufficient intuition into the interpretability mechanism employ
 
 EBM is a type of [generalized additive mode](https://projecteuclid.org/journals/statistical-science/volume-1/issue-3/Generalized-Additive-Models/10.1214/ss/1177013604.full)l or GAM for short. Linear models assume a linear relationship between the response and predictors. Thus, they are unable to capture the non-linearities in the data.
 
-Linear Model: y = β0 + β1x1 + β2x2 + … + βn xn
+`Linear Model: y = β0 + β1x1 + β2x2 + … + βn xn`
 
 To overcome this shortcoming, in the late 80’s statisticians [Hastie & Tibshirani developed generalized additive models](https://projecteuclid.org/journals/statistical-science/volume-1/issue-3/Generalized-Additive-Models/10.1214/ss/1177013604.full)(GAMs), which keep the additive structure, and therefore the interpretability of the linear models. Thus, the linear relationship between the response and predictor variable gets [replaced by several non-linear smooth functions](https://datascienceplus.com/generalized-additive-models/)(f1, f2, etc.) to model and capture the non-linearities in the data. GAMs are more accurate than simple linear models, and since they do not contain any interactions between features, users can also easily interpret them.
 
-Additive Model: y = **f1**(x1) + **f2**(x2) + … + **fn** (xn)
+`Additive Model: y = **f1**(x1) + **f2**(x2) + … + **fn** (xn)`
 
 EBMs are an improvement on the GAMs utilizing techniques like gradient boosting and bagging. EBMs include pairwise interaction terms, which increases their accuracy even further.
 
-EBMs: y = Ʃi **fi** (xi) + Ʃij **fij(xi , xj) **+ Ʃijk **fijk (xi , xj , xk )**
+`EBMs: y = Ʃifi (xi) + Ʃijfij(xi , xj) + Ʃijk fijk (xi , xj , xk )`
 
 The following talk from Richard Caruana, the creator of EBM, goes deeper into the intuition behind the algorithm.
 
@@ -74,15 +74,17 @@ The vital point to note here is that even after all these improvements, EBM stil
 
 ![Classification performance for models across datasets (rows, columns)|The official paper: [InterpretML: A Unified Framework for Machine Learning Interpretability](https://arxiv.org/pdf/1909.09223.pdf)](https://cdn-images-1.medium.com/max/2118/1*-gnKXfPsi5FHYcPiaLK50Q.png)
 
-## Case Study: Predicting Employee Attrition Using Machine Learning
+---
+ 
+ ## Case Study: Predicting Employee Attrition Using Machine Learning
 >  Here is the [nbviewer link](https://nbviewer.jupyter.org/github/parulnith/Data-Science-Articles/blob/main/Interpretable%20or%20Accurate%3F%20Why%20not%C2%A0both/Interpretable%20or%20Accurate%3F%20Why%20not%C2%A0both.ipynb) to the code notebook in case you want to follow along.
 
 ![[](https://pixabay.com/photos/get-me-out-escape-danger-security-1605906/)](https://cdn-images-1.medium.com/max/3840/1*289fHah3E3BX9CkKrIJegw.jpeg)
 <sub>Andrew Martin from Pixabay
 
 It’s time to get our hands dirty. In this section, we’ll train an EBM model to predict employee attrition. We’ll also compare the performance of EBMs with other algorithms. Finally, we’ll try and explain the predictions that our model made with the help of a tool called InterpretML. What is interpretML? Let’s find out.
-
-### IntepretML: A Unified Framework for Machine Learning Interpretability
+ 
+ ### IntepretML: A Unified Framework for Machine Learning Interpretability
 
 EBMs come packaged within a Machine Learning Interpretability toolkit called [InterpretML](http://Unified Framework for Machine Learning Interpretability). [I](https://github.com/interpretml/interpret)t is an open-source package for training interpretable models as well as explaining black-box systems. Within InterpretML, the explainability algorithms are organized into two major sections, i.e., **Glassbox models** and **Blackbox explanations**. This means that this tool can not only explain the decisions of inherently interpretable models but also provide possible reasoning for black-box models. The following code architecture from the [official paper](https://arxiv.org/pdf/1909.09223.pdf) sums it nicely.
 
