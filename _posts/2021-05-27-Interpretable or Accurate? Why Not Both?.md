@@ -29,7 +29,8 @@ This article will look at the idea behind EBMs and implement them for a Human Re
 Machine Learning is a powerful tool and is being increasingly used in multi-faceted ways across several industries. The AI models are increasingly used to make decisions that affect people’s lives. Therefore, it becomes imperative that the predictions are fair and not biased or discriminating.
 
 ![](https://cdn-images-1.medium.com/max/2000/1*0r29CPjHgDAVwyMki8LSzg.png)
-<sub>Advantages of having Machine learning Interpretability in pipeline 
+
+         <sub>Advantages of having Machine learning Interpretability in pipeline 
  
 Machine learning interpretability has a vital role to play in such situations. Interpretability gives you the ability not only to discover a model’s mispredictions but analyze and fix the underlying cause too. Interpretability can help you debug your model, detect overfitting and data leakage, and most importantly, inspire trust between models and humans by giving explanations.
 
@@ -57,7 +58,7 @@ Now that we have sufficient intuition into the interpretability mechanism employ
 
 ## Explainable Boosting Machine (EBMs)
 
-[EBMs](https://dl.acm.org/doi/10.1145/2339530.2339556) are Glassbox models designed to have accuracy comparable to state-of-the-art machine learning methods without compromising accuracy and explainability*.*
+[EBMs](https://dl.acm.org/doi/10.1145/2339530.2339556) are Glassbox models designed to have accuracy comparable to state-of-the-art machine learning methods without compromising accuracy and explainability
 
 EBM is a type of [generalized additive mode](https://projecteuclid.org/journals/statistical-science/volume-1/issue-3/Generalized-Additive-Models/10.1214/ss/1177013604.full)l or GAM for short. Linear models assume a linear relationship between the response and predictors. Thus, they are unable to capture the non-linearities in the data.
 
@@ -78,7 +79,8 @@ The following talk from Richard Caruana, the creator of EBM, goes deeper into th
 The vital point to note here is that even after all these improvements, EBM still preserves the interpretability of a linear model but often matches the accuracy of powerful BlackBox models, as shown below:
 
 ![](https://cdn-images-1.medium.com/max/2118/1*-gnKXfPsi5FHYcPiaLK50Q.png)
-<sub>Classification performance for models across datasets (rows, columns)|Source : [InterpretML: A Unified Framework for Machine Learning Interpretability](https://arxiv.org/pdf/1909.09223.pdf)
+
+ <sub>Classification performance for models across datasets (rows, columns)|Source : [InterpretML: A Unified Framework for Machine Learning Interpretability](https://arxiv.org/pdf/1909.09223.pdf)
 ---
  
  ## Case Study: Predicting Employee Attrition Using Machine Learning
