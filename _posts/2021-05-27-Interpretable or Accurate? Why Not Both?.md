@@ -74,7 +74,7 @@ EBMs are an improvement on the GAMs utilizing techniques like gradient boosting 
 
 The following talk from Richard Caruana, the creator of EBM, goes deeper into the intuition behind the algorithm.
 
- <iframe src="https://medium.com/media/d5cacb248136b23c76025cc3518f8fdd" frameborder=0></iframe>
+![](https://youtu.be/MREiHgHgl0k)
 
 The vital point to note here is that even after all these improvements, EBM still preserves the interpretability of a linear model but often matches the accuracy of powerful BlackBox models, as shown below:
 
@@ -119,22 +119,28 @@ As stated above, InterpretML supports training interpretable models (**glass-box
 
 ![](https://cdn-images-1.medium.com/max/2000/1*n4r1n6T5p0f6c3AJUtWEEg.png)
  
-<sub>Algorithms are supported by InterpretML 
+<sub>Algorithms supported by InterpretML 
 
 **Exploring the dataset**
 
 The first task is always to explore the dataset and understand the distributions of various columns. InterpretML provides histogram visualizations for classification problems.
 
-![](https://cdn-images-1.medium.com/max/2720/1*N7-QigRky33FIP3BdsSe6g.png)
-
+```
+hist = ClassHistogram().explain_data(X_train, y_train, name = 'Train Data')
+show(hist)
+```
+ 
 ![](https://cdn-images-1.medium.com/max/2410/1*G67PKzjun3wszNTHnWQTHg.gif)
 <sub>Histogram visualization 
 
 **Training the model**
 
 Training an EBM is relatively easy with InterpretML. After preprocessing our dataset and splitting it into training and a test set, the following lines of code get the job done. InterpretML conforms to the familiar scikit learn API.
-
-![](https://cdn-images-1.medium.com/max/2720/1*wzfPy8pYgK0HL4ypdy4-5w.png)
+ 
+```
+ebm = ExplainableBoostingClassifier(random_state=seed, n_jobs=-1,inner_bags=100,outer_bags=100)
+ebm.fit(X_train, y_train)
+ ```
 
 Once the model is trained, we can visualize and understand the model’s behavior globally and locally.
 
