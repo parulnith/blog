@@ -13,11 +13,11 @@
 <link rel="canonical" href="https://parulnith.github.io/blog/explainable%20ai/machine%20learning%20interpretibility/2021/05/27/Interpretable-or-Accurate-Why-Not-Both.html" />
 <meta property="og:url" content="https://parulnith.github.io/blog/explainable%20ai/machine%20learning%20interpretibility/2021/05/27/Interpretable-or-Accurate-Why-Not-Both.html" />
 <meta property="og:site_name" content="Breaking the Jargons" />
-<meta property="og:image" content="https://parulnith.github.io/blog/images/2021-05-27-Interpretable-or-Accurate-Why-Not-Boths/0.png" />
+<meta property="og:image" content="https://parulnith.github.io/blog/2021-05-27-Interpretable%20or%20Accurate?%20Why%20Not%20Both/0.png" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2021-05-27T00:00:00-05:00" />
 <script type="application/ld+json">
-{"url":"https://parulnith.github.io/blog/explainable%20ai/machine%20learning%20interpretibility/2021/05/27/Interpretable-or-Accurate-Why-Not-Both.html","@type":"BlogPosting","headline":"Interpretable or Accurate? Why Not Both?","dateModified":"2021-05-27T00:00:00-05:00","datePublished":"2021-05-27T00:00:00-05:00","image":"https://parulnith.github.io/blog/images/2021-05-27-Interpretable-or-Accurate-Why-Not-Boths/0.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://parulnith.github.io/blog/explainable%20ai/machine%20learning%20interpretibility/2021/05/27/Interpretable-or-Accurate-Why-Not-Both.html"},"description":"Building interpretable Boosting Models with IntepretML","@context":"https://schema.org"}</script>
+{"url":"https://parulnith.github.io/blog/explainable%20ai/machine%20learning%20interpretibility/2021/05/27/Interpretable-or-Accurate-Why-Not-Both.html","@type":"BlogPosting","headline":"Interpretable or Accurate? Why Not Both?","dateModified":"2021-05-27T00:00:00-05:00","datePublished":"2021-05-27T00:00:00-05:00","image":"https://parulnith.github.io/blog/2021-05-27-Interpretable%20or%20Accurate?%20Why%20Not%20Both/0.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://parulnith.github.io/blog/explainable%20ai/machine%20learning%20interpretibility/2021/05/27/Interpretable-or-Accurate-Why-Not-Both.html"},"description":"Building interpretable Boosting Models with IntepretML","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://parulnith.github.io/blog/feed.xml" title="Breaking the Jargons" /><link rel="shortcut icon" type="image/x-icon" href="/blog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" /><script src="https://hypothes.is/embed.js" async></script>
@@ -116,8 +116,7 @@ window.onload = wrap_img;
 
 <p><img src="https://cdn-images-1.medium.com/max/2000/1*0r29CPjHgDAVwyMki8LSzg.png" alt="" /></p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     &lt;sub&gt;Advantages of having Machine learning Interpretability in pipeline&lt;/sub&gt;
-</code></pre></div></div>
+<p><sub>Advantages of having Machine learning Interpretability in pipeline</sub></p>
 
 <p>Machine learning interpretability has a vital role to play in such situations. Interpretability gives you the ability not only to discover a model’s mispredictions but analyze and fix the underlying cause too. Interpretability can help you debug your model, detect overfitting and data leakage, and most importantly, inspire trust between models and humans by giving explanations.</p>
 
@@ -165,10 +164,11 @@ window.onload = wrap_img;
 <p>The vital point to note here is that even after all these improvements, EBM still preserves the interpretability of a linear model but often matches the accuracy of powerful BlackBox models, as shown below:</p>
 
 <p><img src="https://cdn-images-1.medium.com/max/2118/1*-gnKXfPsi5FHYcPiaLK50Q.png" alt="" />
-<sub>Classification performance for models across datasets (rows, columns)|Source : <a href="https://arxiv.org/pdf/1909.09223.pdf">InterpretML: A Unified Framework for Machine Learning Interpretability</a></sub>
-—</p>
+<sub>Classification performance for models across datasets (rows, columns)|Source : <a href="https://arxiv.org/pdf/1909.09223.pdf">InterpretML: A Unified Framework for Machine Learning Interpretability</a></sub></p>
 
-<p>## Case Study: Predicting Employee Attrition Using Machine Learning</p>
+<hr />
+
+<h2 id="case-study-predicting-employee-attrition-using-machine-learning">Case Study: Predicting Employee Attrition Using Machine Learning</h2>
 <blockquote>
   <p>Here is the <a href="https://nbviewer.jupyter.org/github/parulnith/Data-Science-Articles/blob/main/Interpretable%20or%20Accurate%3F%20Why%20not%C2%A0both/Interpretable%20or%20Accurate%3F%20Why%20not%C2%A0both.ipynb">nbviewer link</a> to the code notebook in case you want to follow along.</p>
 </blockquote>
@@ -178,7 +178,7 @@ window.onload = wrap_img;
 
 <p>It’s time to get our hands dirty. In this section, we’ll train an EBM model to predict employee attrition. We’ll also compare the performance of EBMs with other algorithms. Finally, we’ll try and explain the predictions that our model made with the help of a tool called InterpretML. What is interpretML? Let’s find out.</p>
 
-<p>### IntepretML: A Unified Framework for Machine Learning Interpretability</p>
+<h3 id="intepretml-a-unified-framework-for-machine-learning-interpretability">IntepretML: A Unified Framework for Machine Learning Interpretability</h3>
 
 <p>EBMs come packaged within a Machine Learning Interpretability toolkit called <a href="http://Unified Framework for Machine Learning Interpretability">InterpretML</a>. <a href="https://github.com/interpretml/interpret">I</a>t is an open-source package for training interpretable models as well as explaining black-box systems. Within InterpretML, the explainability algorithms are organized into two major sections, i.e., <strong>Glassbox models</strong> and <strong>Blackbox explanations</strong>. This means that this tool can not only explain the decisions of inherently interpretable models but also provide possible reasoning for black-box models. The following code architecture from the <a href="https://arxiv.org/pdf/1909.09223.pdf">official paper</a> sums it nicely.</p>
 
@@ -211,14 +211,8 @@ window.onload = wrap_img;
 
 <p><img src="https://cdn-images-1.medium.com/max/2720/1*N7-QigRky33FIP3BdsSe6g.png" alt="" /></p>
 
-<table>
-  <tbody>
-    <tr>
-      <td>![Histogram visualization</td>
-      <td>Image by Author](https://cdn-images-1.medium.com/max/2410/1*G67PKzjun3wszNTHnWQTHg.gif)</td>
-    </tr>
-  </tbody>
-</table>
+<p><img src="https://cdn-images-1.medium.com/max/2410/1*G67PKzjun3wszNTHnWQTHg.gif" alt="" />
+<sub>Histogram visualization</sub></p>
 
 <p><strong>Training the model</strong></p>
 
@@ -236,25 +230,13 @@ window.onload = wrap_img;
 
 <p>The first graph that we see is the Summary plot which states that the Overtime variable is the most critical feature in determining if someone will leave the company or not.</p>
 
-<table>
-  <tbody>
-    <tr>
-      <td>![Viewing Global Explanations</td>
-      <td>Image by Author](https://cdn-images-1.medium.com/max/2346/1*j_mIItfKqWYn-wZtsccKOQ.gif)</td>
-    </tr>
-  </tbody>
-</table>
+<p><img src="https://cdn-images-1.medium.com/max/2346/1*j_mIItfKqWYn-wZtsccKOQ.gif" alt="" />
+<sub>Viewing Global Explanations</sub></p>
 
 <p>We can also look deeper into each feature plot on drilling down.</p>
 
-<table>
-  <tbody>
-    <tr>
-      <td>![Effect of age on attrition</td>
-      <td>Image by Author](https://cdn-images-1.medium.com/max/2356/1*-FhB-jPrPGb5Y4v31voP7w.png)</td>
-    </tr>
-  </tbody>
-</table>
+<p><img src="https://cdn-images-1.medium.com/max/2356/1*-FhB-jPrPGb5Y4v31voP7w.png" alt="" />
+<sub>Effect of age on attrition</sub></p>
 
 <p>The score here refers to the logit since the problem is a classification one. The higher you are on the y-axis, the higher your odds of leaving the company. However, after around 35 years of age, this behavior changes, and you have more chances of staying back.</p>
 
@@ -262,40 +244,21 @@ window.onload = wrap_img;
 
 <p>Local Explanations help us understand the reasons behind individual predictions and why a particular prediction was made.</p>
 
-<table>
-  <tbody>
-    <tr>
-      <td>![Viewing Local Explanations</td>
-      <td>Image by Author](https://cdn-images-1.medium.com/max/2000/1*giADRNtdAvltV_E_L59BWg.png)</td>
-    </tr>
-  </tbody>
-</table>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*giADRNtdAvltV_E_L59BWg.png" alt="" />
+<sub>Viewing Local Explanations</sub></p>
 
 <p><strong>Comparing the performance with other models</strong></p>
 
 <p>It is also easy to compare the performance of different algorithms and display the results in a dashboard format.</p>
 
-<table>
-  <tbody>
-    <tr>
-      <td>![Comparison Dashboard</td>
-      <td>Image by Author](https://cdn-images-1.medium.com/max/2920/1*rge1s00o89Id6o6J1pTntA.jpeg)</td>
-    </tr>
-  </tbody>
-</table>
-
-<p><strong>Training BlackBox models</strong></p>
+<p><img src="https://cdn-images-1.medium.com/max/2920/1*rge1s00o89Id6o6J1pTntA.jpeg" alt="" />
+<sub>Comparison Dashboard
+<strong>Training BlackBox models</strong></sub></p>
 
 <p>If required, InterpretML can also train BlackBox models and provide explanations for the predictions. Here is an example of a trained Random ForestClassifier model on the same dataset and the subsequent explanation provided by LIME.</p>
 
-<table>
-  <tbody>
-    <tr>
-      <td>![Analyzing Blackbox models</td>
-      <td>Image by Author](https://cdn-images-1.medium.com/max/2000/1*jhruLFrrbUv020peVaLZHA.jpeg)</td>
-    </tr>
-  </tbody>
-</table>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*jhruLFrrbUv020peVaLZHA.jpeg" alt="" />
+<sub>Analyzing Blackbox models</sub></p>
 
 <h2 id="conclusion">Conclusion</h2>
 
