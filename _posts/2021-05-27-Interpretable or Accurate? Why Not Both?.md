@@ -4,7 +4,7 @@ layout: post
 description: Building interpretable Boosting Models with IntepretML
 comments: true
 categories: [Explainable AI, Machine learning Interpretibility]
-image: images/2021-05-18-A-better-way-to-visualize-decision-trees/0.png
+image: images/2021-05-27-Interpretable-or-Accurate-Why-Not-Boths/0.png
 show_image: true
 show_tags: true
 title: "Interpretable or Accurate? Why Not Both?"
@@ -21,12 +21,14 @@ Well, EBMs precisely tries to fill this void. EBMs, which stands for [Explainabl
 
 This article will look at the idea behind EBMs and implement them for a Human Resources case study via [InterpretML](https://arxiv.org/pdf/1909.09223.pdf), a Unified Framework for Machine Learning Interpretability.
 
+---
+
 ## Machine learning Interpretability — A primer
 
 Machine Learning is a powerful tool and is being increasingly used in multi-faceted ways across several industries. The AI models are increasingly used to make decisions that affect people’s lives. Therefore, it becomes imperative that the predictions are fair and not biased or discriminating.
 
 ![](https://cdn-images-1.medium.com/max/2000/1*0r29CPjHgDAVwyMki8LSzg.png)
-<sub>Advantages of having Machine learning Interpretability in pipeline 
+                              <sub>Advantages of having Machine learning Interpretability in pipeline 
  
 Machine learning interpretability has a vital role to play in such situations. Interpretability gives you the ability not only to discover a model’s mispredictions but analyze and fix the underlying cause too. Interpretability can help you debug your model, detect overfitting and data leakage, and most importantly, inspire trust between models and humans by giving explanations.
 
