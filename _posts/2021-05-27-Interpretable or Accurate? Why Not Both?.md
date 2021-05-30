@@ -24,7 +24,7 @@ This article will look at the idea behind EBMs and implement them for a Human Re
 
 ---
 
-## Machine learning Interpretability — A primer
+## Machine learning Interpretability — A Primer
 
 Machine Learning is a powerful tool and is being increasingly used in multi-faceted ways across several industries. The AI models are increasingly used to make decisions that affect people’s lives. Therefore, it becomes imperative that the predictions are fair and not biased or discriminating.
 
