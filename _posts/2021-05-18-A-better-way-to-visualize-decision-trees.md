@@ -3,7 +3,7 @@ toc: false
 layout: post
 description: An open-source package for decision tree visualization and model interpretation
 comments: true
-categories: [Machine Learning, Data Visualization]
+categories: [Machine Learning]
 image: images/2021-05-18-A-better-way-to-visualize-decision-trees/0.png
 show_image: true
 show_tags: true

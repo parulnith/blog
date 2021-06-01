@@ -3,7 +3,7 @@ toc: false
 layout: post
 description: Optimizing pandas memory usage by the effective use of datatypes
 comments: true
-categories: [Data Science, Big Data, Python]
+categories: [Pandas]
 image: 2021-03-15-Reducing-memory-usage-in-pandas-with-smaller-datatypes/0.png
 show_image: true
 show_tags: true

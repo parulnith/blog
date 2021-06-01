@@ -3,7 +3,7 @@ toc: false
 layout: post
 description: Building interpretable Boosting Models with IntepretML
 comments: true
-categories: [Explainable AI, Machine learning Interpretibility]
+categories: [Explainable AI]
 image: 2021-05-27-Interpretable-or-Accurate-Why-Not-Both/0.png
 show_image: true
 show_tags: true

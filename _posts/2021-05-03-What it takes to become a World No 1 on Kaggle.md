@@ -3,7 +3,7 @@ toc: false
 layout: post
 description:  In conversation with Guanshuo Xu - A Data Scientist, Kaggle Competitions Grandmaster(Rank 1), and a Ph.D. in Electrical Engineering.
 comments: true
-categories: [Kaggle, Interviews]
+categories: [Kaggle]
 image: images/2021-05-03-What it takes to become a World No 1 on Kaggle/0.png
 show_image: true
 show_tags: true
