@@ -4,7 +4,7 @@ layout: post
 description: Building interpretable Boosting Models with IntepretML
 comments: true
 categories: [Explainable AI]
-image: images/2021-05-27-Interpretable-or-Accurate-Why-Not-Both/0.png
+image: images/2021-05-27-Interpretable or Accurate/0.png
 show_image: true
 show_tags: true
 title: "Interpretable or Accurate? Why Not Both?"
