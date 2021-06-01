@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>https://parulnith.github.io/blog/data%20science/big%20data/python/2021/03/15/Reducing-memory-usage-in-pandas-with-smaller-datatypes.html</loc>
+<loc>https://parulnith.github.io/blog/pandas/2021/03/15/Reducing-memory-usage-in-pandas-with-smaller-datatypes.html</loc>
 <lastmod>2021-03-15T00:00:00-05:00</lastmod>
 </url>
 <url>
-<loc>https://parulnith.github.io/blog/kaggle/interviews/2021/05/03/What-it-takes-to-become-a-World-No-1-on-Kaggle.html</loc>
+<loc>https://parulnith.github.io/blog/kaggle/2021/05/03/What-it-takes-to-become-a-World-No-1-on-Kaggle.html</loc>
 <lastmod>2021-05-03T00:00:00-05:00</lastmod>
 </url>
 <url>
@@ -13,15 +13,15 @@
 <lastmod>2021-05-06T00:00:00-05:00</lastmod>
 </url>
 <url>
-<loc>https://parulnith.github.io/blog/programming/colaboratory/jupyter%20notebooks/2021/05/10/Use-Colab-more-efficiently-with-these-hacks.html</loc>
+<loc>https://parulnith.github.io/blog/programming/2021/05/10/Use-Colab-more-efficiently-with-these-hacks.html</loc>
 <lastmod>2021-05-10T00:00:00-05:00</lastmod>
 </url>
 <url>
-<loc>https://parulnith.github.io/blog/machine%20learning/data%20visualization/2021/05/18/A-better-way-to-visualize-decision-trees.html</loc>
+<loc>https://parulnith.github.io/blog/machine%20learning/2021/05/18/A-better-way-to-visualize-decision-trees.html</loc>
 <lastmod>2021-05-18T00:00:00-05:00</lastmod>
 </url>
 <url>
-<loc>https://parulnith.github.io/blog/explainable%20ai/machine%20learning%20interpretibility/2021/05/27/Interpretable-or-Accurate-Why-Not-Both.html</loc>
+<loc>https://parulnith.github.io/blog/explainable%20ai/2021/05/27/Interpretable-or-Accurate-Why-Not-Both.html</loc>
 <lastmod>2021-05-27T00:00:00-05:00</lastmod>
 </url>
 <url>
