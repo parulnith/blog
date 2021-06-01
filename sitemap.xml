@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>https://parulnith.github.io/blog/explainable%20ai/machine%20learning%20interpretibility/2021/03/15/IReducing-memory-usage-in-pandas-with-smaller-datatypes.html</loc>
+<lastmod>2021-03-15T00:00:00-05:00</lastmod>
+</url>
+<url>
 <loc>https://parulnith.github.io/blog/kaggle/interviews/2021/05/03/What-it-takes-to-become-a-World-No-1-on-Kaggle.html</loc>
 <lastmod>2021-05-03T00:00:00-05:00</lastmod>
 </url>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Reducing memory usage in pandas with smaller datatypes | Breaking the Jargons</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Reducing memory usage in pandas with smaller datatypes" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Optimizing pandas memory usage by the effective use of datatypes" />
+<meta property="og:description" content="Optimizing pandas memory usage by the effective use of datatypes" />
+<link rel="canonical" href="https://parulnith.github.io/blog/explainable%20ai/machine%20learning%20interpretibility/2021/03/15/IReducing-memory-usage-in-pandas-with-smaller-datatypes.html" />
+<meta property="og:url" content="https://parulnith.github.io/blog/explainable%20ai/machine%20learning%20interpretibility/2021/03/15/IReducing-memory-usage-in-pandas-with-smaller-datatypes.html" />
+<meta property="og:site_name" content="Breaking the Jargons" />
+<meta property="og:image" content="https://parulnith.github.io/blog/2021-05-27-Interpretable-or-Accurate-Why-Not-Both/0.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-03-15T00:00:00-05:00" />
+<script type="application/ld+json">
+{"url":"https://parulnith.github.io/blog/explainable%20ai/machine%20learning%20interpretibility/2021/03/15/IReducing-memory-usage-in-pandas-with-smaller-datatypes.html","@type":"BlogPosting","headline":"Reducing memory usage in pandas with smaller datatypes","dateModified":"2021-03-15T00:00:00-05:00","datePublished":"2021-03-15T00:00:00-05:00","image":"https://parulnith.github.io/blog/2021-05-27-Interpretable-or-Accurate-Why-Not-Both/0.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://parulnith.github.io/blog/explainable%20ai/machine%20learning%20interpretibility/2021/03/15/IReducing-memory-usage-in-pandas-with-smaller-datatypes.html"},"description":"Optimizing pandas memory usage by the effective use of datatypes","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://parulnith.github.io/blog/feed.xml" title="Breaking the Jargons" /><link rel="shortcut icon" type="image/x-icon" href="/blog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" /><script src="https://hypothes.is/embed.js" async></script>
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/blog/">Breaking the Jargons</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/blog/about/">About Me</a><a class="page-link" href="/blog/search/">Search</a><a class="page-link" href="/blog/categories/">Categories</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Reducing memory usage in pandas with smaller datatypes</h1><p class="page-description">Optimizing pandas memory usage by the effective use of datatypes</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-03-15T00:00:00-05:00" itemprop="datePublished">
+        Mar 15, 2021
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      6 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/blog/categories/#Explainable AI">Explainable AI</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/blog/categories/#Machine learning Interpretibility">Machine learning Interpretibility</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p><em>The article was originally published <a href="https://towardsdatascience.com/reducing-memory-usage-in-pandas-with-smaller-datatypes-b527635830af?sk=55b417ed722bc364a141a9862ee33893">here</a></em></p>
+
+<p><img src="https://cdn-images-1.medium.com/max/10526/0*Ti9hDWaZH8UphPdM" alt="" />
+<sub>Photo by <a href="https://unsplash.com/@tolga__?utm_source=medium&amp;utm_medium=referral">Tolga Ulkan</a> on <a href="https://unsplash.com?utm_source=medium&amp;utm_medium=referral">Unsplash</a></sub></p>
+
+<p>Managing large datasets with pandas is a pretty common issue. Despite this, there are a few tricks and tips that can help us manage the memory issue with pandas to an extent. They might not offer the best solution, but the tricks can prove to be handy at times. Hence there is no harm in getting to know them. I talked about two such alternative ways of <a href="https://towardsdatascience.com/loading-large-datasets-in-pandas-11bdddd36f7b?sk=a52a0f863382bd2d5b631d81838ea8de">loading large datasets in pandas</a> in one of my <a href="https://towardsdatascience.com/loading-large-datasets-in-pandas-11bdddd36f7b">previous article</a>.</p>
+
+<p>These techniques are :</p>
+
+<ul>
+  <li>
+    <p><strong>Chunking: subdividing datasets into smaller parts</strong></p>
+  </li>
+  <li>
+    <p><strong>Using SQL and pandas to read large data files</strong></p>
+  </li>
+</ul>
+
+<p>This article is a sort of continuation to the above techniques. Hence, if you haven’t read the previous article, it’ll be a good idea to do so now 😃. In this article, we’ll cover ways to optimize memory use by the effective use of datatypes. But first, let’s get to know the pandas’ datatypes in detail.</p>
+
+<h2 id="pandas-datatypes">Pandas datatypes</h2>
+
+<p>A datatype refers to the way how data is stored in the memory. To be more succinct and quoting <a href="https://en.wikipedia.org/wiki/Data_type">Wikipedia</a> here:</p>
+<blockquote>
+  <p>a <strong>data type</strong> or simply <strong>type</strong> is an attribute of data that tells the compiler or interpreter how the programmer intends to use the data.</p>
+</blockquote>
+
+<p>The primary data types consist of integers, floating-point numbers, booleans, and characters. Pandas’ also follows the same discourse. Here is a quick overview of various data types supported by pandas:</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*90J0qhEaHPxD_0_G5Mf1ng.png" alt="" /></p>
+
+<p>The int and float datatypes have further subtypes depending upon the number of bytes they use to represent data. Here is a complete list:</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*fsEpwfWQBMnaC6iISieHOw.png" alt="[Source](https://jakevdp.github.io/PythonDataScienceHandbook/02.01-understanding-data-types.html): r*eleased under the [MIT license](https://opensource.org/licenses/MIT).*" /></p>
+
+<p>This is a long list but let’s touch upon few critical points:</p>
+
+<ul>
+  <li>
+    <p>The number preceding the name of the datatype refers to the number of bits of memory required to store a value. For instance, int8 uses <strong>8</strong> bits or 1 byte; int16 uses 16 bits or 2 bytes and so on.</p>
+  </li>
+  <li>
+    <p>The larger the range, the more memory it consumes. This implies that int16 uses twice the memory as int8 while int64 uses eight times the memory as int8.</p>
+  </li>
+  <li>
+    <p>uint8, uint16 etc. refer to unsigned integers while int refers to signed integers. There is no difference in the amount of memory allocated, but as the name suggests, unsigned integers can only store positive values, i.e., 0–255, for uint8. The same applies to uint16,uint32, and uint64 respectively.</p>
+  </li>
+</ul>
+
+<p>The datatypes are important since the way data is stored decides what can be done with it.</p>
+
+<h2 id="seeing-things-in-action">Seeing things in action</h2>
+
+<p>Now that we have a good idea about pandas’ various data types and their representations, let’s look at ways to optimize storage when using them. I’ll be using a file comprising 1.6 GB of data summarising <a href="https://www.kaggle.com/bharath150/taxi-data?select=yellow_tripdata_2016-03.csv">yellow taxi trip data for March 2016</a>. We’ll start by importing the dataset in a pandas’ dataframe using the read_csv() function:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import pandas as pd
+df = pd.read_csv('yellow_tripdata_2016-03.csv')
+</code></pre></div></div>
+
+<p>Let’s look at its first few columns:</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*nr1EPjM4Kef8gfguRn5VPg.png" alt="" /></p>
+
+<p>By default, when pandas loads any CSV file, it automatically detects the various datatypes. Now, this is a good thing, but here is the catch. If a column consists of all integers, it assigns the int64 dtype to that column by default. Similarly, if a column consists of float values, that column gets assigned float64 dtype.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>df.info()
+</code></pre></div></div>
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*45uSv1xBFxWT6JzQZcOe0Q.png" alt="" /></p>
+
+<p>As stated above, three datatypes have been used in this case:</p>
+
+<ul>
+  <li>
+    <p>int64 for integers values,</p>
+  </li>
+  <li>
+    <p>float64 for float values and,</p>
+  </li>
+  <li>
+    <p>object datatype for datetime and categorical values</p>
+  </li>
+</ul>
+
+<h3 id="numerical-data">Numerical data</h3>
+
+<p>On inspecting our dataframe, we find that the maximum value for some of the columns will never be greater than **32767. **In such cases, it is not prudent to use int64 as the datatype, and we can easily downcast it to say, int16. Let’s understand it more concretely through an example.</p>
+
+<p>For the demonstration, let’s analyze the passenger count column and calculate its memory usage. we’ll use the pandas’ <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.memory_usage.html">memory_usage</a>() function for the purpose.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2720/1*bpVjx1a9j9X9-rYAbb2nZg.png" alt="" /></p>
+
+<p>To understand whether a smaller datatype would suffice, let’s see the maximum and minimum values of this column.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2720/1*bN_GqmnOI4bYJA5cTgZLCg.png" alt="" /></p>
+
+<p>Since the column only consists of positive values with the max being only 9, we can easily downcast the datatype to int8 without losing any information.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2720/1*ECXVxjt5ixzxjnWQ9oyaOg.png" alt="" /></p>
+
+<p>That is a considerable decrease in the memory used. Let’s take another example. This time we shall analyze the pickup_longitude column, which consists of float values.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2720/1*fXtSH2feoTaI-ZpVMZ0HpQ.png" alt="" /></p>
+
+<p>Now, you would agree that for the longitude(and latitude) column, values up to two decimal places would be decent in conveying the information. The advantage, on the other hand, in terms of reduction in memory usage would be immense. We can change the datatype from float64 to float16 and this would cut down the memory usage by 1/4th.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2720/1*6uCsQD_Q5P6o_s3Qhjmb-w.png" alt="" /></p>
+
+<p>This is great. We can similarly downcast other columns by analyzing them and can save a considerable amount of memory.</p>
+
+<h3 id="categorical-data">Categorical data</h3>
+
+<p>Till now, we have looked at only the numerical columns. Is there a way to optimize categorical columns as well? Well, yes, there are ways to reduce the memory consumption of categorical columns as well. Let’s take the case of the **store_and_fwd_flag **column, and as shown in the previous section, calculate the memory required to store it.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2720/1*OLTXOKM3Xpta4orcSHH9NA.png" alt="" /></p>
+
+<p>The dtype ‘O’ refers to the object datatype. Now, if we’re to look at the unique values in this column, we would get:</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2720/1*KYmpWKT0Zc193p8bBY_HWg.png" alt="" /></p>
+
+<p>There are only two unique values, i.e., N and Y, which stand for No and Yes, respectively. In such cases where there are a limited number of values, we can use a more compact datatype called <a href="https://pandas.pydata.org/pandas-docs/stable/user_guide/categorical.html">Categorical</a> dtype. Here is an excerpt from the <a href="https://pandas.pydata.org/pandas-docs/stable/user_guide/categorical.html">documentation</a> itself:</p>
+<blockquote>
+  <p>Categoricals are a pandas data type corresponding to categorical variables in statistics. A categorical variable takes on a limited, and usually fixed, number of possible values (categories; levels in R). Examples are gender, social class, blood type, country affiliation, observation time or rating via Likert scales.</p>
+</blockquote>
+
+<p>If we were to downcast the object type to categorical dtype, the decrease in memory usage would be as follows:</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2720/1*e97V19sdtibOg35sodQA_A.png" alt="" /></p>
+
+<p>Again, a decent amount of memory reduction is achieved.</p>
+
+<p>Finally, we can also specify the datatypes for different columns at the time of loading the CSV files. This could be useful for data that throws out of memory error on loading.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2720/1*JeN4G7xHW9BFUomNHV0BfQ.png" alt="" /></p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>In this article, we saw how we could optimize the memory being used by the dataset. This is especially useful if we have limited RAM and our dataset doesn’t fit in the memory. However, it will be helpful to look at some other libraries that can handle the big data issue much more efficiently.</p>
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="parulnith/blog"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/blog/explainable%20ai/machine%20learning%20interpretibility/2021/03/15/IReducing-memory-usage-in-pandas-with-smaller-datatypes.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/blog/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/blog/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/blog/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>Posts on Machine Learning &amp; Data Science</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/parulnith" title="parulnith"><svg class="svg-icon grey"><use xlink:href="/blog/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://www.linkedin.com/in/parulpandeyindia" title="parulpandeyindia"><svg class="svg-icon grey"><use xlink:href="/blog/assets/minima-social-icons.svg#linkedin"></use></svg></a></li><li><a rel="me" href="https://twitter.com/pandeyparul" title="pandeyparul"><svg class="svg-icon grey"><use xlink:href="/blog/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
