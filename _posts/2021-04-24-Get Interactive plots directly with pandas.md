@@ -1,5 +1,5 @@
 ---
-toc: true
+toc: false
 layout: post
 description: A tutorial on creating Plotly and Bokeh plots directly with Pandas plotting syntax
 comments: true
