@@ -94,47 +94,11 @@ window.onload = wrap_img;
     </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <ul class="section-nav">
-<li class="toc-entry toc-h2"><a href="#table-of-contents">Table of Contents</a></li>
-<li class="toc-entry toc-h2"><a href="#dataset">Dataset</a></li>
-<li class="toc-entry toc-h2"><a href="#plotting-with-pandas-directly">Plotting with Pandas directly</a>
-<ul>
-<li class="toc-entry toc-h3"><a href="#1-line-plot">1. Line Plot</a></li>
-<li class="toc-entry toc-h3"><a href="#2-scatter-plot">2. Scatter Plot</a></li>
-<li class="toc-entry toc-h3"><a href="#3-histograms">3. Histograms</a></li>
-<li class="toc-entry toc-h3"><a href="#4-bar-plots">4. Bar plots</a></li>
-<li class="toc-entry toc-h3"><a href="#5-pie-charts">5. Pie Charts</a></li>
-</ul>
-</li>
-<li class="toc-entry toc-h2"><a href="#bokeh-backend-for-pandas--plotting-with-pandas-bokeh">Bokeh Backend for Pandas — plotting with Pandas-Bokeh.</a>
-<ul>
-<li class="toc-entry toc-h3"><a href="#installation">Installation</a></li>
-<li class="toc-entry toc-h3"><a href="#usage">Usage</a></li>
-<li class="toc-entry toc-h3"><a href="#1-line-plot-1">1. Line Plot</a></li>
-<li class="toc-entry toc-h3"><a href="#2-scatter-plot-1">2. Scatter Plot</a></li>
-<li class="toc-entry toc-h3"><a href="#3-histograms-1">3. Histograms</a></li>
-<li class="toc-entry toc-h3"><a href="#4-bar-plots-1">4. Bar plots</a></li>
-<li class="toc-entry toc-h3"><a href="#5-pie-charts-1">5. Pie Charts</a></li>
-</ul>
-</li>
-<li class="toc-entry toc-h2"><a href="#plotly-backend-for-pandas--plotting-with-cufflinks">Plotly Backend for Pandas — plotting with Cufflinks.</a>
-<ul>
-<li class="toc-entry toc-h3"><a href="#installation-1">Installation</a></li>
-<li class="toc-entry toc-h3"><a href="#usage-1">Usage</a></li>
-<li class="toc-entry toc-h3"><a href="#1-line-plot-2">1. Line Plot</a></li>
-<li class="toc-entry toc-h3"><a href="#2-scatter-plot-2">2. Scatter Plot</a></li>
-<li class="toc-entry toc-h3"><a href="#3-histograms-2">3. Histograms</a></li>
-<li class="toc-entry toc-h3"><a href="#4-bar-plots-2">4. Bar plots</a></li>
-<li class="toc-entry toc-h3"><a href="#5-pie-charts-2">5. Pie Charts</a></li>
-</ul>
-</li>
-<li class="toc-entry toc-h2"><a href="#conclusion">Conclusion</a></li>
-</ul><p>Data exploration is by far one of the most important aspects of any data analysis task. The initial probing and preliminary checks that we perform, using the vast catalog of visualization tools, give us actionable insights into the nature of data. However, the choice of visualization tool at times is more complicated than the task itself. On the one hand, we have libraries that are easier to use but are not so helpful in showing complex relationships in data. Then there are others that render interactivity but have a considerable learning curve. Fortunately, some open-source libraries have been created that try to address this pain point effectively.</p>
+    <p>Data exploration is by far one of the most important aspects of any data analysis task. The initial probing and preliminary checks that we perform, using the vast catalog of visualization tools, give us actionable insights into the nature of data. However, the choice of visualization tool at times is more complicated than the task itself. On the one hand, we have libraries that are easier to use but are not so helpful in showing complex relationships in data. Then there are others that render interactivity but have a considerable learning curve. Fortunately, some open-source libraries have been created that try to address this pain point effectively.</p>
 
 <p>In this article, we’ll look at two such libraries, namely pandas_bokeh and cufflinks. We’ll learn how to create plotly and bokeh charts with the basic pandas plotting syntax, which we all are comfortable with. Since the article’s emphasis is on the syntax rather than the types of plots, we’ll limit ourselves to the five basic charts, i.e., line charts, bar charts, histograms, scatter plots, and pie charts. We’ll create each of these charts first with pandas plotting library and then recreate them in plotly and bokeh, albeit with a twist.</p>
 
-<h2 id="table-of-contents">
-<a class="anchor" href="#table-of-contents" aria-hidden="true"><span class="octicon octicon-link"></span></a>Table of Contents</h2>
+<h2 id="table-of-contents">Table of Contents</h2>
 
 <ul>
   <li>
@@ -154,8 +118,7 @@ window.onload = wrap_img;
   </li>
 </ul>
 
-<h2 id="dataset">
-<a class="anchor" href="#dataset" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dataset</h2>
+<h2 id="dataset">Dataset</h2>
 
 <p>We’ll work with the <strong>NIFTY-50 dataset</strong>. The NIFTY 50 index is the <a href="https://en.wikipedia.org/wiki/National_Stock_Exchange_of_India">National Stock Exchange of India’s</a> benchmark for the Indian equity market. The dataset is openly available on <a href="https://www.kaggle.com/sudalairajkumar/nifty-indices-dataset">Kaggle</a>, but we’ll be using a subset of the data containing the stock value of only four sectors, i.e., bank, pharma, IT, and FMCG.</p>
 <blockquote>
@@ -175,7 +138,7 @@ nifty_data = pd.read_csv('NIFTY_data_2020.csv',parse_dates=["Date"],index_col='D
 nifty_data.head()
 </code></pre></div></div>
 
-<p><img src="https://cdn-images-1.medium.com/max/2014/1*9_9_KMUKM6n8I2_bfXvAUA.png" alt="">
+<p><img src="https://cdn-images-1.medium.com/max/2014/1*9_9_KMUKM6n8I2_bfXvAUA.png" alt="" />
 <sub></sub></p>
 
 <p>We can also resample/ aggregate the data by month-end. The pandas’ library has a <a href="https://pandas.pydata.org/docs/reference/api/pandas.Series.resample.html">resample()</a> function, which resamples the time series data.</p>
@@ -184,12 +147,11 @@ nifty_data.head()
 nifty_data_resample
 </code></pre></div></div>
 
-<p><img src="https://cdn-images-1.medium.com/max/2000/1*3SbQiX5_hz0g38aQaX99hA.png" alt=""></p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*3SbQiX5_hz0g38aQaX99hA.png" alt="" /></p>
 
 <p>Now that we have our dataframes ready, it is time to visualize them via different plots.</p>
 
-<h2 id="plotting-with-pandas-directly">
-<a class="anchor" href="#plotting-with-pandas-directly" aria-hidden="true"><span class="octicon octicon-link"></span></a>Plotting with Pandas directly</h2>
+<h2 id="plotting-with-pandas-directly">Plotting with Pandas directly</h2>
 
 <p>Let’s begin with the most straightforward plotting technique — pandas’ <a href="https://pandas.pydata.org/pandas-docs/stable/user_guide/visualization.html#plotting-tools">plotting functions</a>. To plot a graph using pandas, we’ll call the .plot()method on the dataframe.</p>
 
@@ -228,18 +190,16 @@ kind : str
 <p>For a complete list of the parameters and their usage, please refer to the <a href="https://pandas.pydata.org/pandas-docs/stable/user_guide/visualization.html#basic-plotting-plot">documentation</a>. Let’s now look at ways to create different plots. In this article, we’ll not go into detail explaining each plot. We’ll only focus on the syntax, which is self-explanatory if you have some experience in pandas. For a detailed understanding of the pandas’ plots, the article -  <a href="https://neptune.ai/blog/pandas-plot-deep-dive-into-plotting-directly-with-pandas">Pandas Plot: Deep Dive Into Plotting Directly with Pandas
 </a> will be helpful.</p>
 
-<h3 id="1-line-plot">
-<a class="anchor" href="#1-line-plot" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. Line Plot</h3>
+<h3 id="1-line-plot">1. Line Plot</h3>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nifty_data.plot(title='Nifty Index values in 2020', 
                 xlabel = 'Values',
                 figsize=(10,6);
 </code></pre></div></div>
 
-<p><img src="https://cdn-images-1.medium.com/max/2000/1*2U8aDYsc0er0VvMX_gcHyw.png" alt="Line plot with pandas plotting"></p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*2U8aDYsc0er0VvMX_gcHyw.png" alt="Line plot with pandas plotting" /></p>
 
-<h3 id="2-scatter-plot">
-<a class="anchor" href="#2-scatter-plot" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. Scatter Plot</h3>
+<h3 id="2-scatter-plot">2. Scatter Plot</h3>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nifty_data.plot(kind='scatter',
         x='NIFTY FMCG index', 
@@ -248,23 +208,21 @@ kind : str
         figsize=(10,6));
 </code></pre></div></div>
 
-<p><img src="https://cdn-images-1.medium.com/max/2000/1*e_AnlwQyY3PIl0bztHeOxw.png" alt="Scatter plot with pandas plotting"></p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*e_AnlwQyY3PIl0bztHeOxw.png" alt="Scatter plot with pandas plotting" /></p>
 
-<h3 id="3-histograms">
-<a class="anchor" href="#3-histograms" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. Histograms</h3>
+<h3 id="3-histograms">3. Histograms</h3>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nifty_data[['NIFTY FMCG index','NIFTY Bank index']].plot(kind='hist',figsize=(9,6), bins=30);
 </code></pre></div></div>
 
-<p><img src="https://cdn-images-1.medium.com/max/2000/1*A-ble7r8wh1eR0a7EcQChw.png" alt="Histogram with pandas plotting"></p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*A-ble7r8wh1eR0a7EcQChw.png" alt="Histogram with pandas plotting" /></p>
 
-<h3 id="4-bar-plots">
-<a class="anchor" href="#4-bar-plots" aria-hidden="true"><span class="octicon octicon-link"></span></a>4. Bar plots</h3>
+<h3 id="4-bar-plots">4. Bar plots</h3>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nifty_data_resample.plot(kind='bar',figsize=(10,6));
 </code></pre></div></div>
 
-<p><img src="https://cdn-images-1.medium.com/max/2000/1*_5hayOFgYRn5eBtfZn2G0g.png" alt="Bar plot with pandas plotting"></p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*_5hayOFgYRn5eBtfZn2G0g.png" alt="Bar plot with pandas plotting" /></p>
 
 <ul>
   <li>
@@ -274,28 +232,25 @@ kind : str
   </li>
 </ul>
 
-<p><img src="https://cdn-images-1.medium.com/max/2000/1*yEtlWDpSEWodWy9b5N7ZmA.png" alt="Stacked Bar plot with pandas plotting"></p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*yEtlWDpSEWodWy9b5N7ZmA.png" alt="Stacked Bar plot with pandas plotting" /></p>
 
-<h3 id="5-pie-charts">
-<a class="anchor" href="#5-pie-charts" aria-hidden="true"><span class="octicon octicon-link"></span></a>5. Pie Charts</h3>
+<h3 id="5-pie-charts">5. Pie Charts</h3>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nifty_data_resample.index=['Jan','Feb','March','Apr','May','June','July']
 nifty_data_resample['NIFTY Bank index'].plot.pie(legend=False, figsize=(10,6),autopct='%.1f');
 </code></pre></div></div>
 
-<p><img src="https://cdn-images-1.medium.com/max/2000/1*NBgkv8XIt68ZsQkDwZJnpw.png" alt="Pie Chart with pandas plotting"></p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*NBgkv8XIt68ZsQkDwZJnpw.png" alt="Pie Chart with pandas plotting" /></p>
 
 <p>These were some of the charts that can be directly created with pandas’ dataframes. However, these charts lack interactivity and capabilities like zoom and pan. Let’s now change these existing charts in syntax into their fully interactive counterparts with just a slight change in the syntax.</p>
 
-<h2 id="bokeh-backend-for-pandas--plotting-with-pandas-bokeh">
-<a class="anchor" href="#bokeh-backend-for-pandas--plotting-with-pandas-bokeh" aria-hidden="true"><span class="octicon octicon-link"></span></a>Bokeh Backend for Pandas — plotting with Pandas-Bokeh.</h2>
+<h2 id="bokeh-backend-for-pandas--plotting-with-pandas-bokeh">Bokeh Backend for Pandas — plotting with Pandas-Bokeh.</h2>
 
-<p><img src="https://cdn-images-1.medium.com/max/2560/1*Od87aq3PzK8yO3bV7QkyqQ.png" alt="Image by Author"></p>
+<p><img src="https://cdn-images-1.medium.com/max/2560/1*Od87aq3PzK8yO3bV7QkyqQ.png" alt="Image by Author" /></p>
 
 <p>The <a href="https://docs.bokeh.org/en/latest/">bokeh</a> library clearly stands out when it comes to data visualizations<em>. *The</em> <a href="https://github.com/PatrikHlobil/Pandas-Bokeh">*Pandas-Bokeh</a> provides a bokeh plotting backend for <a href="https://pandas.pydata.org/">Pandas</a>, <a href="http://geopandas.org/">GeoPandas</a>, and <a href="https://spark.apache.org/docs/latest/api/python/index.html">Pyspark</a> DataFrames. This backend adds a plot_bokeh() method to the DataFrames and Series.</p>
 
-<h3 id="installation">
-<a class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h3>
+<h3 id="installation">Installation</h3>
 
 <p>Pandas-Bokeh can be installed from <a href="https://pypi.org/project/pandas-bokeh/">PyPI</a> via <em>pip or conda</em></p>
 
@@ -306,8 +261,7 @@ or
 conda install -c patrikhlobil pandas-bokeh
 </code></pre></div></div>
 
-<h3 id="usage">
-<a class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h3>
+<h3 id="usage">Usage</h3>
 
 <p>The Pandas-Bokeh library should be imported after Pandas, GeoPandas, and/or Pyspark.</p>
 
@@ -333,39 +287,35 @@ import pandas_bokeh
 **pandas_bokeh.output_notebook()**
 </code></pre></div></div>
 
-<p><img src="https://cdn-images-1.medium.com/max/2000/1*Ro3EXH0Zw9p0I6GXSm8NMw.png" alt=""></p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*Ro3EXH0Zw9p0I6GXSm8NMw.png" alt="" /></p>
 
-<h3 id="1-line-plot-1">
-<a class="anchor" href="#1-line-plot-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. Line Plot</h3>
+<h3 id="1-line-plot-1">1. Line Plot</h3>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nifty_data.plot_bokeh(kind='line') #equivalent to nifty_data.plot_bokeh.line()
 </code></pre></div></div>
 
-<p><img src="https://cdn-images-1.medium.com/max/2000/1*xq9HCxX1Pudnw15eMZYPsA.gif" alt="Line plot with pandas_bokeh"></p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*xq9HCxX1Pudnw15eMZYPsA.gif" alt="Line plot with pandas_bokeh" /></p>
 
-<h3 id="2-scatter-plot-1">
-<a class="anchor" href="#2-scatter-plot-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. Scatter Plot</h3>
+<h3 id="2-scatter-plot-1">2. Scatter Plot</h3>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nifty_data.plot_bokeh.scatter(x='NIFTY FMCG index', y='NIFTY Bank index');
 </code></pre></div></div>
 
-<p><img src="https://cdn-images-1.medium.com/max/2000/1*7_9_Psy3ZxMmD_rEKfy1KQ.gif" alt="Scatter plot with pandas_bokeh"></p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*7_9_Psy3ZxMmD_rEKfy1KQ.gif" alt="Scatter plot with pandas_bokeh" /></p>
 
-<h3 id="3-histograms-1">
-<a class="anchor" href="#3-histograms-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. Histograms</h3>
+<h3 id="3-histograms-1">3. Histograms</h3>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nifty_data[['NIFTY FMCG index','NIFTY Bank index']].plot_bokeh(kind='hist', bins=30);
 </code></pre></div></div>
 
-<p><img src="https://cdn-images-1.medium.com/max/2000/1*O_Ui5aIQJe9q-nLpcXVR1A.gif" alt="Histogram with pandas_bokeh"></p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*O_Ui5aIQJe9q-nLpcXVR1A.gif" alt="Histogram with pandas_bokeh" /></p>
 
-<h3 id="4-bar-plots-1">
-<a class="anchor" href="#4-bar-plots-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>4. Bar plots</h3>
+<h3 id="4-bar-plots-1">4. Bar plots</h3>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nifty_data_resample.plot_bokeh(kind='bar',figsize=(10,6));
 </code></pre></div></div>
 
-<p><img src="https://cdn-images-1.medium.com/max/2000/1*SHMDYroerHPDC2_BfM79Mw.gif" alt="Bar plot with pandas_bokeh"></p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*SHMDYroerHPDC2_BfM79Mw.gif" alt="Bar plot with pandas_bokeh" /></p>
 
 <ul>
   <li>
@@ -375,45 +325,41 @@ import pandas_bokeh
   </li>
 </ul>
 
-<p><img src="https://cdn-images-1.medium.com/max/2000/1*gPYVU2oONB4db0bKC-wMuQ.gif" alt="Stacked bar plot with pandas_bokeh"></p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*gPYVU2oONB4db0bKC-wMuQ.gif" alt="Stacked bar plot with pandas_bokeh" /></p>
 
-<h3 id="5-pie-charts-1">
-<a class="anchor" href="#5-pie-charts-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>5. Pie Charts</h3>
+<h3 id="5-pie-charts-1">5. Pie Charts</h3>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nifty_data_resample.index=['Jan','Feb','March','Apr','May','June','July']
 nifty_data_resample.plot_bokeh.pie(y ='NIFTY Bank index')
 </code></pre></div></div>
 
-<p><img src="https://cdn-images-1.medium.com/max/2000/1*NwFRmTmphZ5dgOtk5EXxPQ.gif" alt="pie chart with pandas_bokeh"></p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*NwFRmTmphZ5dgOtk5EXxPQ.gif" alt="pie chart with pandas_bokeh" /></p>
 
 <p>Additionally, you can also create multiple nested pie plots within the same plot:</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nifty_data_resample.plot_bokeh.pie()
 </code></pre></div></div>
 
-<p><img src="https://cdn-images-1.medium.com/max/2000/1*310V2S3DB1l3xC9j4s1Cxw.gif" alt="Nested pie chart with pandas_bokeh"></p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*310V2S3DB1l3xC9j4s1Cxw.gif" alt="Nested pie chart with pandas_bokeh" /></p>
 
 <p>This section saw how we could seamlessly create bokeh plots without any significant change in the pandas plotting syntax. Now we can have the best of both worlds without having to learn any new format.</p>
 
-<h2 id="plotly-backend-for-pandas--plotting-with-cufflinks">
-<a class="anchor" href="#plotly-backend-for-pandas--plotting-with-cufflinks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Plotly Backend for Pandas — plotting with Cufflinks.</h2>
+<h2 id="plotly-backend-for-pandas--plotting-with-cufflinks">Plotly Backend for Pandas — plotting with Cufflinks.</h2>
 
-<p><img src="https://cdn-images-1.medium.com/max/2560/1*xXvqRkqru2r4GeTdD741pQ.png" alt="Image by Author"></p>
+<p><img src="https://cdn-images-1.medium.com/max/2560/1*xXvqRkqru2r4GeTdD741pQ.png" alt="Image by Author" /></p>
 
 <p>Another commonly used library for data visualization is <a href="https://plotly.com/graphing-libraries/">Plotly</a>. With plotly, you can make interactive charts in Python, R, and JavaScript. As of version 4.8, Plotly came out with a <a href="https://plotly.com/python/plotly-express/">Plotly Express-powered</a> backend for Pandas plotting, which meant that one even does not need to import plotly to create plotly like visualizations.</p>
 
 <p>However, the library I want to mention here is not plotly express, but an independent third-party wrapper library around Plotly called <a href="https://github.com/santosjorge/cufflinks">**Cufflinks</a>. **The beauty of cufflinks is that it is more versatile, has more functionalities, and has an API similar to pandas plotting. This means you only need to add a .iplot() method to Pandas dataframes for plotting graphs.</p>
 
-<h3 id="installation-1">
-<a class="anchor" href="#installation-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h3>
+<h3 id="installation-1">Installation</h3>
 
 <p>Make sure you have plotly installed before installing cufflinks. Read <a href="https://plotly.com/python/getting-started/">this</a> guide for instructions.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip install cufflinks
 </code></pre></div></div>
 
-<h3 id="usage-1">
-<a class="anchor" href="#usage-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h3>
+<h3 id="usage-1">Usage</h3>
 
 <p>The <a href="https://nbviewer.jupyter.org/gist/santosjorge/aba934a0d20023a136c2">repository</a> has a lot of useful examples and notebooks to get started.</p>
 
@@ -427,39 +373,35 @@ cf.set_config_file(sharing='public',theme='white',offline=True)
 
 <p>That is all. We can now create visualizations with the power of plotly but with the ease of pandas. The only change in the syntax is dataframe.iplot().</p>
 
-<h3 id="1-line-plot-2">
-<a class="anchor" href="#1-line-plot-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. Line Plot</h3>
+<h3 id="1-line-plot-2">1. Line Plot</h3>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nifty_data.iplot(kind='line')
 </code></pre></div></div>
 
-<p><img src="https://cdn-images-1.medium.com/max/2048/1*mqlUhL12p4P5JCZLfezMJA.gif" alt="Line plot with cufflinks"></p>
+<p><img src="https://cdn-images-1.medium.com/max/2048/1*mqlUhL12p4P5JCZLfezMJA.gif" alt="Line plot with cufflinks" /></p>
 
-<h3 id="2-scatter-plot-2">
-<a class="anchor" href="#2-scatter-plot-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. Scatter Plot</h3>
+<h3 id="2-scatter-plot-2">2. Scatter Plot</h3>
 
 <p>You need to mention the plotting <strong>mode</strong> for scatter trace while creating a scatterplot. The mode could be lines, markers, text, or a combination of either of them.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nifty_data.iplot(kind='scatter',x='NIFTY FMCG index', y='NIFTY Bank index',**mode='markers'**);
 </code></pre></div></div>
 
-<p><img src="https://cdn-images-1.medium.com/max/2010/1*ze78LxMhamZumciF9c7Xow.gif" alt="Scatter plot with cufflinks"></p>
+<p><img src="https://cdn-images-1.medium.com/max/2010/1*ze78LxMhamZumciF9c7Xow.gif" alt="Scatter plot with cufflinks" /></p>
 
-<h3 id="3-histograms-2">
-<a class="anchor" href="#3-histograms-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. Histograms</h3>
+<h3 id="3-histograms-2">3. Histograms</h3>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nifty_data[['NIFTY FMCG index','NIFTY Bank index']].iplot(kind='hist', bins=30);
 </code></pre></div></div>
 
-<p><img src="https://cdn-images-1.medium.com/max/2010/1*66OV0Fi3MqJK7VrkrdlPPA.gif" alt="Histogram with cufflinks"></p>
+<p><img src="https://cdn-images-1.medium.com/max/2010/1*66OV0Fi3MqJK7VrkrdlPPA.gif" alt="Histogram with cufflinks" /></p>
 
-<h3 id="4-bar-plots-2">
-<a class="anchor" href="#4-bar-plots-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>4. Bar plots</h3>
+<h3 id="4-bar-plots-2">4. Bar plots</h3>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nifty_data_resample.iplot(kind='bar');
 </code></pre></div></div>
 
-<p><img src="https://cdn-images-1.medium.com/max/2010/1*PCDr5fU2kJMdBg8uUaXE9A.gif" alt="Barplots with cufflinks"></p>
+<p><img src="https://cdn-images-1.medium.com/max/2010/1*PCDr5fU2kJMdBg8uUaXE9A.gif" alt="Barplots with cufflinks" /></p>
 
 <ul>
   <li>
@@ -469,21 +411,19 @@ cf.set_config_file(sharing='public',theme='white',offline=True)
   </li>
 </ul>
 
-<p><img src="https://cdn-images-1.medium.com/max/2010/1*nKQZhR49_g0_ILCfYVp1Ew.gif" alt="Stacked bar plots with cufflinks"></p>
+<p><img src="https://cdn-images-1.medium.com/max/2010/1*nKQZhR49_g0_ILCfYVp1Ew.gif" alt="Stacked bar plots with cufflinks" /></p>
 
-<h3 id="5-pie-charts-2">
-<a class="anchor" href="#5-pie-charts-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>5. Pie Charts</h3>
+<h3 id="5-pie-charts-2">5. Pie Charts</h3>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nifty_data_resample.index=['Jan','Feb','March','Apr','May','June','July']
 nifty_data_resample.reset_index().iplot(kind='pie',labels='index',values='NIFTY Bank index')
 </code></pre></div></div>
 
-<p><img src="https://cdn-images-1.medium.com/max/2010/1*-0j6SsStGMBSDDdw6yfKlg.gif" alt="Pie charts with cufflinks"></p>
+<p><img src="https://cdn-images-1.medium.com/max/2010/1*-0j6SsStGMBSDDdw6yfKlg.gif" alt="Pie charts with cufflinks" /></p>
 
 <p>The Cufflinks library provides an easy way to get the power of plotly within plotly. The similarity in syntax is another point of advantage.</p>
 
-<h2 id="conclusion">
-<a class="anchor" href="#conclusion" aria-hidden="true"><span class="octicon octicon-link"></span></a>Conclusion</h2>
+<h2 id="conclusion">Conclusion</h2>
 
 <p>The Bokeh or a Plotly plot is self-sufficient in conveying the entire information. Based on your choice and preference, you can choose both or either of them; The primary purpose is to make the visualizations more intuitive and interactive at the same time. After going through this article, you should be able to convert the static visualizations into their interactive counterparts and take your analysis a notch higher.</p>
 
