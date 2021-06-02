@@ -1,18 +1,16 @@
 ---
-toc: false
+toc: true
 layout: post
 description: A tutorial on creating Plotly and Bokeh plots directly with Pandas plotting syntax
 comments: true
 categories: [Data Visualization]
 image: images/2021-03-15-Reducing-memory-usage-in-pandas-with-smaller-datatypes/0.png
-show_image: false
+show_image: true
 show_tags: true
 title: "Get Interactive plots directly with pandas."
 ---
 
 
-![](https://cdn-images-1.medium.com/max/12000/1*ud-bR4tZNZevyMg_EUc0IQ.jpeg)
-<sub>[Infographic vector created by macrovector — www.freepik.com](https://www.freepik.com/vectors/infographic)</sub>
 
 Data exploration is by far one of the most important aspects of any data analysis task. The initial probing and preliminary checks that we perform, using the vast catalog of visualization tools, give us actionable insights into the nature of data. However, the choice of visualization tool at times is more complicated than the task itself. On the one hand, we have libraries that are easier to use but are not so helpful in showing complex relationships in data. Then there are others that render interactivity but have a considerable learning curve. Fortunately, some open-source libraries have been created that try to address this pain point effectively.
 
@@ -47,7 +45,8 @@ Let’s import the necessary libraries and dataset required for the visualizatio
     nifty_data = pd.read_csv('NIFTY_data_2020.csv',parse_dates=["Date"],index_col='Date')
     nifty_data.head()
 
-![Combined dataframe consisting of NIFTY indices of the bank, pharma, IT, and FMCG sectors](https://cdn-images-1.medium.com/max/2014/1*9_9_KMUKM6n8I2_bfXvAUA.png)
+![](https://cdn-images-1.medium.com/max/2014/1*9_9_KMUKM6n8I2_bfXvAUA.png)
+<sub>
 
 We can also resample/ aggregate the data by month-end. The pandas’ library has a [resample()](https://pandas.pydata.org/docs/reference/api/pandas.Series.resample.html) function, which resamples the time series data.
 
@@ -62,23 +61,23 @@ Now that we have our dataframes ready, it is time to visualize them via differen
 
 Let’s begin with the most straightforward plotting technique — pandas’ [plotting functions](https://pandas.pydata.org/pandas-docs/stable/user_guide/visualization.html#plotting-tools). To plot a graph using pandas, we’ll call the .plot()method on the dataframe.
 
-**Syntax**: dataframe.plot()
+*Syntax*: dataframe.plot()
 
 The plot method is just a simple wrapper around matplotlib’s [**plt.plot()](https://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.plot.html#matplotlib.axes.Axes.plot). **We can also specify some additional parameters like the ones mentioned below:
 
     Some of the important Parameters
     --------------------------------
     
-    **x** : label or position, default None
+    *x* : label or position, default None
         Only used if data is a DataFrame.
-    **y** : label, position or list of label, positions, default None
+    *y* : label, position or list of label, positions, default None
 
-    **title**: title to be used for the plot
+    *title*: title to be used for the plot
 
-    **X and y label:** Name to use for the label on the x-axis and y-axis.
+    *X and y label*: Name to use for the label on the x-axis and y-axis.
 
-    **figsize** : specifies the size of the figure object.    
-    **kind** : str
+    *figsize* : specifies the size of the figure object.    
+    *kind* : str
         The kind of plot to produce:
     
         - 'line' : line plot (default)
@@ -94,7 +93,7 @@ The plot method is just a simple wrapper around matplotlib’s [**plt.plot()](ht
         - 'hexbin' : hexbin plot.
 
 For a complete list of the parameters and their usage, please refer to the [documentation](https://pandas.pydata.org/pandas-docs/stable/user_guide/visualization.html#basic-plotting-plot). Let’s now look at ways to create different plots. In this article, we’ll not go into detail explaining each plot. We’ll only focus on the syntax, which is self-explanatory if you have some experience in pandas. For a detailed understanding of the pandas’ plots, the below article will be helpful:
-[**Pandas Plot: Deep Dive Into Plotting Directly with Pandas **
+[*Pandas Plot: Deep Dive Into Plotting Directly with Pandas
 ](https://neptune.ai/blog/pandas-plot-deep-dive-into-plotting-directly-with-pandas)* *In this article, we’ll look at how to explore and visualize your data with pandas, and then we’ll dive deeper into some of the advanced capabilities for visualization with pandas.
 
 ### 1. Line Plot
