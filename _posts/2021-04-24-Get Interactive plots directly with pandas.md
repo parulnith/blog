@@ -1,11 +1,19 @@
 
-### [Hands-on Tutorials](https://towardsdatascience.com/tagged/hands-on-tutorials)
+---
+toc: false
+layout: post
+description: A tutorial on creating Plotly and Bokeh plots directly with Pandas plotting syntax
+comments: true
+categories: [Data Visualization]
+image: images/2021-03-15-Reducing-memory-usage-in-pandas-with-smaller-datatypes/0.png
+show_image: false
+show_tags: true
+title: "Get Interactive plots directly with pandas."
+---
 
-## Get Interactive plots directly with pandas.
 
-### A tutorial on creating Plotly and Bokeh plots directly with Pandas plotting syntax
-
-![[Infographic vector created by macrovector — www.freepik.com](https://www.freepik.com/vectors/infographic)](https://cdn-images-1.medium.com/max/12000/1*ud-bR4tZNZevyMg_EUc0IQ.jpeg)
+![](https://cdn-images-1.medium.com/max/12000/1*ud-bR4tZNZevyMg_EUc0IQ.jpeg)
+<sub>[Infographic vector created by macrovector — www.freepik.com](https://www.freepik.com/vectors/infographic)</sub>
 
 Data exploration is by far one of the most important aspects of any data analysis task. The initial probing and preliminary checks that we perform, using the vast catalog of visualization tools, give us actionable insights into the nature of data. However, the choice of visualization tool at times is more complicated than the task itself. On the one hand, we have libraries that are easier to use but are not so helpful in showing complex relationships in data. Then there are others that render interactivity but have a considerable learning curve. Fortunately, some open-source libraries have been created that try to address this pain point effectively.
 
