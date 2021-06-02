@@ -68,16 +68,16 @@ The plot method is just a simple wrapper around matplotlib’s [**plt.plot()](ht
     Some of the important Parameters
     --------------------------------
     
-    *x* : label or position, default None
+    x : label or position, default None
         Only used if data is a DataFrame.
-    *y* : label, position or list of label, positions, default None
+    y : label, position or list of label, positions, default None
 
-    *title*: title to be used for the plot
+    title: title to be used for the plot
 
-    *X and y label*: Name to use for the label on the x-axis and y-axis.
+    X and y label: Name to use for the label on the x-axis and y-axis.
 
-    *figsize* : specifies the size of the figure object.    
-    *kind* : str
+    figsize : specifies the size of the figure object.    
+    kind : str
         The kind of plot to produce:
     
         - 'line' : line plot (default)
@@ -92,9 +92,8 @@ The plot method is just a simple wrapper around matplotlib’s [**plt.plot()](ht
         - 'scatter' : scatter plot
         - 'hexbin' : hexbin plot.
 
-For a complete list of the parameters and their usage, please refer to the [documentation](https://pandas.pydata.org/pandas-docs/stable/user_guide/visualization.html#basic-plotting-plot). Let’s now look at ways to create different plots. In this article, we’ll not go into detail explaining each plot. We’ll only focus on the syntax, which is self-explanatory if you have some experience in pandas. For a detailed understanding of the pandas’ plots, the below article will be helpful:
-[*Pandas Plot: Deep Dive Into Plotting Directly with Pandas
-](https://neptune.ai/blog/pandas-plot-deep-dive-into-plotting-directly-with-pandas)* *In this article, we’ll look at how to explore and visualize your data with pandas, and then we’ll dive deeper into some of the advanced capabilities for visualization with pandas.
+For a complete list of the parameters and their usage, please refer to the [documentation](https://pandas.pydata.org/pandas-docs/stable/user_guide/visualization.html#basic-plotting-plot). Let’s now look at ways to create different plots. In this article, we’ll not go into detail explaining each plot. We’ll only focus on the syntax, which is self-explanatory if you have some experience in pandas. For a detailed understanding of the pandas’ plots, the article -  [Pandas Plot: Deep Dive Into Plotting Directly with Pandas
+](https://neptune.ai/blog/pandas-plot-deep-dive-into-plotting-directly-with-pandas) will be helpful.
 
 ### 1. Line Plot
 
@@ -127,7 +126,7 @@ For a complete list of the parameters and their usage, please refer to the [docu
 
 ![Bar plot with pandas plotting](https://cdn-images-1.medium.com/max/2000/1*_5hayOFgYRn5eBtfZn2G0g.png)
 
-* **4.1 Stacked bar plots**
+* *4.1 Stacked bar plots*
 
     nifty_data_resample.plot(kind='barh',figsize=(10,6));
 
