@@ -77,7 +77,7 @@ As stated above, three datatypes have been used in this case:
 
 ### Numerical data
 
-On inspecting our dataframe, we find that the maximum value for some of the columns will never be greater than **32767. **In such cases, it is not prudent to use int64 as the datatype, and we can easily downcast it to say, int16. Let’s understand it more concretely through an example.
+On inspecting our dataframe, we find that the maximum value for some of the columns will never be greater than `32767`. n such cases, it is not prudent to use int64 as the datatype, and we can easily downcast it to say, int16. Let’s understand it more concretely through an example.
 
 For the demonstration, let’s analyze the passenger count column and calculate its memory usage. we’ll use the pandas’ [memory_usage](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.memory_usage.html)() function for the purpose.
 
