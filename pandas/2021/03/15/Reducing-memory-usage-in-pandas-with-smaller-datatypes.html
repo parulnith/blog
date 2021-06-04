@@ -180,7 +180,7 @@ df = pd.read_csv('yellow_tripdata_2016-03.csv')
 
 <h3 id="numerical-data">Numerical data</h3>
 
-<p>On inspecting our dataframe, we find that the maximum value for some of the columns will never be greater than **32767. **In such cases, it is not prudent to use int64 as the datatype, and we can easily downcast it to say, int16. Let’s understand it more concretely through an example.</p>
+<p>On inspecting our dataframe, we find that the maximum value for some of the columns will never be greater than <code class="language-plaintext highlighter-rouge">32767</code>. n such cases, it is not prudent to use int64 as the datatype, and we can easily downcast it to say, int16. Let’s understand it more concretely through an example.</p>
 
 <p>For the demonstration, let’s analyze the passenger count column and calculate its memory usage. we’ll use the pandas’ <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.memory_usage.html">memory_usage</a>() function for the purpose.</p>
 
