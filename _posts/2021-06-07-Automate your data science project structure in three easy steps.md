@@ -1,7 +1,21 @@
+---
+toc: false
+layout: post
+description: Streamline your data science code repository and tooling quickly and efficiently
+comments: true
+categories: [Data Science]
+image: images/2021-06-7-Automate your data science project structure in three easy step/0.png
+show_image: false
+show_tags: true
+title: "Automate your data science project structure in three easy steps"
+---
+
+*The article was originally published [here](https://towardsdatascience.com/automate-your-data-science-project-structure-in-three-easy-steps-277c92328d24?sk=72df9f0f306dd6deb4be757008e3b956f)*
 
 
 
 ![](https://cdn-images-1.medium.com/max/2000/1*z0VoWoaLTXXPv2MN_7b1GQ.png)
+
 <sub>Free Vector illustrations from [Scale](https://2.flexiple.com/scale/all-illustrations?search=code&gender-option-field=Female%7CMale%7CBoth)
 
 > # Good Code is its own best documentation
