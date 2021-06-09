@@ -1,0 +1,119 @@
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*z0VoWoaLTXXPv2MN_7b1GQ.png" alt="" />
+<sub>Free Vector illustrations from <a href="https://2.flexiple.com/scale/all-illustrations?search=code&amp;gender-option-field=Female%7CMale%7CBoth">Scale</a></sub></p>
+
+<blockquote>
+  <h1 id="good-code-is-its-own-best-documentation">Good Code is its own best documentation</h1>
+</blockquote>
+
+<p><a href="https://twitter.com/rctatman?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">Dr. Rachael Tatman</a>, in one of her <a href="http://www.rctatman.com/files/Tatman_2018_ReproducibleML.pdf">presentations</a>, highlighted the importance of code reproducibility in a very subtle way :</p>
+<blockquote>
+  <p>“Why should you care about reproducibility? Because the person most likely to need to reproduce your work… is you.”</p>
+</blockquote>
+
+<p>This is true on so many levels. Have you ever found yourself in a situation where it became difficult to decipher your codebase? Do you often end up with multiple files like untitled1.py or untitled2.ipynb? Well, if not all, a few of us must have undoubtedly faced the brunt of bad coding practices on few occasions. The situation is even more common in data science. Often, we limit our focus on the analysis and the end product while ignoring the quality of the code that is responsible for the analysis.</p>
+
+<p>Why is reproducibility a vital ingredient in the data science pipeline? I have touched upon this topic in <a href="https://towardsdatascience.com/getting-more-out-of-your-kaggle-notebooks-fb2530ece942?sk=99d718e3b75d8de58e4c1fb23cdc09c4">another blog post</a>, and I’ll borrow a few lines from there. A reproducible example allows someone else to recreate your analysis using the same data. This makes a lot of sense since you put your work out in the public for them to use. This purpose gets defeated if others cannot reproduce your work. In this article, let’s look at three useful tools that can streamline and help you in creating structured and reproducible projects.</p>
+
+<h2 id="creating-a-good-project-structure">Creating a good project structure</h2>
+
+<p>Let’s say you want to create a project which contains code to analyze the sentiments of the movie reviews. There are three essential steps to create a good project structure:</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2294/1*TwzEaKcZUff8VQkt6ooGsw.png" alt="" />
+<sub>The pipeline of creating a project template | Image by Author</sub></p>
+
+<h3 id="1-automating-project-template-creation-with-cookiecutter-data-science">1. Automating project template creation with <a href="https://github.com/drivendata/cookiecutter-data-science">Cookiecutter Data Science</a></h3>
+
+<p>![<a href="https://thenounproject.com/term/baking/2870320"></a> 
+<sub> Icon by @NounProject| CC: Creative Commons](https://cdn-images-1.medium.com/max/2000/1*Gw61dGYG48pd5VO3srkgGg.png)</sub></p>
+
+<p>There is not a clear consensus in the community on best practices for organizing machine learning projects. That is why they are a plethora of choices, and this lack of clarity leads to confusion. Fortunately, there is a workaround, thanks to people at DrivenData. They have created a tool called <strong>Cookiecutter Data Science</strong> which is a <a href="https://github.com/drivendata/cookiecutter-data-science">standardized but flexible project structure for doing and sharing data science work</a>. A few lines of code set up a whole series of subdirectories and make it easier to start, structure, and share analysis. You can read more about the tool on their <a href="http://drivendata.github.io/cookiecutter-data-science/">project home page</a>. Let’s get to in interesting part and see it in action.</p>
+
+<h3 id="installation">Installation</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip install cookiecutter
+
+or
+
+conda config --add channels conda-forge
+conda install cookiecutter
+</code></pre></div></div>
+
+<h3 id="starting-a-new-project">Starting a new project</h3>
+
+<p>Head over to your terminal and run the following command. It will automatically populate a directory with the required files.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cookiecutter [https://github.com/drivendata/cookiecutter-data-science](https://github.com/drivendata/cookiecutter-data-science)
+</code></pre></div></div>
+
+<p><img src="https://cdn-images-1.medium.com/max/2210/1*w-_2fdm2vXINDfg7j5m10Q.gif" alt="" />
+<sub> Using Cookiecutter DataScience | Image by Author</sub></p>
+
+<p>A sentiment Analysis directory gets created on the specified path, which in the above case is the Desktop.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*XNDkQBEsy07bHOlQNHohig.png" alt="The directory structure of the newly created project | Image by Author" /></p>
+<blockquote>
+  <p><strong>Note</strong> : Cookiecutter data science will be moving to version 2 soon, and hence there slight change in how the command is used in the future. This means you will have to use <em>ccds …</em> rather than <em>cookiecutter … *in the command above. As per the Github repository, this version of the template will still be available but one would have to explicitly use *-c v1</em> to select it. Keep an eye on the <a href="https://github.com/drivendata/cookiecutter-data-science#new-version-of-cookiecutter-data-science">documentaion</a>, when the change happens.</p>
+</blockquote>
+
+<h2 id="creating-a-good-readme-with-readmeso">Creating a good Readme with <a href="https://readme.so/">readme.so</a></h2>
+
+<table>
+  <tbody>
+    <tr>
+      <td>![<a href="https://thenounproject.com/search/?q=Page&amp;i=2359483">Icon by @NounProject</a></td>
+      <td>CC: Creative Commons](https://cdn-images-1.medium.com/max/2000/1*pFC6ZB0FMVita5OHWVpF_g.png)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>After creating the skeleton of the project next, you need to populate it. But before that, there is an important file to be updated — the <a href="https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-on-github/about-readmes">README</a>. A README is a markdown file that communicates essential information about your project. It tells others what the project is about, the project’s license, how others can contribute to the project, etc. I have seen many people putting tremendous effort into their projects but failing to create decent READMEs. If you are one of them, there is some good news in the form of a project called [<strong>readme.so](https://readme.so/).</strong></p>
+
+<p>A good soul has just put an end to writing READMEs manually. <a href="https://twitter.com/katherinecodes">Katherine Peterson</a> recently created a simple editor allowing you to create and customize your project’s readme quickly.</p>
+
+<iframe src="https://medium.com/media/c1ab59be4e3029a30adae1cf3dd6577a" frameborder="0"></iframe>
+
+<p>The editor is pretty intuitive. You only need to click on a section to edit the content, and the section gets added to your readme. Choose the ones you like from an extensive collection. You can also move the sections depending upon the location where you want them on the page. Once you have all things in place, go ahead and copy the content or download the file and add it to your existing project.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>![Generate automatic READMEs with readme.so</td>
+      <td>Image by Author](https://cdn-images-1.medium.com/max/3126/1*Le7xvk0HTxsGR-_xb6eNvA.gif)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="push-your-code-to-github">Push your code to Github</h2>
+
+<table>
+  <tbody>
+    <tr>
+      <td>![<a href="https://thenounproject.com/search/?q=Github&amp;i=2346914">Icon by @NounProject</a></td>
+      <td>CC: Creative Commons](https://cdn-images-1.medium.com/max/2000/1*7cBYwVhMG_NSHLXifrkmeg.png)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>We are almost done. The only thing left is to push the code to Github(or any version control platform of your choice). You can do that easily via Git. Here is a handy cheat sheet containing the <a href="https://education.github.com/git-cheat-sheet-education.pdf">most important and commonly used Git commands for easy reference.</a></p>
+
+<iframe src="https://medium.com/media/58585761cded8c233f1568e936719f27" frameborder="0"></iframe>
+
+<p>Alternatively, if you use <a href="https://code.visualstudio.com/">Visual Studio Code</a>(VS Code), like me, it is already taken care of. VS Code makes it possible to publish any project directly to GitHub without having to create a repository first. VS Code will create the repository for you and control whether or not it should be public or private. The only thing required from your side is to provide authentication to GitHub through VS Code.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>![Pushing Code to Github via Visual Studio Code</td>
+      <td>Image by Author](https://cdn-images-1.medium.com/max/3588/1*XCJ5_8uE1n8B8jf3iUWRAw.gif)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>That is all you need to set up a robust and structured project base. All the above steps have been summarized in the following video in case you want to look at all the steps in sync.</p>
+
+<iframe src="https://medium.com/media/482da1aaaf65139b92d6f68f8b29b328" frameborder="0"></iframe>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Creating structured and reproducible projects might seem difficult in the beginning but offer advantages in the long run. In this article, we looked at three useful tools that can help us in this task. While <strong>cookiecutter data science</strong> gives a clean project template, <strong>readme.so</strong> automatically populates a readme file. Finally, the VS Code can help us push the project onto the web for source control and collaboration. This creates the necessary foundation for a good data science project. Now you can begin working on your data and derive insights from it to be shared with various stakeholders.</p>
