@@ -80,7 +80,8 @@ The editor is pretty intuitive. You only need to click on a section to edit the 
 
 ## Push your code to Github
 
-![[Icon by @NounProject](https://thenounproject.com/search/?q=Github&i=2346914) | CC: Creative Commons](https://cdn-images-1.medium.com/max/2000/1*7cBYwVhMG_NSHLXifrkmeg.png)
+![](https://cdn-images-1.medium.com/max/2000/1*7cBYwVhMG_NSHLXifrkmeg.png)
+    <sub> [Icon by @NounProject](https://thenounproject.com/search/?q=Github&i=2346914) | CC: Creative Commons
 
 We are almost done. The only thing left is to push the code to Github(or any version control platform of your choice). You can do that easily via Git. Here is a handy cheat sheet containing the [most important and commonly used Git commands for easy reference.](https://education.github.com/git-cheat-sheet-education.pdf)
 
